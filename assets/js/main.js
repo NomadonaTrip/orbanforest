@@ -4,114 +4,122 @@
    ============================================================ */
 
 (function () {
-  'use strict';
+  "use strict";
 
   // ── THEME TOGGLE ──────────────────────────────────────────
-  const themeToggle = document.getElementById('themeToggle');
+  const themeToggle = document.getElementById("themeToggle");
   const root = document.documentElement;
 
   function getPreferredTheme() {
-    const stored = localStorage.getItem('of-theme');
+    const stored = localStorage.getItem("of-theme");
     if (stored) return stored;
-    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    return window.matchMedia("(prefers-color-scheme: dark)").matches
+      ? "dark"
+      : "light";
   }
 
   function setTheme(theme) {
-    root.setAttribute('data-theme', theme);
-    localStorage.setItem('of-theme', theme);
+    root.setAttribute("data-theme", theme);
+    localStorage.setItem("of-theme", theme);
   }
 
   // Initialize theme
   setTheme(getPreferredTheme());
 
-  themeToggle.addEventListener('click', () => {
-    const current = root.getAttribute('data-theme');
-    setTheme(current === 'light' ? 'dark' : 'light');
+  themeToggle.addEventListener("click", () => {
+    const current = root.getAttribute("data-theme");
+    setTheme(current === "light" ? "dark" : "light");
   });
 
   // Listen for system preference changes
-  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-    if (!localStorage.getItem('of-theme')) {
-      setTheme(e.matches ? 'dark' : 'light');
-    }
-  });
+  window
+    .matchMedia("(prefers-color-scheme: dark)")
+    .addEventListener("change", (e) => {
+      if (!localStorage.getItem("of-theme")) {
+        setTheme(e.matches ? "dark" : "light");
+      }
+    });
 
   // ── HEADER SCROLL ─────────────────────────────────────────
-  const header = document.getElementById('header');
+  const header = document.getElementById("header");
   let lastScrollY = 0;
 
   function handleHeaderScroll() {
     const scrollY = window.scrollY;
     if (scrollY > 50) {
-      header.classList.add('scrolled');
+      header.classList.add("scrolled");
     } else {
-      header.classList.remove('scrolled');
+      header.classList.remove("scrolled");
     }
     lastScrollY = scrollY;
   }
 
-  window.addEventListener('scroll', handleHeaderScroll, { passive: true });
+  window.addEventListener("scroll", handleHeaderScroll, { passive: true });
 
   // ── MOBILE NAV ────────────────────────────────────────────
-  const navToggle = document.getElementById('navToggle');
-  const navLinks = document.getElementById('navLinks');
+  const navToggle = document.getElementById("navToggle");
+  const navLinks = document.getElementById("navLinks");
 
-  navToggle.addEventListener('click', () => {
-    const expanded = navToggle.getAttribute('aria-expanded') === 'true';
-    navToggle.setAttribute('aria-expanded', !expanded);
-    navLinks.classList.toggle('open');
-    document.body.style.overflow = expanded ? '' : 'hidden';
+  navToggle.addEventListener("click", () => {
+    const expanded = navToggle.getAttribute("aria-expanded") === "true";
+    navToggle.setAttribute("aria-expanded", !expanded);
+    navLinks.classList.toggle("open");
+    document.body.style.overflow = expanded ? "" : "hidden";
   });
 
   // Close mobile nav on link click
-  navLinks.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', () => {
-      navToggle.setAttribute('aria-expanded', 'false');
-      navLinks.classList.remove('open');
-      document.body.style.overflow = '';
+  navLinks.querySelectorAll(".nav-link").forEach((link) => {
+    link.addEventListener("click", () => {
+      navToggle.setAttribute("aria-expanded", "false");
+      navLinks.classList.remove("open");
+      document.body.style.overflow = "";
     });
   });
 
   // ── SMOOTH SCROLL FOR ANCHOR LINKS ────────────────────────
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      const href = this.getAttribute('href');
-      if (href === '#') return;
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+      const href = this.getAttribute("href");
+      if (href === "#") return;
       const target = document.querySelector(href);
       if (target) {
         e.preventDefault();
         const headerHeight = header.offsetHeight;
-        const targetPos = target.getBoundingClientRect().top + window.scrollY - headerHeight - 20;
-        window.scrollTo({ top: targetPos, behavior: 'smooth' });
+        const targetPos =
+          target.getBoundingClientRect().top +
+          window.scrollY -
+          headerHeight -
+          20;
+        window.scrollTo({ top: targetPos, behavior: "smooth" });
       }
     });
   });
 
   // ── SCROLL REVEAL ─────────────────────────────────────────
-  const revealElements = document.querySelectorAll('.reveal-up');
+  const revealElements = document.querySelectorAll(".reveal-up");
 
   const revealObserver = new IntersectionObserver(
     (entries) => {
-      entries.forEach(entry => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('revealed');
+          entry.target.classList.add("revealed");
           revealObserver.unobserve(entry.target);
         }
       });
     },
     {
       threshold: 0.1,
-      rootMargin: '0px 0px -60px 0px',
-    }
+      rootMargin: "0px 0px -60px 0px",
+    },
   );
 
-  revealElements.forEach(el => revealObserver.observe(el));
+  revealElements.forEach((el) => revealObserver.observe(el));
 
   // ── COUNTER ANIMATION ─────────────────────────────────────
-  const counters = document.querySelectorAll('.stat-number[data-count]');
+  const counters = document.querySelectorAll(".stat-number[data-count]");
 
   function animateCounter(el) {
-    const target = parseInt(el.getAttribute('data-count'), 10);
+    const target = parseInt(el.getAttribute("data-count"), 10);
     const duration = 2000;
     const start = performance.now();
 
@@ -133,61 +141,77 @@
 
   const counterObserver = new IntersectionObserver(
     (entries) => {
-      entries.forEach(entry => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
           animateCounter(entry.target);
           counterObserver.unobserve(entry.target);
         }
       });
     },
-    { threshold: 0.5 }
+    { threshold: 0.5 },
   );
 
-  counters.forEach(el => counterObserver.observe(el));
+  counters.forEach((el) => counterObserver.observe(el));
 
   // ── CARD SWARM ──────────────────────────────────────────────
   (function initSwarm() {
-    const hero = document.getElementById('hero');
-    const container = document.getElementById('swarmContainer');
+    const hero = document.getElementById("hero");
+    const container = document.getElementById("swarmContainer");
     if (!hero || !container) return;
 
     // Skip animation on touch devices or reduced motion
-    const isTouch = window.matchMedia('(pointer: coarse)').matches;
-    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const isTouch = window.matchMedia("(pointer: coarse)").matches;
+    const reducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
 
-    // Card data: 6 services (primary) + 14 tech tags (secondary)
-    const cards = [
-      { label: '3D Animation', href: '#services', type: 'service' },
-      { label: 'Web Applications', href: '#services', type: 'service' },
-      { label: 'Websites', href: '#services', type: 'service' },
-      { label: 'AR/VR Experiences', href: '#services', type: 'service' },
-      { label: 'AI Automations', href: '#services', type: 'service' },
-      { label: 'Branding & Design', href: '#services', type: 'service' },
-      { label: 'Character Design', href: '#services', type: 'tech' },
-      { label: 'Motion Graphics', href: '#services', type: 'tech' },
-      { label: 'React', href: '#services', type: 'tech' },
-      { label: 'Next.js', href: '#services', type: 'tech' },
-      { label: 'Node.js', href: '#services', type: 'tech' },
-      { label: 'Unity', href: '#services', type: 'tech' },
-      { label: 'WebXR', href: '#services', type: 'tech' },
-      { label: 'Machine Learning', href: '#services', type: 'tech' },
-      { label: 'UI/UX Design', href: '#services', type: 'tech' },
-      { label: 'WordPress', href: '#services', type: 'tech' },
-      { label: 'Blender', href: '#services', type: 'tech' },
-      { label: 'LLM Integration', href: '#services', type: 'tech' },
-      { label: 'Spatial Computing', href: '#services', type: 'tech' },
-      { label: 'E-Commerce', href: '#services', type: 'tech' },
-    ];
+    // Derive card data from service cards in the DOM
+    const serviceCards = document.querySelectorAll(".service-card");
+    const cards = [];
+
+    serviceCards.forEach((card) => {
+      const id = card.id;
+      const href = "#" + id;
+      const title = card.querySelector(".service-title")?.textContent.trim();
+
+      // Add the service name card (primary)
+      if (title && id) {
+        cards.push({ label: title, href, type: "service" });
+      }
+
+      // Add each tag as a tech card (secondary)
+      card.querySelectorAll(".tag").forEach((tag) => {
+        cards.push({ label: tag.textContent.trim(), href, type: "tech" });
+      });
+    });
 
     // Generate DOM elements
-    const cardEls = cards.map(card => {
-      const a = document.createElement('a');
-      a.className = 'swarm-card';
+    const cardEls = cards.map((card) => {
+      const a = document.createElement("a");
+      a.className = "swarm-card";
       a.href = card.href;
       a.textContent = card.label;
-      a.setAttribute('data-card-type', card.type);
+      a.setAttribute("data-card-type", card.type);
       container.appendChild(a);
       return a;
+    });
+
+    // Register smooth scroll on dynamically created cards
+    cardEls.forEach((a) => {
+      a.addEventListener("click", function (e) {
+        const href = this.getAttribute("href");
+        const target = document.querySelector(href);
+        if (target) {
+          e.preventDefault();
+          const headerHeight = header.offsetHeight;
+          const targetPos =
+            target.getBoundingClientRect().top +
+            window.scrollY -
+            headerHeight -
+            20;
+          window.scrollTo({ top: targetPos, behavior: "smooth" });
+        }
+      });
     });
 
     // Skip physics on touch/reduced-motion (CSS handles static layout)
@@ -195,7 +219,12 @@
 
     // Physics state per card
     const state = cardEls.map(() => ({
-      x: 0, y: 0, vx: 0, vy: 0, w: 0, h: 0,
+      x: 0,
+      y: 0,
+      vx: 0,
+      vy: 0,
+      w: 0,
+      h: 0,
     }));
 
     // Mouse state
@@ -223,25 +252,28 @@
     }
 
     // Mouse tracking
-    hero.addEventListener('mousemove', (e) => {
+    hero.addEventListener("mousemove", (e) => {
       const rect = hero.getBoundingClientRect();
       mouse.x = e.clientX - rect.left;
       mouse.y = e.clientY - rect.top;
       mouse.active = true;
     });
 
-    hero.addEventListener('mouseleave', () => {
+    hero.addEventListener("mouseleave", () => {
       mouse.active = false;
     });
 
     // Physics constants
-    const ATTRACTION = 0.0008;
-    const SEPARATION_DIST = 120;
-    const SEPARATION_FORCE = 0.8;
+    const ATTRACTION = 0.11;
+    const ATTRACT_RANGE = 550;
+    const SEPARATION_DIST = 90;
+    const SEPARATION_FORCE = 0.5;
     const DAMPING = 0.92;
     const MAX_SPEED = 4;
     const EDGE_PUSH = 0.3;
     const ACTIVE_RADIUS = 80;
+    const SCALE_RANGE = 250;
+    const MAX_SCALE = 1.25;
 
     let activeIndex = -1;
     let heroVisible = true;
@@ -262,14 +294,18 @@
         const cx = s.x + s.w / 2;
         const cy = s.y + s.h / 2;
 
-        // Attraction toward cursor
+        // Distance-attenuated attraction toward cursor
         if (mouse.active) {
           const dx = mouse.x - cx;
           const dy = mouse.y - cy;
           const dist = Math.sqrt(dx * dx + dy * dy);
-          const cappedDist = Math.max(dist, 50);
-          s.vx += (dx / cappedDist) * ATTRACTION * cappedDist;
-          s.vy += (dy / cappedDist) * ATTRACTION * cappedDist;
+
+          if (dist < ATTRACT_RANGE && dist > 1) {
+            const t = 1 - dist / ATTRACT_RANGE;
+            const strength = ATTRACTION * t * t;
+            s.vx += (dx / dist) * strength;
+            s.vy += (dy / dist) * strength;
+          }
 
           // Track closest to cursor for active state
           if (dist < closestDist) {
@@ -287,7 +323,8 @@
           const dy = cy - ocy;
           const dist = Math.sqrt(dx * dx + dy * dy);
           if (dist < SEPARATION_DIST && dist > 0) {
-            const force = (SEPARATION_DIST - dist) / SEPARATION_DIST * SEPARATION_FORCE;
+            const force =
+              ((SEPARATION_DIST - dist) / SEPARATION_DIST) * SEPARATION_FORCE;
             const nx = dx / dist;
             const ny = dy / dist;
             s.vx += nx * force;
@@ -324,48 +361,75 @@
       }
 
       // Active card detection
-      const newActive = (closestDist < ACTIVE_RADIUS) ? closestIdx : -1;
+      const newActive = closestDist < ACTIVE_RADIUS ? closestIdx : -1;
       if (newActive !== activeIndex) {
-        if (activeIndex >= 0) cardEls[activeIndex].classList.remove('swarm-card--active');
-        if (newActive >= 0) cardEls[newActive].classList.add('swarm-card--active');
+        if (activeIndex >= 0)
+          cardEls[activeIndex].classList.remove("swarm-card--active");
+        if (newActive >= 0)
+          cardEls[newActive].classList.add("swarm-card--active");
         activeIndex = newActive;
       }
 
-      // Batch render
+      // Batch render with z-space proximity scaling
       for (let i = 0; i < n; i++) {
-        cardEls[i].style.transform = 'translate(' + state[i].x.toFixed(1) + 'px,' + state[i].y.toFixed(1) + 'px)';
+        let scale = 1;
+        if (mouse.active) {
+          const cx = state[i].x + state[i].w / 2;
+          const cy = state[i].y + state[i].h / 2;
+          const dx = mouse.x - cx;
+          const dy = mouse.y - cy;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < SCALE_RANGE) {
+            const t = 1 - dist / SCALE_RANGE;
+            scale = 1 + (MAX_SCALE - 1) * t * t;
+          }
+        }
+        cardEls[i].style.transform =
+          "translate(" +
+          state[i].x.toFixed(1) +
+          "px," +
+          state[i].y.toFixed(1) +
+          "px) scale(" +
+          scale.toFixed(3) +
+          ")";
       }
     }
 
     function loop() {
-      if (!heroVisible) { animId = null; return; }
+      if (!heroVisible) {
+        animId = null;
+        return;
+      }
       updatePhysics();
       animId = requestAnimationFrame(loop);
     }
 
     // IntersectionObserver to pause when hero scrolls off-screen
-    const visObs = new IntersectionObserver((entries) => {
-      heroVisible = entries[0].isIntersecting;
-      if (heroVisible && !animId) {
-        animId = requestAnimationFrame(loop);
-      }
-    }, { threshold: 0 });
+    const visObs = new IntersectionObserver(
+      (entries) => {
+        heroVisible = entries[0].isIntersecting;
+        if (heroVisible && !animId) {
+          animId = requestAnimationFrame(loop);
+        }
+      },
+      { threshold: 0 },
+    );
     visObs.observe(hero);
 
     // Resize handler
-    window.addEventListener('resize', () => {
+    window.addEventListener("resize", () => {
       measure();
       const rect = hero.getBoundingClientRect();
       const W = rect.width;
       const H = rect.height;
-      state.forEach(s => {
+      state.forEach((s) => {
         s.x = Math.min(s.x, W - s.w);
         s.y = Math.min(s.y, H - s.h);
       });
     });
 
     // Initialize after layout
-    window.addEventListener('load', () => {
+    window.addEventListener("load", () => {
       measure();
       scatter();
       animId = requestAnimationFrame(loop);
@@ -373,19 +437,18 @@
   })();
 
   // ── SERVICE CARD TILT (subtle, desktop only) ──────────────
-  if (window.matchMedia('(min-width: 769px)').matches) {
-    document.querySelectorAll('.service-card').forEach(card => {
-      card.addEventListener('mousemove', (e) => {
+  if (window.matchMedia("(min-width: 769px)").matches) {
+    document.querySelectorAll(".service-card").forEach((card) => {
+      card.addEventListener("mousemove", (e) => {
         const rect = card.getBoundingClientRect();
         const x = (e.clientX - rect.left) / rect.width - 0.5;
         const y = (e.clientY - rect.top) / rect.height - 0.5;
         card.style.transform = `translateY(-4px) perspective(600px) rotateX(${y * -3}deg) rotateY(${x * 3}deg)`;
       });
 
-      card.addEventListener('mouseleave', () => {
-        card.style.transform = '';
+      card.addEventListener("mouseleave", () => {
+        card.style.transform = "";
       });
     });
   }
-
 })();

@@ -485,6 +485,7 @@ em {
   display: inline-flex;
   align-items: center;
   user-select: none;
+  transform-origin: center center;
 }
 
 .swarm-card[data-card-type="service"] {
@@ -514,6 +515,7 @@ em {
   color: var(--accent) !important;
   background: var(--accent-light) !important;
   box-shadow: var(--card-shadow-hover) !important;
+  z-index: 10;
 }
 
 /* Swarm gradient fade overlay */
