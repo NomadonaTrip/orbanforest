@@ -1,12 +1,13 @@
 /* ============================================================
-   CONTACT US PAGE
+   CONTACT US PAGE — Aligned with index.html design system
+   Uses CSS variables from styles.css
    ============================================================ */
 
 /* ── CONTACT HERO ─────────────────────────────────────────── */
 .contact-hero {
   padding: 10rem 0 4rem;
   position: relative;
-  background: var(--hero-gradient);
+  background: var(--bg-dark);
 }
 
 .contact-hero-content {
@@ -14,35 +15,59 @@
 }
 
 .contact-eyebrow {
-  font-size: 0.85rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.12em;
   color: var(--accent);
-  margin-bottom: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.contact-eyebrow::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background: var(--accent);
+  border-radius: 50%;
+  display: inline-block;
 }
 
 .contact-headline {
-  letter-spacing: -0.02em;
-  margin-bottom: 1.5rem;
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: clamp(2.8rem, 5.5vw, 4.2rem);
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  margin-bottom: 1.75rem;
+  color: var(--text-white);
+}
+
+.hero-accent {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--accent);
 }
 
 .contact-hero-sub {
-  font-size: clamp(1.05rem, 1.5vw, 1.2rem);
-  color: var(--text-secondary);
+  font-size: clamp(1rem, 1.3vw, 1.15rem);
+  color: var(--text-white-muted);
   max-width: 520px;
-  line-height: 1.7;
+  line-height: 1.75;
 }
 
 /* ── CONTACT SECTION ──────────────────────────────────────── */
 .contact-section {
-  padding: var(--space-xl) 0 var(--space-2xl);
+  padding: 5rem 0 7rem;
 }
 
 .contact-grid {
   display: grid;
   grid-template-columns: 0.8fr 1.2fr;
-  gap: var(--space-xl);
+  gap: 4rem;
   align-items: start;
 }
 
@@ -53,12 +78,15 @@
 }
 
 .contact-info-title {
+  font-family: var(--font-sans);
   font-size: 1.5rem;
+  font-weight: 500;
   margin-bottom: 1rem;
+  color: var(--text-white);
 }
 
 .contact-info-text {
-  color: var(--text-secondary);
+  color: var(--text-white-muted);
   line-height: 1.75;
   font-size: 0.95rem;
 }
@@ -81,13 +109,13 @@
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: var(--text-tertiary);
+  color: var(--text-white-dim);
 }
 
 .contact-detail-value {
   font-size: 1rem;
   font-weight: 500;
-  color: var(--text-primary);
+  color: var(--text-white);
   transition: color var(--transition-fast);
 }
 
@@ -101,7 +129,7 @@ a.contact-detail-value:hover {
   align-items: center;
   gap: 0.6rem;
   font-size: 0.85rem;
-  color: var(--text-secondary);
+  color: var(--text-white-muted);
 }
 
 .availability-dot {
@@ -130,11 +158,21 @@ a.contact-detail-value:hover {
 
 /* ── CONTACT FORM ─────────────────────────────────────────── */
 .contact-form-wrap {
-  background: var(--bg-card);
-  border: 1px solid var(--border-light);
-  border-radius: var(--radius-lg);
+  background: #111111;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius-section);
   padding: 2.5rem;
-  box-shadow: var(--card-shadow);
+  --text-dark: #f6f6f6;
+  --text-dark-muted: #999999;
+  --border-light: rgba(255,255,255,0.1);
+}
+
+[data-theme="dark"] .contact-form-wrap {
+  background: #f6f6f6;
+  border: none;
+  --text-dark: #111111;
+  --text-dark-muted: #555555;
+  --border-light: #e0e0e0;
 }
 
 .form-group {
@@ -145,11 +183,12 @@ a.contact-detail-value:hover {
 
 .form-group label {
   display: block;
+  font-family: var(--font-sans);
   font-size: 0.8rem;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  color: var(--text-tertiary);
+  color: var(--text-dark-muted);
   margin-bottom: 0.5rem;
   transition: color var(--transition-fast);
 }
@@ -161,12 +200,12 @@ a.contact-detail-value:hover {
 .form-group input,
 .form-group textarea {
   width: 100%;
-  font-family: var(--font-body);
+  font-family: var(--font-sans);
   font-size: 1rem;
-  color: var(--text-primary);
-  background: var(--bg-primary);
-  border: 1.5px solid var(--border);
-  border-radius: var(--radius-md);
+  color: var(--text-dark);
+  background: transparent;
+  border: 1.5px solid var(--border-light);
+  border-radius: var(--radius-card);
   padding: 0.9rem 1.1rem;
   transition: all var(--transition-fast);
   outline: none;
@@ -174,19 +213,15 @@ a.contact-detail-value:hover {
 
 .form-group input::placeholder,
 .form-group textarea::placeholder {
-  color: var(--text-tertiary);
+  color: var(--text-dark-muted);
   font-weight: 300;
+  opacity: 0.6;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
   border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(46, 107, 52, 0.08);
-}
-
-[data-theme="dark"] .form-group input:focus,
-[data-theme="dark"] .form-group textarea:focus {
-  box-shadow: 0 0 0 3px rgba(92, 191, 99, 0.1);
+  box-shadow: 0 0 0 3px var(--accent-glow);
 }
 
 .form-group textarea {
@@ -255,7 +290,7 @@ a.contact-detail-value:hover {
   width: 64px;
   height: 64px;
   border-radius: 50%;
-  background: var(--accent-light);
+  background: var(--accent-glow);
   color: var(--accent);
   display: flex;
   align-items: center;
@@ -265,19 +300,37 @@ a.contact-detail-value:hover {
 
 .success-title {
   font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--text-dark);
 }
 
 .success-text {
-  color: var(--text-secondary);
+  color: var(--text-dark-muted);
   max-width: 320px;
   line-height: 1.6;
+}
+
+.form-success .btn--ghost {
+  border-color: var(--border-light);
+  color: var(--text-dark);
+  margin-top: 0.5rem;
+}
+
+.form-success .btn--ghost:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* ── CONTACT FOOTER — match index.html footer ─────────────── */
+.contact-page .site-footer .footer-grid {
+  grid-template-columns: 1fr 1fr;
 }
 
 /* ── CONTACT PAGE RESPONSIVE ──────────────────────────────── */
 @media (max-width: 1024px) {
   .contact-grid {
     grid-template-columns: 1fr;
-    gap: var(--space-lg);
+    gap: 3rem;
   }
 
   .contact-info {
