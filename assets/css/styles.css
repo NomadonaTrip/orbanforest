@@ -54,9 +54,9 @@ ol {
   --text-dark: #1a1a17;
   --text-dark-muted: #5a5a52;
 
-  --accent: #00c261;
-  --accent-hover: #00a854;
-  --accent-glow: rgba(0, 194, 97, 0.15);
+  --accent: #a855f7;
+  --accent-hover: #9333ea;
+  --accent-glow: rgba(168, 85, 247, 0.15);
 
   --border-dark: rgba(0, 0, 0, 0.08);
   --border-light: #e0dfd8;
@@ -85,9 +85,9 @@ ol {
   --text-white-dim: #555555;
   --text-dark: #f6f6f6;
   --text-dark-muted: #999999;
-  --accent: #00c261;
-  --accent-hover: #00a854;
-  --accent-glow: rgba(0, 194, 97, 0.12);
+  --accent: #a855f7;
+  --accent-hover: #9333ea;
+  --accent-glow: rgba(168, 85, 247, 0.12);
   --border-dark: rgba(255, 255, 255, 0.08);
   --border-light: #2a2a2a;
   color-scheme: dark;
@@ -713,6 +713,13 @@ h3 {
 .explore-link:hover svg {
   transform: translate(2px, -2px);
 }
+.project-card .explore-link::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+.project-card { cursor: pointer; }
 
 /* ── SERVICES (Light section, Ziff-style rows) ──────── */
 .services-rows {
