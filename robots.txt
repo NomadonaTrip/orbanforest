@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+Disallow: /archive/
+Disallow: /mockups/
+Disallow: /ui-iterations/
+Disallow: /.claude/
+Disallow: /.playwright-mcp/
+
+Sitemap: https://orbanforest.ca/sitemap.xml
