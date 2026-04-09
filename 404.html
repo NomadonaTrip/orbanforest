@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="The page you're looking for doesn't exist. Navigate back to Orban Forest — web design, AI automation, and digital marketing in Brantford, Cambridge, and Paris ON." />
+    <link rel="icon" type="image/png" href="/assets/img/logo/favicon.png" />
+    <title>Page Not Found | Orban Forest Inc.</title>
+    <meta name="robots" content="noindex, nofollow" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300;1,9..40,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <style>
+      .error-section {
+        min-height: 70vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 4rem 1.5rem;
+      }
+      .error-code {
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(6rem, 15vw, 12rem);
+        font-weight: 700;
+        line-height: 1;
+        color: var(--accent);
+        margin-bottom: 0.25rem;
+      }
+      .error-heading {
+        font-size: clamp(1.5rem, 3vw, 2rem);
+        font-weight: 600;
+        margin-bottom: 1rem;
+        color: var(--text-primary);
+      }
+      .error-text {
+        font-size: 1.05rem;
+        color: var(--text-secondary);
+        max-width: 480px;
+        margin: 0 auto 2.5rem;
+        line-height: 1.7;
+      }
+      .error-links {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .error-links .btn {
+        min-width: 160px;
+      }
+      .btn--secondary {
+        background: transparent;
+        border: 1.5px solid var(--border);
+        color: var(--text-primary);
+        padding: 0.75rem 1.75rem;
+        border-radius: var(--radius-btn, 6px);
+        font-size: 0.925rem;
+        font-weight: 500;
+        text-decoration: none;
+        transition: border-color 0.25s, color 0.25s;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      .btn--secondary:hover {
+        border-color: var(--accent);
+        color: var(--accent);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ========== HEADER / NAV ========== -->
+    <header class="site-header" id="header">
+      <nav class="nav-container">
+        <a href="/" class="nav-logo" aria-label="Orban Forest Home">
+          <img
+            src="/assets/img/logo/logo-white.svg"
+            alt="Orban Forest logo"
+            class="logo-img"
+          />
+          <span class="logo-text">Orban Forest</span>
+        </a>
+
+        <div class="nav-links" id="navLinks">
+          <a href="/#services" class="nav-link">Services</a>
+          <a href="/#work" class="nav-link">Work</a>
+          <a href="/#process" class="nav-link">Process</a>
+          <a href="/blog" class="nav-link">Blog</a>
+          <a href="/contact-us" class="nav-link nav-link--cta">
+            Let's Talk
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 14 14"
+              fill="none"
+              aria-hidden="true"
+            >
+              <path
+                d="M1 13L13 1M13 1H3M13 1V11"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+        </div>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </header>
+
+    <!-- ========== 404 CONTENT ========== -->
+    <section class="error-section">
+      <div>
+        <p class="error-code">404</p>
+        <h1 class="error-heading">Page not found</h1>
+        <p class="error-text">
+          The page you're looking for may have moved or no longer exists.
+          Let's get you back on track.
+        </p>
+        <div class="error-links">
+          <a href="/" class="btn btn--primary">
+            Back to Home
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+              <path d="M1 7H13M13 7L7 1M13 7L7 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <a href="/blog" class="btn btn--secondary">
+            Read Our Blog
+          </a>
+          <a href="/contact-us" class="btn btn--secondary">
+            Contact Us
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <img
+              src="/assets/img/logo/logo-white.svg"
+              alt="Orban Forest logo"
+              class="logo-img"
+            />
+            <div class="footer-contact">
+              <p>Brantford, Ontario, Canada</p>
+              <a href="tel:+13659948961">+1 (365) 994-8961</a>
+              <a href="mailto:hello@orbanforest.ca">hello@orbanforest.ca</a>
+            </div>
+          </div>
+
+          <div class="footer-nav-group">
+            <p class="footer-nav-title">Design</p>
+            <a href="/#service-web-design">Web Design</a>
+            <a href="/#service-web-design">UI/UX Design</a>
+            <a href="/#service-3d-animation">Animation</a>
+            <a href="/#service-arvr">AR/VR Experiences</a>
+          </div>
+
+          <div class="footer-nav-group">
+            <p class="footer-nav-title">Technology</p>
+            <a href="/#service-web-apps">Web Applications</a>
+            <a href="/#service-ai">AI Automations</a>
+            <a href="/#service-web-apps">Full-Stack Dev</a>
+          </div>
+
+          <div class="footer-nav-group">
+            <p class="footer-nav-title">Marketing</p>
+            <a href="/#service-digital-marketing">SEO</a>
+            <a href="/#service-digital-marketing">Content Strategy</a>
+            <a href="/#service-digital-marketing">Social Media</a>
+            <a href="/#service-digital-marketing">PPC</a>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2026 Orban Forest Inc. All rights reserved. &middot; Designed by <a href="https://www.orbanforest.ca/">Orban Forest Inc.</a></p>
+          <div class="footer-bottom-links">
+            <a href="/privacy-policy">Privacy Policy</a>
+            <a href="/contact-us">Contact</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>

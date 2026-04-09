@@ -1,18 +1,15 @@
 # Clean URLs for orbanforest.ca
 # Internally rewrites /foo -> /foo.html, and 301-redirects /foo.html -> /foo
 
+ErrorDocument 404 /404.html
+
 RewriteEngine On
 
 # 1. 301 redirect old .html URLs to clean URLs (preserves SEO link equity)
 RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?] [NC]
 RewriteRule ^ /%1 [R=301,L,NE]
 
-# 2. Explicit rewrite for /blog -> /blog.html
-#    (needed because the /blog/ directory already exists for blog posts,
-#    so the generic rule below would skip it via the !-d check)
-RewriteRule ^blog/?$ blog.html [L]
-
-# 3. Generic: rewrite /foo -> /foo.html if the .html file exists
+# 2. Generic: rewrite /foo -> /foo.html if the .html file exists
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME}.html -f
