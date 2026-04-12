@@ -1,0 +1,1397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Book, Heard and Seen — AR Platform for Children's Book Authors</title>
+  <meta name="description" content="A visibility platform for self-published children's book authors. AI-powered audio and AR bring your illustrations to life. Parents share. Schools notice. Your book gets found.">
+
+  <link rel="icon" type="image/png" href="assets/img/logo/favicon.png">
+
+  <!-- Fonts: Young Serif (display) + Figtree (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&family=Young+Serif&display=swap" rel="stylesheet">
+
+  <style>
+    /* ============================================================
+       AR CHILDREN'S BOOK PLATFORM — Landing Page
+       Aesthetic: "The Warm Shelf" — bookshop warmth,
+       literary confidence, parent trust
+       ============================================================ */
+
+    /* ── CUSTOM PROPERTIES ─────────────────────────────────── */
+    :root {
+      --cream: oklch(0.965 0.008 75);
+      --warm-white: oklch(0.985 0.004 75);
+      --text: oklch(0.22 0.015 55);
+      --text-mid: oklch(0.38 0.012 55);
+      --text-secondary: oklch(0.48 0.012 55);
+      --text-tertiary: oklch(0.62 0.008 55);
+      --terracotta: oklch(0.52 0.14 35);
+      --terracotta-hover: oklch(0.46 0.15 35);
+      --terracotta-soft: oklch(0.94 0.025 35);
+      --teal: oklch(0.40 0.07 210);
+      --teal-soft: oklch(0.94 0.02 210);
+      --gold: oklch(0.76 0.10 80);
+      --gold-soft: oklch(0.95 0.025 80);
+      --deep: oklch(0.20 0.015 55);
+      --deep-mid: oklch(0.28 0.015 55);
+      --deep-text: oklch(0.92 0.006 75);
+      --deep-text-muted: oklch(0.72 0.008 75);
+      --border: oklch(0.90 0.005 75);
+      --border-strong: oklch(0.84 0.006 75);
+
+      --font-display: 'Young Serif', Georgia, serif;
+      --font-body: 'Figtree', system-ui, sans-serif;
+
+      --space-xs: 4px;
+      --space-sm: 8px;
+      --space-md: 16px;
+      --space-lg: 24px;
+      --space-xl: 32px;
+      --space-2xl: 48px;
+      --space-3xl: 64px;
+      --space-4xl: 96px;
+      --space-5xl: 128px;
+
+      --container: 1100px;
+      --container-narrow: 680px;
+      --gutter: clamp(1.25rem, 4vw, 2.5rem);
+
+      --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+      --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* ── RESET ─────────────────────────────────────────────── */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+    button { background: none; border: none; cursor: pointer; font: inherit; color: inherit; }
+    ul, ol { list-style: none; }
+
+    /* ── BASE ──────────────────────────────────────────────── */
+    body {
+      font-family: var(--font-body);
+      font-size: 1.0625rem;
+      font-weight: 400;
+      line-height: 1.65;
+      color: var(--text-secondary);
+      background: var(--cream);
+    }
+
+    h1, h2, h3, h4 {
+      font-family: var(--font-display);
+      font-weight: 400;
+      color: var(--text);
+      line-height: 1.15;
+    }
+
+    h1 { font-size: clamp(2.5rem, 5vw + 0.5rem, 4rem); letter-spacing: -0.015em; }
+    h2 { font-size: clamp(1.85rem, 3.5vw + 0.25rem, 2.75rem); letter-spacing: -0.01em; line-height: 1.2; }
+    h3 { font-size: clamp(1.3rem, 1.5vw + 0.5rem, 1.6rem); line-height: 1.3; }
+
+    p { max-width: 65ch; }
+
+    .container {
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 0 var(--gutter);
+    }
+    .container--narrow {
+      max-width: var(--container-narrow);
+      margin: 0 auto;
+      padding: 0 var(--gutter);
+    }
+
+    .section-label {
+      font-family: var(--font-body);
+      font-size: 0.8125rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--terracotta);
+      display: block;
+      margin-bottom: var(--space-lg);
+    }
+
+    /* ── BUTTONS ───────────────────────────────────────────── */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 0.875rem 2rem;
+      border-radius: 8px;
+      transition: background 200ms var(--ease-out-quart),
+                  transform 200ms var(--ease-out-quart),
+                  box-shadow 200ms var(--ease-out-quart);
+    }
+    .btn-primary {
+      background: var(--terracotta);
+      color: var(--warm-white);
+    }
+    .btn-primary:hover {
+      background: var(--terracotta-hover);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 16px oklch(0.52 0.14 35 / 0.2);
+    }
+    .btn-outline {
+      background: transparent;
+      border: 1.5px solid var(--terracotta);
+      color: var(--terracotta);
+    }
+    .btn-outline:hover {
+      background: var(--terracotta-soft);
+    }
+    .btn-sm { font-size: 0.875rem; padding: 0.625rem 1.5rem; }
+    .btn-lg { font-size: 1.0625rem; padding: 1rem 2.5rem; }
+
+    /* ── NAV ───────────────────────────────────────────────── */
+    .nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: var(--space-md) 0;
+      transition: background 300ms, box-shadow 300ms;
+    }
+    .nav.scrolled {
+      background: oklch(0.965 0.008 75 / 0.92);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      box-shadow: 0 1px 0 var(--border);
+    }
+    .nav-inner {
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 0 var(--gutter);
+      display: flex;
+      align-items: center;
+      gap: var(--space-xl);
+    }
+    .nav-wordmark {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      color: var(--text);
+      white-space: nowrap;
+    }
+    .nav-links {
+      display: flex;
+      gap: var(--space-xl);
+      margin-left: auto;
+    }
+    .nav-links a {
+      font-size: 0.9375rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      transition: color 200ms;
+    }
+    .nav-links a:hover { color: var(--text); }
+    .nav-cta { margin-left: var(--space-md); }
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      margin-left: auto;
+      padding: var(--space-sm);
+    }
+    .nav-toggle span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--text);
+      transition: transform 300ms var(--ease-out-quart), opacity 200ms;
+    }
+    .nav-toggle.open span:nth-child(1) { transform: rotate(45deg) translate(4px, 4px); }
+    .nav-toggle.open span:nth-child(2) { opacity: 0; }
+    .nav-toggle.open span:nth-child(3) { transform: rotate(-45deg) translate(4px, -4px); }
+
+    .nav-mobile {
+      display: none;
+      position: fixed;
+      top: 56px; left: 0; right: 0;
+      background: var(--cream);
+      padding: var(--space-xl) var(--gutter);
+      border-bottom: 1px solid var(--border);
+      flex-direction: column;
+      gap: var(--space-lg);
+    }
+    .nav-mobile.open { display: flex; }
+    .nav-mobile a {
+      font-size: 1.0625rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+    }
+
+    /* ── HERO ──────────────────────────────────────────────── */
+    .hero {
+      padding: clamp(7rem, 14vh, 10rem) 0 clamp(4rem, 8vh, 6rem);
+    }
+    .hero-inner {
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 0 var(--gutter);
+      display: grid;
+      grid-template-columns: 1fr 0.75fr;
+      gap: var(--space-3xl);
+      align-items: center;
+    }
+    .hero-badge {
+      display: inline-block;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--terracotta);
+      margin-bottom: var(--space-lg);
+    }
+    .hero h1 {
+      margin-bottom: var(--space-lg);
+    }
+    .hero-sub {
+      font-size: clamp(1.0625rem, 1.2vw, 1.1875rem);
+      line-height: 1.7;
+      color: var(--text-mid);
+      margin-bottom: var(--space-2xl);
+      max-width: 52ch;
+    }
+
+    /* Book mockup in hero */
+    .hero-visual {
+      display: flex;
+      justify-content: center;
+      position: relative;
+    }
+    .hero-book {
+      width: 240px;
+      height: 320px;
+      background: var(--warm-white);
+      border-radius: 2px 10px 10px 2px;
+      position: relative;
+      box-shadow:
+        -6px 0 0 oklch(0.78 0.04 55),
+        -10px 0 0 oklch(0.84 0.03 55),
+        0 24px 64px oklch(0.22 0.015 55 / 0.12),
+        0 8px 24px oklch(0.22 0.015 55 / 0.06);
+    }
+    .hero-book-inner {
+      position: absolute;
+      inset: 24px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-md);
+    }
+    .hero-book-lines {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      width: 100%;
+      margin-bottom: auto;
+    }
+    .hero-book-lines span {
+      display: block;
+      height: 3px;
+      border-radius: 2px;
+      background: oklch(0.90 0.005 75);
+    }
+    .hero-book-lines span:nth-child(1) { width: 80%; }
+    .hero-book-lines span:nth-child(2) { width: 100%; }
+    .hero-book-lines span:nth-child(3) { width: 65%; }
+    .hero-play-btn {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: var(--terracotta);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: auto 0;
+      cursor: pointer;
+      transition: transform 300ms var(--ease-out-quart), box-shadow 300ms;
+    }
+    .hero-play-btn:hover {
+      transform: scale(1.06);
+      box-shadow: 0 8px 24px oklch(0.52 0.14 35 / 0.25);
+    }
+    .hero-play-btn svg { margin-left: 3px; }
+    .hero-book-caption {
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: var(--text-tertiary);
+      text-align: center;
+      margin-top: auto;
+    }
+
+    /* Floating particles around book */
+    .hero-particle {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--gold);
+      opacity: 0;
+      animation: particle-float 5s var(--ease-out-quart) infinite;
+    }
+    .hero-particle:nth-child(1) { top: 10%; right: -20px; animation-delay: 0s; }
+    .hero-particle:nth-child(2) { bottom: 25%; left: -16px; animation-delay: -1.8s; width: 6px; height: 6px; }
+    .hero-particle:nth-child(3) { top: 55%; right: -28px; animation-delay: -3.2s; width: 5px; height: 5px; background: var(--terracotta); }
+
+    @keyframes particle-float {
+      0%, 100% { transform: translateY(0); opacity: 0.3; }
+      50% { transform: translateY(-14px); opacity: 0.6; }
+    }
+
+    /* ── MODES SECTION ─────────────────────────────────────── */
+    .modes {
+      background: var(--warm-white);
+      padding: clamp(4rem, 8vh, 6rem) 0;
+    }
+    .modes-header {
+      text-align: center;
+      margin-bottom: var(--space-2xl);
+    }
+    .modes-header .section-label { margin-bottom: var(--space-md); }
+
+    .mode-tabs {
+      display: inline-flex;
+      background: var(--cream);
+      border-radius: 10px;
+      padding: 4px;
+      gap: 4px;
+    }
+    .mode-tab {
+      font-family: var(--font-body);
+      font-size: 0.9375rem;
+      font-weight: 500;
+      padding: 0.625rem 1.75rem;
+      border-radius: 7px;
+      color: var(--text-secondary);
+      transition: all 250ms var(--ease-out-quart);
+    }
+    .mode-tab:hover { color: var(--text); }
+    .mode-tab.active {
+      background: var(--warm-white);
+      color: var(--text);
+      box-shadow: 0 1px 4px oklch(0.22 0.015 55 / 0.06);
+    }
+
+    .mode-panels { position: relative; }
+    .mode-panel {
+      display: none;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-3xl);
+      align-items: center;
+      padding: var(--space-2xl);
+      border-radius: 16px;
+      transition: background 400ms var(--ease-out-quart);
+    }
+    .mode-panel.active { display: grid; }
+    .mode-panel[data-mode="listen"] { background: var(--gold-soft); }
+    .mode-panel[data-mode="discover"] { background: var(--teal-soft); }
+    .mode-panel[data-mode="watch"] { background: var(--terracotta-soft); }
+
+    .mode-text h3 {
+      margin-bottom: var(--space-md);
+    }
+    .mode-text > p {
+      color: var(--text-mid);
+      margin-bottom: var(--space-xl);
+    }
+    .mode-meta {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-md);
+      margin-bottom: var(--space-lg);
+    }
+    .mode-meta > div {
+      display: flex;
+      gap: var(--space-md);
+    }
+    .mode-meta dt {
+      font-size: 0.8125rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-tertiary);
+      min-width: 100px;
+      flex-shrink: 0;
+    }
+    .mode-meta dd {
+      font-size: 0.9375rem;
+      color: var(--text-mid);
+    }
+    .mode-rec {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--terracotta);
+    }
+
+    /* Mode visual — abstract representation */
+    .mode-visual {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 280px;
+      border-radius: 12px;
+      position: relative;
+      overflow: hidden;
+    }
+    .mode-visual-icon {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .mode-panel[data-mode="listen"] .mode-visual-icon { background: oklch(0.76 0.10 80 / 0.3); }
+    .mode-panel[data-mode="discover"] .mode-visual-icon { background: oklch(0.40 0.07 210 / 0.15); }
+    .mode-panel[data-mode="watch"] .mode-visual-icon { background: oklch(0.52 0.14 35 / 0.15); }
+
+    /* Sound wave rings for Listen */
+    .mode-waves {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      pointer-events: none;
+    }
+    .mode-waves span {
+      position: absolute;
+      border-radius: 50%;
+      border: 1.5px solid oklch(0.76 0.10 80 / 0.15);
+      animation: wave-pulse 3s ease-out infinite;
+    }
+    .mode-waves span:nth-child(1) { width: 120px; height: 120px; animation-delay: 0s; }
+    .mode-waves span:nth-child(2) { width: 170px; height: 170px; animation-delay: 0.6s; }
+    .mode-waves span:nth-child(3) { width: 220px; height: 220px; animation-delay: 1.2s; }
+
+    @keyframes wave-pulse {
+      0% { transform: scale(0.8); opacity: 0.5; }
+      100% { transform: scale(1.1); opacity: 0; }
+    }
+
+    /* Floating dots for Discover */
+    .mode-dots span {
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: oklch(0.40 0.07 210 / 0.25);
+      animation: dot-drift 6s ease-in-out infinite;
+    }
+    .mode-dots span:nth-child(1) { top: 20%; left: 25%; animation-delay: 0s; }
+    .mode-dots span:nth-child(2) { top: 60%; right: 20%; animation-delay: -1.5s; width: 8px; height: 8px; }
+    .mode-dots span:nth-child(3) { bottom: 25%; left: 40%; animation-delay: -3s; width: 4px; height: 4px; }
+    .mode-dots span:nth-child(4) { top: 35%; right: 35%; animation-delay: -4s; }
+    .mode-dots span:nth-child(5) { bottom: 40%; left: 15%; animation-delay: -2s; width: 5px; height: 5px; }
+
+    @keyframes dot-drift {
+      0%, 100% { transform: translate(0, 0); opacity: 0.3; }
+      25% { transform: translate(8px, -12px); opacity: 0.6; }
+      75% { transform: translate(-6px, 8px); opacity: 0.4; }
+    }
+
+    .modes-quote {
+      text-align: center;
+      font-family: var(--font-display);
+      font-size: clamp(1.0625rem, 1.3vw, 1.1875rem);
+      color: var(--text-mid);
+      max-width: 56ch;
+      margin: var(--space-2xl) auto 0;
+      padding: var(--space-xl) 0;
+    }
+
+    /* ── PROBLEM ───────────────────────────────────────────── */
+    .problem {
+      padding: clamp(4rem, 8vh, 6rem) 0;
+    }
+    .problem-stat {
+      font-family: var(--font-display);
+      font-size: clamp(1.85rem, 3.5vw + 0.25rem, 2.75rem);
+      color: var(--text);
+      line-height: 1.2;
+      margin-bottom: var(--space-xl);
+      max-width: 20ch;
+    }
+    .problem-body {
+      font-size: 1.125rem;
+      line-height: 1.75;
+      max-width: 60ch;
+    }
+    .problem-context {
+      margin-top: var(--space-xl);
+      font-size: 0.9375rem;
+      color: var(--text-tertiary);
+      font-style: italic;
+    }
+
+    /* ── SOLUTION ──────────────────────────────────────────── */
+    .solution {
+      background: var(--warm-white);
+      padding: clamp(4rem, 8vh, 6rem) 0;
+    }
+    .solution h2 {
+      margin-bottom: var(--space-sm);
+    }
+    .solution-intro {
+      font-size: 1.125rem;
+      color: var(--text-mid);
+      margin-bottom: var(--space-3xl);
+      max-width: 50ch;
+    }
+    .solution-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-2xl) var(--space-3xl);
+    }
+    .solution-item {
+      display: flex;
+      gap: var(--space-lg);
+    }
+    .solution-num {
+      font-family: var(--font-display);
+      font-size: 2.5rem;
+      color: var(--border-strong);
+      line-height: 1;
+      flex-shrink: 0;
+      min-width: 48px;
+    }
+    .solution-item h3 {
+      margin-bottom: var(--space-sm);
+      font-size: 1.1875rem;
+    }
+    .solution-item p {
+      font-size: 0.9375rem;
+      line-height: 1.7;
+    }
+
+    /* ── HOW IT WORKS ──────────────────────────────────────── */
+    .how {
+      padding: clamp(4rem, 8vh, 6rem) 0;
+    }
+    .how h2 { margin-bottom: var(--space-3xl); }
+    .how-steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-2xl);
+    }
+    .how-step-num {
+      font-family: var(--font-display);
+      font-size: 3.5rem;
+      color: var(--terracotta-soft);
+      line-height: 1;
+      margin-bottom: var(--space-md);
+    }
+    .how-step h3 {
+      margin-bottom: var(--space-sm);
+      font-size: 1.125rem;
+    }
+    .how-step p {
+      font-size: 0.9375rem;
+      line-height: 1.7;
+    }
+
+    /* ── STORIES ───────────────────────────────────────────── */
+    .stories {
+      background: var(--deep);
+      padding: clamp(4.5rem, 9vh, 7rem) 0;
+      color: var(--deep-text);
+    }
+    .stories .section-label {
+      color: var(--gold);
+    }
+    .stories h2 {
+      color: var(--deep-text);
+      margin-bottom: var(--space-xl);
+    }
+    .stories-body {
+      font-size: 1.1875rem;
+      line-height: 1.8;
+      color: var(--deep-text-muted);
+      max-width: 58ch;
+    }
+    .stories-body strong {
+      color: var(--deep-text);
+      font-weight: 500;
+    }
+    .stories-close {
+      margin-top: var(--space-xl);
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      color: var(--deep-text);
+    }
+
+    /* ── REVENUE ───────────────────────────────────────────── */
+    .revenue {
+      background: var(--warm-white);
+      padding: clamp(4rem, 8vh, 6rem) 0;
+    }
+    .revenue h2 { margin-bottom: var(--space-lg); }
+    .revenue-intro {
+      font-size: 1.0625rem;
+      color: var(--text-mid);
+      margin-bottom: var(--space-2xl);
+      max-width: 55ch;
+    }
+    .revenue-points {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-xl) var(--space-3xl);
+    }
+    .revenue-point h3 {
+      font-size: 1.0625rem;
+      margin-bottom: var(--space-xs);
+    }
+    .revenue-point p {
+      font-size: 0.9375rem;
+      line-height: 1.7;
+    }
+
+    /* ── FOUNDING AUTHORS ──────────────────────────────────── */
+    .founding {
+      background: var(--terracotta);
+      padding: clamp(4rem, 8vh, 6rem) 0;
+      color: oklch(0.97 0.005 35);
+    }
+    .founding .section-label {
+      color: oklch(0.85 0.04 35);
+    }
+    .founding-inner {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: var(--space-3xl);
+      align-items: start;
+    }
+    .founding h2 {
+      color: oklch(0.97 0.005 35);
+      margin-bottom: var(--space-lg);
+    }
+    .founding-price {
+      display: flex;
+      align-items: baseline;
+      gap: var(--space-md);
+      margin-bottom: var(--space-xl);
+    }
+    .founding-price-current {
+      font-family: var(--font-display);
+      font-size: 3rem;
+      line-height: 1;
+    }
+    .founding-price-original {
+      font-size: 1.25rem;
+      text-decoration: line-through;
+      opacity: 0.55;
+    }
+    .founding-price-label {
+      font-size: 0.9375rem;
+      opacity: 0.75;
+    }
+    .founding-benefits {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-sm);
+      margin-bottom: var(--space-xl);
+    }
+    .founding-benefits li {
+      font-size: 1rem;
+      padding-left: var(--space-lg);
+      position: relative;
+    }
+    .founding-benefits li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      opacity: 0.5;
+    }
+    .founding-reqs {
+      font-size: 0.875rem;
+      opacity: 0.65;
+      line-height: 1.7;
+    }
+    .founding-cta-area { padding-top: var(--space-lg); }
+    .founding .btn {
+      background: oklch(0.97 0.005 35);
+      color: var(--terracotta);
+      font-weight: 700;
+    }
+    .founding .btn:hover {
+      background: oklch(1 0 0);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 20px oklch(0.22 0.015 55 / 0.15);
+    }
+
+    /* ── FOR PARENTS ───────────────────────────────────────── */
+    .parents {
+      padding: clamp(4rem, 8vh, 6rem) 0;
+    }
+    .parents h2 { margin-bottom: var(--space-lg); }
+    .parents-body {
+      font-size: 1.0625rem;
+      line-height: 1.75;
+      color: var(--text-mid);
+      margin-bottom: var(--space-xl);
+      max-width: 55ch;
+    }
+    .parents-assurances {
+      display: flex;
+      gap: var(--space-2xl);
+      margin-bottom: var(--space-xl);
+    }
+    .parents-assurances li {
+      font-size: 0.9375rem;
+      font-weight: 500;
+      color: var(--text);
+    }
+
+    /* ── FAQ ───────────────────────────────────────────────── */
+    .faq {
+      background: var(--warm-white);
+      padding: clamp(4rem, 8vh, 6rem) 0;
+    }
+    .faq h2 { margin-bottom: var(--space-2xl); }
+    .faq-list {
+      max-width: 720px;
+    }
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+    }
+    .faq-item summary {
+      padding: var(--space-lg) 0;
+      font-family: var(--font-body);
+      font-size: 1.0625rem;
+      font-weight: 500;
+      color: var(--text);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-lg);
+      list-style: none;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after {
+      content: '+';
+      font-size: 1.25rem;
+      font-weight: 300;
+      color: var(--text-tertiary);
+      flex-shrink: 0;
+      transition: transform 300ms var(--ease-out-quart);
+    }
+    .faq-item[open] summary::after {
+      content: '\2212'; /* minus */
+    }
+    .faq-answer {
+      padding-bottom: var(--space-lg);
+      font-size: 0.9375rem;
+      line-height: 1.75;
+      max-width: 58ch;
+    }
+
+    /* ── FINAL CTA ─────────────────────────────────────────── */
+    .final-cta {
+      padding: clamp(4.5rem, 9vh, 7rem) 0;
+      text-align: center;
+    }
+    .final-cta h2 {
+      margin-bottom: var(--space-md);
+    }
+    .final-cta-sub {
+      font-size: 1.0625rem;
+      color: var(--text-mid);
+      max-width: 50ch;
+      margin: 0 auto var(--space-2xl);
+    }
+    .final-cta-buttons {
+      display: flex;
+      gap: var(--space-md);
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* ── FOOTER ────────────────────────────────────────────── */
+    .footer {
+      background: var(--deep);
+      padding: var(--space-2xl) 0;
+      color: var(--deep-text-muted);
+    }
+    .footer-inner {
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 0 var(--gutter);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-xl);
+      flex-wrap: wrap;
+    }
+    .footer-brand {
+      font-size: 0.875rem;
+    }
+    .footer-links {
+      display: flex;
+      gap: var(--space-xl);
+    }
+    .footer-links a {
+      font-size: 0.875rem;
+      transition: color 200ms;
+    }
+    .footer-links a:hover { color: var(--deep-text); }
+
+    /* ── SCROLL ANIMATIONS ─────────────────────────────────── */
+    [data-animate] {
+      opacity: 0;
+      transform: translateY(24px);
+    }
+    [data-animate].visible {
+      opacity: 1;
+      transform: none;
+      transition: opacity 0.7s var(--ease-out-expo),
+                  transform 0.7s var(--ease-out-expo);
+    }
+    [data-animate][data-delay="1"].visible { transition-delay: 0.08s; }
+    [data-animate][data-delay="2"].visible { transition-delay: 0.16s; }
+    [data-animate][data-delay="3"].visible { transition-delay: 0.24s; }
+    [data-animate][data-delay="4"].visible { transition-delay: 0.32s; }
+
+    /* ── RESPONSIVE ────────────────────────────────────────── */
+    @media (max-width: 900px) {
+      .hero-inner {
+        grid-template-columns: 1fr;
+        gap: var(--space-2xl);
+      }
+      .hero-visual { order: -1; }
+      .hero-book { width: 200px; height: 266px; }
+
+      .mode-panel {
+        grid-template-columns: 1fr;
+        gap: var(--space-xl);
+      }
+      .mode-visual { min-height: 180px; }
+
+      .solution-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .how-steps {
+        grid-template-columns: 1fr;
+        gap: var(--space-xl);
+      }
+
+      .founding-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .revenue-points {
+        grid-template-columns: 1fr;
+      }
+
+      .parents-assurances {
+        flex-direction: column;
+        gap: var(--space-md);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .nav-links, .nav-cta { display: none; }
+      .nav-toggle { display: flex; }
+
+      .hero { padding-top: clamp(5.5rem, 12vh, 8rem); }
+      .hero h1 { font-size: clamp(2rem, 7vw, 2.8rem); }
+      .hero-book { width: 180px; height: 240px; }
+      .hero-play-btn { width: 44px; height: 44px; }
+
+      .mode-tabs { width: 100%; }
+      .mode-tab { flex: 1; text-align: center; padding: 0.625rem 0.75rem; font-size: 0.875rem; }
+      .mode-panel { padding: var(--space-xl) var(--space-lg); }
+      .mode-meta > div { flex-direction: column; gap: 2px; }
+      .mode-meta dt { min-width: unset; }
+
+      .solution-item { flex-direction: column; gap: var(--space-sm); }
+
+      .founding-price-current { font-size: 2.5rem; }
+
+      .final-cta-buttons { flex-direction: column; align-items: center; }
+      .final-cta-buttons .btn { width: 100%; max-width: 320px; }
+
+      .footer-inner { flex-direction: column; text-align: center; }
+      .footer-links { justify-content: center; }
+    }
+
+    /* ── REDUCED MOTION ────────────────────────────────────── */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+      html { scroll-behavior: auto; }
+      [data-animate] { opacity: 1; transform: none; }
+    }
+
+    /* ── FOCUS STYLES ──────────────────────────────────────── */
+    :focus-visible {
+      outline: 2px solid var(--terracotta);
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+
+    /* ── SKIP LINK ─────────────────────────────────────────── */
+    .skip-link {
+      position: absolute;
+      top: -100%;
+      left: var(--gutter);
+      background: var(--terracotta);
+      color: var(--warm-white);
+      padding: var(--space-sm) var(--space-md);
+      border-radius: 0 0 6px 6px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      z-index: 200;
+    }
+    .skip-link:focus { top: 0; }
+  </style>
+</head>
+
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <!-- ── NAV ──────────────────────────────────────────── -->
+  <nav class="nav" id="nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="#" class="nav-wordmark">[Platform]</a>
+      <div class="nav-links">
+        <a href="#modes">How It Works</a>
+        <a href="#founding">For Authors</a>
+        <a href="#parents">For Parents</a>
+      </div>
+      <a href="#founding" class="btn btn-primary btn-sm nav-cta">Get Early Access</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile" id="nav-mobile">
+      <a href="#modes">How It Works</a>
+      <a href="#founding">For Authors</a>
+      <a href="#parents">For Parents</a>
+      <a href="#founding" class="btn btn-primary" style="margin-top: var(--space-sm)">Get Early Access</a>
+    </div>
+  </nav>
+
+  <main id="main">
+    <!-- ── HERO ──────────────────────────────────────── -->
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="hero-content">
+          <span class="hero-badge" data-animate>For Children's Book Authors</span>
+          <h1 data-animate data-delay="1">Your book, heard and seen by the right families.</h1>
+          <p class="hero-sub" data-animate data-delay="2">A visibility platform for self-published children's book authors. AI-powered audio and AR bring your illustrations to life. Parents share. Schools notice. Your book gets&nbsp;found.</p>
+          <a href="#founding" class="btn btn-primary btn-lg" data-animate data-delay="3">Get Early Access</a>
+        </div>
+        <div class="hero-visual" data-animate data-delay="2">
+          <div class="hero-book">
+            <div class="hero-book-inner">
+              <div class="hero-book-lines">
+                <span></span><span></span><span></span>
+              </div>
+              <div class="hero-play-btn" role="button" aria-label="Play demo video" tabindex="0">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <polygon points="4,2 4,18 18,10" fill="white"/>
+                </svg>
+              </div>
+              <span class="hero-book-caption">See Listen mode in action</span>
+            </div>
+            <span class="hero-particle"></span>
+            <span class="hero-particle"></span>
+            <span class="hero-particle"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── MODES ─────────────────────────────────────── -->
+    <section class="modes" id="modes">
+      <div class="container">
+        <div class="modes-header" data-animate>
+          <span class="section-label">Less noise. More readers.</span>
+          <div class="mode-tabs" role="tablist" aria-label="Experience modes">
+            <button role="tab" class="mode-tab active" data-mode="listen" aria-selected="true" aria-controls="panel-listen">Listen</button>
+            <button role="tab" class="mode-tab" data-mode="discover" aria-selected="false" aria-controls="panel-discover">Discover</button>
+            <button role="tab" class="mode-tab" data-mode="watch" aria-selected="false" aria-controls="panel-watch">Watch</button>
+          </div>
+        </div>
+
+        <div class="mode-panels" data-animate data-delay="1">
+          <!-- Listen -->
+          <div class="mode-panel active" id="panel-listen" role="tabpanel" data-mode="listen">
+            <div class="mode-text">
+              <h3>Sound brings the page alive.</h3>
+              <p>Narration, soundscapes, and sound effects play when a parent scans your illustration. The child imagines the rest. The most powerful mode — and the simplest to create.</p>
+              <dl class="mode-meta">
+                <div><dt>Imagination</dt><dd>Highest — the child's mind fills in everything</dd></div>
+                <div><dt>Best for</dt><dd>First reads, bedtime, deep engagement</dd></div>
+              </dl>
+              <span class="mode-rec">Start here &#8594;</span>
+            </div>
+            <div class="mode-visual">
+              <div class="mode-visual-icon">
+                <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+                  <path d="M8 12v12l8 6V6l-8 6z" fill="oklch(0.52 0.12 80)"/>
+                  <path d="M20 12c2 2 3 4 3 6s-1 4-3 6" stroke="oklch(0.52 0.12 80)" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M24 8c3.5 3.5 5.5 7 5.5 10s-2 6.5-5.5 10" stroke="oklch(0.52 0.12 80)" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+                </svg>
+              </div>
+              <div class="mode-waves">
+                <span></span><span></span><span></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Discover -->
+          <div class="mode-panel" id="panel-discover" role="tabpanel" data-mode="discover">
+            <div class="mode-text">
+              <h3>Atmosphere enhances without overwhelming.</h3>
+              <p>Subtle particles, soft glow, a door that opens halfway. The AR creates the question. The child's imagination creates the answer.</p>
+              <dl class="mode-meta">
+                <div><dt>Imagination</dt><dd>Guided — hints invite, don't tell</dd></div>
+                <div><dt>Best for</dt><dd>Re-reads, exploration, curiosity</dd></div>
+              </dl>
+              <span class="mode-rec">Then here &#8594;</span>
+            </div>
+            <div class="mode-visual">
+              <div class="mode-visual-icon">
+                <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+                  <circle cx="18" cy="18" r="7" stroke="oklch(0.40 0.07 210)" stroke-width="2"/>
+                  <circle cx="18" cy="18" r="3" fill="oklch(0.40 0.07 210)"/>
+                  <path d="M18 7V4M18 32v-3M7 18H4M32 18h-3" stroke="oklch(0.40 0.07 210)" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+                </svg>
+              </div>
+              <div class="mode-dots">
+                <span></span><span></span><span></span><span></span><span></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Watch -->
+          <div class="mode-panel" id="panel-watch" role="tabpanel" data-mode="watch">
+            <div class="mode-text">
+              <h3>The full experience.</h3>
+              <p>Your illustrations animate completely — characters move, scenes unfold. The moment parents share on Instagram. The reason kids say "again."</p>
+              <dl class="mode-meta">
+                <div><dt>Imagination</dt><dd>Visual — the author's full vision</dd></div>
+                <div><dt>Best for</dt><dd>Social sharing, youngest readers, celebration</dd></div>
+              </dl>
+              <span class="mode-rec">Save for special moments &#8594;</span>
+            </div>
+            <div class="mode-visual">
+              <div class="mode-visual-icon">
+                <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+                  <rect x="6" y="8" width="24" height="20" rx="3" stroke="oklch(0.52 0.14 35)" stroke-width="2"/>
+                  <polygon points="15,14 15,22 23,18" fill="oklch(0.52 0.14 35)"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <blockquote class="modes-quote" data-animate>
+          "Start with Listen. Move to Discover after your child knows the story. Save Watch for the re-read they'll want to share."
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- ── PROBLEM ───────────────────────────────────── -->
+    <section class="problem">
+      <div class="container" data-animate>
+        <span class="section-label">The visibility gap</span>
+        <p class="problem-stat">4 million books on Amazon. Yours is on page&nbsp;47.</p>
+        <p class="problem-body">
+          Children's picture books are the hardest genre for indie discoverability. Parents don't find books through keyword search — they find them through word-of-mouth, school recommendations, and social sharing. Amazon can't give you any of&nbsp;that.
+        </p>
+        <p class="problem-context">31% of new picture books now include AR features. The technology is moving. Your readers are waiting.</p>
+      </div>
+    </section>
+
+    <!-- ── SOLUTION ──────────────────────────────────── -->
+    <section class="solution" id="solution">
+      <div class="container">
+        <span class="section-label" data-animate>A shelf where your book gets found</span>
+        <h2 data-animate data-delay="1">Not another marketplace. A visibility engine.</h2>
+        <p class="solution-intro" data-animate data-delay="2">Everything an indie author needs to be discovered — built into the platform from day one.</p>
+        <div class="solution-grid">
+          <div class="solution-item" data-animate>
+            <span class="solution-num">01</span>
+            <div>
+              <h3>Curated catalog</h3>
+              <p>Parents browse by theme, age, and culture — not by algorithm rank. Every book on the platform has passed a quality bar. Being here is the signal.</p>
+            </div>
+          </div>
+          <div class="solution-item" data-animate data-delay="1">
+            <span class="solution-num">02</span>
+            <div>
+              <h3>Auto-generated content</h3>
+              <p>Every book gets a 30-second AR preview, social media templates, and a unique QR code. The marketing assets you need but can't produce yourself — created automatically.</p>
+            </div>
+          </div>
+          <div class="solution-item" data-animate data-delay="2">
+            <span class="solution-num">03</span>
+            <div>
+              <h3>Engagement data</h3>
+              <p>For the first time, know how your book is actually read. Which pages get scanned most. How often children re-read. Data Amazon doesn't have because physical books have always been dark after purchase.</p>
+            </div>
+          </div>
+          <div class="solution-item" data-animate data-delay="3">
+            <span class="solution-num">04</span>
+            <div>
+              <h3>School pipeline</h3>
+              <p>Classroom licenses, curriculum-aligned teacher guides, and engagement reports that prove your book works. The channel KDP can never give you.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── HOW IT WORKS ──────────────────────────────── -->
+    <section class="how">
+      <div class="container">
+        <span class="section-label" data-animate>Live in minutes</span>
+        <h2 data-animate data-delay="1">Three steps. No technical skills.</h2>
+        <div class="how-steps">
+          <div class="how-step" data-animate>
+            <span class="how-step-num">1</span>
+            <h3>Upload your illustrations</h3>
+            <p>High-res files, one per page. That's all we need.</p>
+          </div>
+          <div class="how-step" data-animate data-delay="1">
+            <span class="how-step-num">2</span>
+            <h3>Create the experience</h3>
+            <p>Use our AI studio to generate narration, soundscapes, and animations for each page. Describe what you want. The AI builds it. You approve.</p>
+          </div>
+          <div class="how-step" data-animate data-delay="2">
+            <span class="how-step-num">3</span>
+            <h3>Publish and grow</h3>
+            <p>Your book goes live on the marketplace with AR preview, QR code, and social templates — ready to share. Release new experience packs anytime.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── STORIES ───────────────────────────────────── -->
+    <section class="stories">
+      <div class="container" data-animate>
+        <span class="section-label">Starting with stories that have waited the longest</span>
+        <h2>Stories that see your child.</h2>
+        <p class="stories-body">
+          Our first catalog leads with the <strong>African diaspora</strong>. Characters with natural hair. Cultural traditions that feel like home. Narration in <strong>Yoruba, Igbo, Twi, Patois, and French Creole</strong>.
+        </p>
+        <p class="stories-close">
+          Every story worth telling is welcome here. We're starting with the ones that have never had this technology before.
+        </p>
+      </div>
+    </section>
+
+    <!-- ── REVENUE ───────────────────────────────────── -->
+    <section class="revenue">
+      <div class="container">
+        <span class="section-label" data-animate>One book. Ongoing revenue.</span>
+        <h2 data-animate data-delay="1">Your price stays yours.</h2>
+        <p class="revenue-intro" data-animate data-delay="2">A small AR premium is added at checkout. The buyer pays it, not you.</p>
+        <div class="revenue-points">
+          <div class="revenue-point" data-animate>
+            <h3>Sell once, earn forever</h3>
+            <p>Create new experience packs — holiday editions, new languages, dramatized audio, visual upgrades — and sell them to readers who already own your book.</p>
+          </div>
+          <div class="revenue-point" data-animate data-delay="1">
+            <h3>See what works</h3>
+            <p>Your dashboard shows scan counts, page engagement, and re-read rates. Know which pages your readers love and what to create next.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── FOUNDING AUTHORS ──────────────────────────── -->
+    <section class="founding" id="founding">
+      <div class="container">
+        <div class="founding-inner">
+          <div>
+            <span class="section-label" data-animate>10 spots. First movers.</span>
+            <h2 data-animate data-delay="1">Shape the platform with us.</h2>
+            <div class="founding-price" data-animate data-delay="2">
+              <span class="founding-price-current">$29</span>
+              <span class="founding-price-original">$49</span>
+              <span class="founding-price-label">one-time setup</span>
+            </div>
+            <ul class="founding-benefits" data-animate data-delay="3">
+              <li>Double the free creation tokens</li>
+              <li>Direct access to our team</li>
+              <li>Permanent featured placement</li>
+              <li>Founding revenue share rate — locked forever</li>
+            </ul>
+            <p class="founding-reqs">Published or near-published children's picture book. Completed illustrations. Willingness to shape the product.</p>
+          </div>
+          <div class="founding-cta-area" data-animate data-delay="2">
+            <a href="#" class="btn btn-lg">Apply Now — 10 Spots</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── FOR PARENTS ───────────────────────────────── -->
+    <section class="parents" id="parents">
+      <div class="container">
+        <span class="section-label" data-animate>The book they imagine with</span>
+        <h2 data-animate data-delay="1">Point your phone at any page.</h2>
+        <p class="parents-body" data-animate data-delay="2">
+          Choose Listen, Discover, or Watch. Your child engages with the story at whatever depth you choose. Just a book, a phone, and a child whose imagination leads the&nbsp;way.
+        </p>
+        <ul class="parents-assurances" data-animate data-delay="3">
+          <li>No headset</li>
+          <li>No subscription</li>
+          <li>No screen addiction loop</li>
+        </ul>
+        <a href="#" class="btn btn-outline" data-animate data-delay="4">Join the Parent Waitlist</a>
+      </div>
+    </section>
+
+    <!-- ── FAQ ────────────────────────────────────────── -->
+    <section class="faq">
+      <div class="container">
+        <h2 data-animate>Common questions</h2>
+        <div class="faq-list">
+          <details class="faq-item" data-animate>
+            <summary>Do I need special equipment?</summary>
+            <div class="faq-answer"><p>Any modern iPhone or Android.</p></div>
+          </details>
+          <details class="faq-item" data-animate data-delay="1">
+            <summary>Can I still sell on Amazon?</summary>
+            <div class="faq-answer"><p>Yes. No exclusivity. We're an additional channel, not a replacement.</p></div>
+          </details>
+          <details class="faq-item" data-animate data-delay="1">
+            <summary>What does it cost authors?</summary>
+            <div class="faq-answer"><p>$49 one-time. Includes free creation tokens. No monthly fees.</p></div>
+          </details>
+          <details class="faq-item" data-animate data-delay="2">
+            <summary>Who owns the content I create?</summary>
+            <div class="faq-answer"><p>You do.</p></div>
+          </details>
+          <details class="faq-item" data-animate data-delay="2">
+            <summary>Is this safe for children?</summary>
+            <div class="faq-answer"><p>Yes. The parent controls the device and chooses the mode. Listen mode uses zero screen visuals. No ads, no social features, no data collected from children without parental consent.</p></div>
+          </details>
+          <details class="faq-item" data-animate data-delay="3">
+            <summary>How is this different from Disney's AR books?</summary>
+            <div class="faq-answer"><p>Disney defaulted to full animation — passive consumption that replaced imagination. We built three modes so the reader controls how much the technology reveals. Listen mode is what Disney never built and what educators always wanted.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── FINAL CTA ──────────────────────────────────── -->
+    <section class="final-cta">
+      <div class="container--narrow" data-animate>
+        <span class="section-label" style="text-align:center">Your book deserves to be found</span>
+        <h2>Not louder. Not flashier. Found.</h2>
+        <p class="final-cta-sub">By the parents, teachers, and children who've been looking for exactly this story.</p>
+        <div class="final-cta-buttons">
+          <a href="#founding" class="btn btn-primary btn-lg">Get Early Access</a>
+          <a href="#" class="btn btn-outline btn-lg">Join the Waitlist</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ── FOOTER ─────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <span class="footer-brand">[Platform Name] by Orban Forest Inc. — Brantford, Ontario</span>
+      <div class="footer-links">
+        <a href="mailto:hello@orbanforest.ca">Email</a>
+        <a href="#" target="_blank" rel="noopener">Instagram</a>
+        <a href="#" target="_blank" rel="noopener">TikTok</a>
+        <a href="privacy-policy.html">Privacy</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    /* ── Sticky nav ─────────────────────────────────── */
+    const nav = document.getElementById('nav');
+    const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 40);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    /* ── Mobile nav toggle ──────────────────────────── */
+    const toggle = document.getElementById('nav-toggle');
+    const mobile = document.getElementById('nav-mobile');
+    toggle.addEventListener('click', () => {
+      const open = toggle.classList.toggle('open');
+      mobile.classList.toggle('open', open);
+      toggle.setAttribute('aria-expanded', open);
+    });
+    /* Close mobile nav on link click */
+    mobile.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        toggle.classList.remove('open');
+        mobile.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    /* ── Mode tabs ──────────────────────────────────── */
+    const tabs = document.querySelectorAll('.mode-tab');
+    const panels = document.querySelectorAll('.mode-panel');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const mode = tab.dataset.mode;
+        tabs.forEach(t => {
+          t.classList.remove('active');
+          t.setAttribute('aria-selected', 'false');
+        });
+        tab.classList.add('active');
+        tab.setAttribute('aria-selected', 'true');
+
+        panels.forEach(p => p.classList.remove('active'));
+        document.getElementById('panel-' + mode).classList.add('active');
+      });
+    });
+
+    /* Keyboard navigation for tabs */
+    const tabList = document.querySelector('.mode-tabs');
+    tabList.addEventListener('keydown', (e) => {
+      const tabArr = [...tabs];
+      const current = tabArr.findIndex(t => t.classList.contains('active'));
+      let next;
+      if (e.key === 'ArrowRight') next = (current + 1) % tabArr.length;
+      else if (e.key === 'ArrowLeft') next = (current - 1 + tabArr.length) % tabArr.length;
+      else return;
+      e.preventDefault();
+      tabArr[next].click();
+      tabArr[next].focus();
+    });
+
+    /* ── Scroll animations ──────────────────────────── */
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!prefersReduced) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+      document.querySelectorAll('[data-animate]').forEach(el => observer.observe(el));
+    } else {
+      document.querySelectorAll('[data-animate]').forEach(el => el.classList.add('visible'));
+    }
+  </script>
+</body>
+</html>
