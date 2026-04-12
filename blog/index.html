@@ -1,6 +1,21 @@
 <!doctype html>
 <html lang="en" data-theme="light">
   <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-CBGMEPXECR"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-CBGMEPXECR");
+    </script>
+    <!-- Google-tag-end -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
@@ -9,50 +24,97 @@
     />
     <link rel="icon" type="image/png" href="../assets/img/logo/favicon.png" />
     <link rel="canonical" href="https://orbanforest.ca/blog" />
-    <title>Blog — Web Design, AI Automation & Digital Marketing Insights | Orban Forest</title>
+    <title>
+      Blog — Web Design, AI Automation & Digital Marketing Insights | Orban
+      Forest
+    </title>
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Blog — Web Design, AI Automation & Digital Marketing Insights" />
-    <meta property="og:description" content="Insights on web design, AI automation, digital marketing, and business growth strategy from Orban Forest — serving Brantford, Cambridge, Paris ON and beyond." />
+    <meta
+      property="og:title"
+      content="Blog — Web Design, AI Automation & Digital Marketing Insights"
+    />
+    <meta
+      property="og:description"
+      content="Insights on web design, AI automation, digital marketing, and business growth strategy from Orban Forest — serving Brantford, Cambridge, Paris ON and beyond."
+    />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://orbanforest.ca/blog" />
     <meta property="og:site_name" content="Orban Forest Inc." />
 
     <!-- Structured Data: CollectionPage + BreadcrumbList -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "CollectionPage",
-          "@id": "https://orbanforest.ca/blog#page",
-          "name": "Blog — Web Design, AI Automation & Digital Marketing Insights",
-          "description": "Insights on web design, AI automation, digital marketing, and business growth strategy from Orban Forest — serving Brantford, Cambridge, Paris ON and beyond.",
-          "url": "https://orbanforest.ca/blog",
-          "isPartOf": { "@id": "https://orbanforest.ca/#website" },
-          "publisher": { "@id": "https://orbanforest.ca/#business" },
-          "mainEntity": {
-            "@type": "ItemList",
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": "https://orbanforest.ca/blog#page",
+            "name": "Blog — Web Design, AI Automation & Digital Marketing Insights",
+            "description": "Insights on web design, AI automation, digital marketing, and business growth strategy from Orban Forest — serving Brantford, Cambridge, Paris ON and beyond.",
+            "url": "https://orbanforest.ca/blog",
+            "isPartOf": { "@id": "https://orbanforest.ca/#website" },
+            "publisher": { "@id": "https://orbanforest.ca/#business" },
+            "mainEntity": {
+              "@type": "ItemList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "url": "https://orbanforest.ca/blog/google-business-profile"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "url": "https://orbanforest.ca/blog/customers-tell-you-why-they-buy"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "url": "https://orbanforest.ca/blog/automate-repetitive-tasks"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 4,
+                  "url": "https://orbanforest.ca/blog/website-marketing-not-broken"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 5,
+                  "url": "https://orbanforest.ca/blog/30-second-video-beats-brochure"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 6,
+                  "url": "https://orbanforest.ca/blog/website-three-seconds"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 7,
+                  "url": "https://orbanforest.ca/blog/follow-up-is-where-the-money-is"
+                }
+              ]
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
             "itemListElement": [
-              { "@type": "ListItem", "position": 1, "url": "https://orbanforest.ca/blog/google-business-profile" },
-              { "@type": "ListItem", "position": 2, "url": "https://orbanforest.ca/blog/customers-tell-you-why-they-buy" },
-              { "@type": "ListItem", "position": 3, "url": "https://orbanforest.ca/blog/automate-repetitive-tasks" },
-              { "@type": "ListItem", "position": 4, "url": "https://orbanforest.ca/blog/website-marketing-not-broken" },
-              { "@type": "ListItem", "position": 5, "url": "https://orbanforest.ca/blog/30-second-video-beats-brochure" },
-              { "@type": "ListItem", "position": 6, "url": "https://orbanforest.ca/blog/website-three-seconds" },
-              { "@type": "ListItem", "position": 7, "url": "https://orbanforest.ca/blog/follow-up-is-where-the-money-is" }
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://orbanforest.ca/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Blog",
+                "item": "https://orbanforest.ca/blog"
+              }
             ]
           }
-        },
-        {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://orbanforest.ca/" },
-            { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://orbanforest.ca/blog" }
-          ]
-        }
-      ]
-    }
+        ]
+      }
     </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -172,9 +234,15 @@
       <div class="container">
         <div class="blog-filter-row reveal-up">
           <button class="blog-filter-btn active" data-filter="all">All</button>
-          <button class="blog-filter-btn" data-filter="marketing">Marketing</button>
-          <button class="blog-filter-btn" data-filter="technology">Technology</button>
-          <button class="blog-filter-btn" data-filter="strategy">Strategy</button>
+          <button class="blog-filter-btn" data-filter="marketing">
+            Marketing
+          </button>
+          <button class="blog-filter-btn" data-filter="technology">
+            Technology
+          </button>
+          <button class="blog-filter-btn" data-filter="strategy">
+            Strategy
+          </button>
           <button class="blog-filter-btn" data-filter="growth">Growth</button>
         </div>
       </div>
@@ -183,9 +251,16 @@
     <!-- ========== FEATURED POST ========== -->
     <section class="blog-featured">
       <div class="container">
-        <a href="/blog/google-business-profile" class="blog-featured-card reveal-up" data-category="marketing">
+        <a
+          href="/blog/google-business-profile"
+          class="blog-featured-card reveal-up"
+          data-category="marketing"
+        >
           <div class="blog-featured-image">
-            <img src="../assets/img/blog/google-business-profile_1.jpg" alt="Google Business Profile optimization for local businesses">
+            <img
+              src="../assets/img/blog/google-business-profile_1.jpg"
+              alt="Google Business Profile optimization for local businesses"
+            />
           </div>
           <div class="blog-featured-content">
             <div class="blog-post-meta">
@@ -197,14 +272,27 @@
               <span class="italic-serif">Customers</span> Right Now
             </h2>
             <p class="blog-featured-excerpt">
-              When someone in your city searches "plumber near me" or "CNC machining Brantford,"
-              Google doesn't pull out a phone book. It shows a map with three businesses on it.
-              If you're not one of those three, you might as well not exist.
+              When someone in your city searches "plumber near me" or "CNC
+              machining Brantford," Google doesn't pull out a phone book. It
+              shows a map with three businesses on it. If you're not one of
+              those three, you might as well not exist.
             </p>
             <span class="blog-read-more">
               Read Article
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-                <path d="M1 7H13M13 7L7 1M13 7L7 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+                aria-hidden="true"
+              >
+                <path
+                  d="M1 7H13M13 7L7 1M13 7L7 13"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
               </svg>
             </span>
           </div>
@@ -216,133 +304,288 @@
     <section class="blog-grid-section">
       <div class="container">
         <div class="blog-grid">
-
           <!-- Article 2 -->
-          <a href="/blog/customers-tell-you-why-they-buy" class="blog-card reveal-up" data-category="strategy">
+          <a
+            href="/blog/customers-tell-you-why-they-buy"
+            class="blog-card reveal-up"
+            data-category="strategy"
+          >
             <div class="blog-card-image">
-              <img src="../assets/img/blog/listening_to_customers.jpg" alt="Listening to your customers to understand why they buy">
+              <img
+                src="../assets/img/blog/listening_to_customers.jpg"
+                alt="Listening to your customers to understand why they buy"
+              />
             </div>
             <div class="blog-card-body">
               <div class="blog-post-meta">
                 <span class="blog-post-category">Strategy</span>
                 <span class="blog-post-date">March 20, 2026</span>
               </div>
-              <h3 class="blog-card-title">Your Customers Are Telling You Why They Buy. Are You Listening?</h3>
-              <p class="blog-card-excerpt">"Why do your customers choose you over the competition?" The answers we get usually sound like this: "We have the best quality." But your competitors say the exact same thing.</p>
+              <h3 class="blog-card-title">
+                Your Customers Are Telling You Why They Buy. Are You Listening?
+              </h3>
+              <p class="blog-card-excerpt">
+                "Why do your customers choose you over the competition?" The
+                answers we get usually sound like this: "We have the best
+                quality." But your competitors say the exact same thing.
+              </p>
               <span class="blog-read-more">
                 Read Article
-                <svg width="12" height="12" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-                  <path d="M1 7H13M13 7L7 1M13 7L7 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <svg
+                  width="12"
+                  height="12"
+                  viewBox="0 0 14 14"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M1 7H13M13 7L7 1M13 7L7 13"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
                 </svg>
               </span>
             </div>
           </a>
 
           <!-- Article 3 -->
-          <a href="/blog/automate-repetitive-tasks" class="blog-card reveal-up" data-delay="1" data-category="technology">
+          <a
+            href="/blog/automate-repetitive-tasks"
+            class="blog-card reveal-up"
+            data-delay="1"
+            data-category="technology"
+          >
             <div class="blog-card-image">
-              <img src="../assets/img/blog/automation.jpg" alt="Automating repetitive daily tasks">
+              <img
+                src="../assets/img/blog/automation.jpg"
+                alt="Automating repetitive daily tasks"
+              />
             </div>
             <div class="blog-card-body">
               <div class="blog-post-meta">
                 <span class="blog-post-category">Technology</span>
                 <span class="blog-post-date">March 13, 2026</span>
               </div>
-              <h3 class="blog-card-title">You're Doing the Same 10 Tasks Every Day. What If You Didn't Have To?</h3>
-              <p class="blog-card-excerpt">You get to the office and the first thing you do is check messages. Three quote requests came in overnight. It's 10:30 a.m. You haven't done any actual work yet.</p>
+              <h3 class="blog-card-title">
+                You're Doing the Same 10 Tasks Every Day. What If You Didn't
+                Have To?
+              </h3>
+              <p class="blog-card-excerpt">
+                You get to the office and the first thing you do is check
+                messages. Three quote requests came in overnight. It's 10:30
+                a.m. You haven't done any actual work yet.
+              </p>
               <span class="blog-read-more">
                 Read Article
-                <svg width="12" height="12" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-                  <path d="M1 7H13M13 7L7 1M13 7L7 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <svg
+                  width="12"
+                  height="12"
+                  viewBox="0 0 14 14"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M1 7H13M13 7L7 1M13 7L7 13"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
                 </svg>
               </span>
             </div>
           </a>
 
           <!-- Article 4 -->
-          <a href="/blog/website-marketing-not-broken" class="blog-card reveal-up" data-delay="2" data-category="marketing">
+          <a
+            href="/blog/website-marketing-not-broken"
+            class="blog-card reveal-up"
+            data-delay="2"
+            data-category="marketing"
+          >
             <div class="blog-card-image">
-              <img src="../assets/img/blog/website_marketing.jpg" alt="Website marketing strategy for local businesses">
+              <img
+                src="../assets/img/blog/website_marketing.jpg"
+                alt="Website marketing strategy for local businesses"
+              />
             </div>
             <div class="blog-card-body">
               <div class="blog-post-meta">
                 <span class="blog-post-category">Marketing</span>
                 <span class="blog-post-date">March 6, 2026</span>
               </div>
-              <h3 class="blog-card-title">Your Website Isn't Broken. Your Marketing Around It Is.</h3>
-              <p class="blog-card-excerpt">A business owner spends $5,000 to $15,000 on a new site. It looks great. They launch it, share it on Facebook once, and then... nothing. The website didn't fail. It never had a chance.</p>
+              <h3 class="blog-card-title">
+                Your Website Isn't Broken. Your Marketing Around It Is.
+              </h3>
+              <p class="blog-card-excerpt">
+                A business owner spends $5,000 to $15,000 on a new site. It
+                looks great. They launch it, share it on Facebook once, and
+                then... nothing. The website didn't fail. It never had a chance.
+              </p>
               <span class="blog-read-more">
                 Read Article
-                <svg width="12" height="12" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-                  <path d="M1 7H13M13 7L7 1M13 7L7 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <svg
+                  width="12"
+                  height="12"
+                  viewBox="0 0 14 14"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M1 7H13M13 7L7 1M13 7L7 13"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
                 </svg>
               </span>
             </div>
           </a>
 
           <!-- Article 5 -->
-          <a href="/blog/30-second-video-beats-brochure" class="blog-card reveal-up" data-category="marketing">
+          <a
+            href="/blog/30-second-video-beats-brochure"
+            class="blog-card reveal-up"
+            data-category="marketing"
+          >
             <div class="blog-card-image">
-              <img src="../assets/img/blog/Animation.jpg" alt="3D animation and video production for business marketing">
+              <img
+                src="../assets/img/blog/Animation.jpg"
+                alt="3D animation and video production for business marketing"
+              />
             </div>
             <div class="blog-card-body">
               <div class="blog-post-meta">
                 <span class="blog-post-category">Marketing</span>
                 <span class="blog-post-date">February 27, 2026</span>
               </div>
-              <h3 class="blog-card-title">A 30-Second Video Can Do What Your Brochure Never Could</h3>
-              <p class="blog-card-excerpt">A manufacturing company makes industrial filtration systems. The sales team spent 30 minutes on every call just explaining the basics. Then they got a 40-second animated explainer.</p>
+              <h3 class="blog-card-title">
+                A 30-Second Video Can Do What Your Brochure Never Could
+              </h3>
+              <p class="blog-card-excerpt">
+                A manufacturing company makes industrial filtration systems. The
+                sales team spent 30 minutes on every call just explaining the
+                basics. Then they got a 40-second animated explainer.
+              </p>
               <span class="blog-read-more">
                 Read Article
-                <svg width="12" height="12" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-                  <path d="M1 7H13M13 7L7 1M13 7L7 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <svg
+                  width="12"
+                  height="12"
+                  viewBox="0 0 14 14"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M1 7H13M13 7L7 1M13 7L7 13"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
                 </svg>
               </span>
             </div>
           </a>
 
           <!-- Article 6 -->
-          <a href="/blog/website-three-seconds" class="blog-card reveal-up" data-delay="1" data-category="strategy">
+          <a
+            href="/blog/website-three-seconds"
+            class="blog-card reveal-up"
+            data-delay="1"
+            data-category="strategy"
+          >
             <div class="blog-card-image">
-              <img src="../assets/img/blog/attention-website.jpg" alt="Website first impressions and the three-second rule">
+              <img
+                src="../assets/img/blog/attention-website.jpg"
+                alt="Website first impressions and the three-second rule"
+              />
             </div>
             <div class="blog-card-body">
               <div class="blog-post-meta">
                 <span class="blog-post-category">Strategy</span>
                 <span class="blog-post-date">February 20, 2026</span>
               </div>
-              <h3 class="blog-card-title">Your Website Has Three Seconds. What Does It Say About You?</h3>
-              <p class="blog-card-excerpt">Pull up your website on your phone. Hand it to someone who has never seen it. Give them three seconds. If they can't tell what you do, your website is costing you business.</p>
+              <h3 class="blog-card-title">
+                Your Website Has Three Seconds. What Does It Say About You?
+              </h3>
+              <p class="blog-card-excerpt">
+                Pull up your website on your phone. Hand it to someone who has
+                never seen it. Give them three seconds. If they can't tell what
+                you do, your website is costing you business.
+              </p>
               <span class="blog-read-more">
                 Read Article
-                <svg width="12" height="12" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-                  <path d="M1 7H13M13 7L7 1M13 7L7 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <svg
+                  width="12"
+                  height="12"
+                  viewBox="0 0 14 14"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M1 7H13M13 7L7 1M13 7L7 13"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
                 </svg>
               </span>
             </div>
           </a>
 
           <!-- Article 7 -->
-          <a href="/blog/follow-up-is-where-the-money-is" class="blog-card reveal-up" data-delay="2" data-category="growth">
+          <a
+            href="/blog/follow-up-is-where-the-money-is"
+            class="blog-card reveal-up"
+            data-delay="2"
+            data-category="growth"
+          >
             <div class="blog-card-image">
-              <img src="../assets/img/blog/website-follow-up.jpg" alt="Automated follow-up systems for small business lead nurturing">
+              <img
+                src="../assets/img/blog/website-follow-up.jpg"
+                alt="Automated follow-up systems for small business lead nurturing"
+              />
             </div>
             <div class="blog-card-body">
               <div class="blog-post-meta">
                 <span class="blog-post-category">Growth</span>
                 <span class="blog-post-date">February 13, 2026</span>
               </div>
-              <h3 class="blog-card-title">The Follow-Up Is Where the Money Is (And Most Small Businesses Drop the Ball)</h3>
-              <p class="blog-card-excerpt">A potential customer reaches out. You're busy. You tell yourself you'll get back to them later. By Monday, they've already called someone else. This isn't a moral failing. It's a systems problem.</p>
+              <h3 class="blog-card-title">
+                The Follow-Up Is Where the Money Is (And Most Small Businesses
+                Drop the Ball)
+              </h3>
+              <p class="blog-card-excerpt">
+                A potential customer reaches out. You're busy. You tell yourself
+                you'll get back to them later. By Monday, they've already called
+                someone else. This isn't a moral failing. It's a systems
+                problem.
+              </p>
               <span class="blog-read-more">
                 Read Article
-                <svg width="12" height="12" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-                  <path d="M1 7H13M13 7L7 1M13 7L7 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <svg
+                  width="12"
+                  height="12"
+                  viewBox="0 0 14 14"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M1 7H13M13 7L7 1M13 7L7 13"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
                 </svg>
               </span>
             </div>
           </a>
-
         </div>
       </div>
     </section>
@@ -466,7 +709,10 @@
         </div>
 
         <div class="footer-bottom">
-          <p>&copy; 2026 Orban Forest Inc. All rights reserved. &middot; Designed by <a href="https://www.orbanforest.ca/">Orban Forest Inc.</a></p>
+          <p>
+            &copy; 2026 Orban Forest Inc. All rights reserved. &middot; Designed
+            by <a href="https://www.orbanforest.ca/">Orban Forest Inc.</a>
+          </p>
           <div class="footer-bottom-links">
             <a href="/privacy-policy">Privacy Policy</a>
             <a href="#contact">Contact</a>
@@ -486,14 +732,19 @@
 
         buttons.forEach(function (btn) {
           btn.addEventListener("click", function () {
-            buttons.forEach(function (b) { b.classList.remove("active"); });
+            buttons.forEach(function (b) {
+              b.classList.remove("active");
+            });
             btn.classList.add("active");
 
             var filter = btn.getAttribute("data-filter");
 
             /* Featured post */
             if (featured) {
-              if (filter === "all" || featured.getAttribute("data-category") === filter) {
+              if (
+                filter === "all" ||
+                featured.getAttribute("data-category") === filter
+              ) {
                 featured.style.display = "";
               } else {
                 featured.style.display = "none";
@@ -502,7 +753,10 @@
 
             /* Grid cards */
             cards.forEach(function (card) {
-              if (filter === "all" || card.getAttribute("data-category") === filter) {
+              if (
+                filter === "all" ||
+                card.getAttribute("data-category") === filter
+              ) {
                 card.style.display = "";
               } else {
                 card.style.display = "none";
