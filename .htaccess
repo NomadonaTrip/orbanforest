@@ -19,6 +19,9 @@ RewriteRule ^web-design-brantford/?$ web-design-brantford.html [L]
 RewriteRule ^web-design-cambridge-ontario/?$ web-design-cambridge-ontario.html [L]
 RewriteRule ^web-design-kitchener-waterloo/?$ web-design-kitchener-waterloo.html [L]
 RewriteRule ^web-design-hamilton/?$ web-design-hamilton.html [L]
+RewriteRule ^blog/?$ blog/index.html [L]
+RewriteRule ^web-design-cost-estimator/?$ web-design-cost-estimator.html [L]
+RewriteRule ^web-design-paris-ontario/?$ web-design-paris-ontario.html [L]
 
 # 3. Generic: rewrite /foo -> /foo.html if the .html file exists
 RewriteCond %{REQUEST_FILENAME} !-d
