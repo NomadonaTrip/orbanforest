@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en" data-theme="light">
   <head>
+    <script>if(localStorage.getItem('of-cookie-consent')==='declined')window['ga-disable-G-CBGMEPXECR']=true;</script>
     <!-- Google tag (gtag.js) -->
     <script
       async
@@ -38,7 +39,7 @@
     />
     <meta
       property="og:description"
-      content="Use our free interactive tool to estimate your website project cost. Based on real 2026 rates from agencies in Brantford, Cambridge, Hamilton, and Kitchener-Waterloo."
+      content="Use our free interactive tool to estimate your website project cost. Based on real 2026 freelancer rates in Brantford, Cambridge, Hamilton, and Kitchener-Waterloo."
     />
     <meta property="og:type" content="website" />
     <meta
@@ -74,7 +75,7 @@
                 "name": "How much does a website cost in Ontario in 2026?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "A basic brochure website (3-5 pages) typically costs $1,500 to $5,000 CAD in southwestern Ontario. A small business website (5-10 pages) ranges from $3,000 to $9,000. E-commerce sites start at $5,000 and can reach $40,000+ for advanced builds. Custom web applications range from $20,000 to $80,000+. Prices vary based on design complexity, features, and whether you hire a freelancer or agency."
+                  "text": "A basic brochure website (3-5 pages) typically costs $1,000 to $3,500 CAD in southwestern Ontario. A small business website (5-10 pages) ranges from $2,000 to $6,000. E-commerce sites start at $3,000 and can reach $28,000+ for advanced builds. Custom web applications range from $14,000 to $55,000+. Prices vary based on design complexity, features, and provider."
                 }
               },
               {
@@ -82,7 +83,7 @@
                 "name": "What is a reasonable price for web design in Brantford, Hamilton, or Kitchener-Waterloo?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Web design rates in Brantford, Hamilton, and the Kitchener-Waterloo-Cambridge corridor are typically 15-30% lower than Toronto. Local agency hourly rates range from $50-$130/hr, and freelancers charge $35-$80/hr. A professional 5-page business website from a local agency averages $3,000 to $6,000 CAD."
+                  "text": "Web design rates in Brantford, Hamilton, and the Kitchener-Waterloo-Cambridge corridor are typically 15-30% lower than Toronto. Freelancer hourly rates range from $35-$80/hr, compared to $50-$130/hr at agencies. A professional 5-page business website from a local freelancer or small studio averages $1,500 to $3,500 CAD."
                 }
               },
               {
@@ -90,7 +91,7 @@
                 "name": "What ongoing costs should I budget for after my website launches?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Typical monthly ongoing costs for a small business website in Ontario include: hosting ($10-$75/month), maintenance and updates ($85-$250/month), domain renewal ($15-$25/year), and optional SEO services ($700-$4,000/month). A reasonable monthly budget for a small business is $100-$300 CAD."
+                  "text": "Typical monthly ongoing costs for a small business website in Ontario include: hosting ($10-$50/month), maintenance and updates ($60-$200/month), domain renewal ($15-$25/year), and optional SEO services ($500-$3,000/month). A reasonable monthly budget for a small business is $75-$225 CAD."
                 }
               }
             ]
@@ -317,11 +318,15 @@
         text-align: center;
       }
 
-      /* ── FEATURE CHECKBOXES ──────────────────────────────── */
+      /* ── FEATURE CHECKBOXES (bento grid) ──────────────────── */
       .est-features-grid {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
         gap: 0.75rem;
+      }
+      .est-features-grid .est-feature-item:nth-child(9),
+      .est-features-grid .est-feature-item:nth-child(10) {
+        grid-column: span 2;
       }
       .est-feature-item {
         display: flex;
@@ -504,6 +509,10 @@
         .est-features-grid {
           grid-template-columns: repeat(2, 1fr);
         }
+        .est-features-grid .est-feature-item:nth-child(9),
+        .est-features-grid .est-feature-item:nth-child(10) {
+          grid-column: span 1;
+        }
       }
       @media (max-width: 600px) {
         .est-type-grid {
@@ -543,6 +552,7 @@
           <a href="/#work" class="nav-link">Work</a>
           <a href="/#process" class="nav-link">Process</a>
           <a href="/blog" class="nav-link">Blog</a>
+          <a href="/web-design-cost-estimator" class="nav-link">Pricing</a>
           <a href="/contact-us" class="nav-link nav-link--cta">
             Let's Talk
             <svg
@@ -625,8 +635,8 @@
         </h1>
         <p class="est-hero-sub reveal-up" data-delay="2">
           Get an instant ballpark estimate for your web project. Based on real
-          2026 rates from agencies in Brantford, Cambridge, Hamilton, and
-          Kitchener-Waterloo.
+          2026 freelancer and small-studio rates in Brantford, Cambridge,
+          Hamilton, and Kitchener-Waterloo.
         </p>
       </div>
     </section>
@@ -726,7 +736,7 @@
             Select everything that applies. Each adds to the overall estimate.
           </p>
           <div class="est-features-grid reveal-up" id="featuresGrid">
-            <label class="est-feature-item" data-cost-low="200" data-cost-high="600">
+            <label class="est-feature-item" data-cost-low="150" data-cost-high="400">
               <input type="checkbox" name="feature" value="blog" />
               <span class="est-check-box">
                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
@@ -735,10 +745,10 @@
               </span>
               <span>
                 <span class="est-feature-label">Blog</span><br />
-                <span class="est-feature-price">+$200 - $600</span>
+                <span class="est-feature-price">+$150 - $400</span>
               </span>
             </label>
-            <label class="est-feature-item" data-cost-low="500" data-cost-high="2000">
+            <label class="est-feature-item" data-cost-low="300" data-cost-high="1400">
               <input type="checkbox" name="feature" value="booking" />
               <span class="est-check-box">
                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
@@ -747,10 +757,10 @@
               </span>
               <span>
                 <span class="est-feature-label">Online Booking</span><br />
-                <span class="est-feature-price">+$500 - $2,000</span>
+                <span class="est-feature-price">+$300 - $1,400</span>
               </span>
             </label>
-            <label class="est-feature-item" data-cost-low="500" data-cost-high="3000">
+            <label class="est-feature-item" data-cost-low="300" data-cost-high="2000">
               <input type="checkbox" name="feature" value="chatbot" />
               <span class="est-check-box">
                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
@@ -759,10 +769,10 @@
               </span>
               <span>
                 <span class="est-feature-label">AI Chatbot</span><br />
-                <span class="est-feature-price">+$500 - $3,000</span>
+                <span class="est-feature-price">+$300 - $2,000</span>
               </span>
             </label>
-            <label class="est-feature-item" data-cost-low="1500" data-cost-high="5000">
+            <label class="est-feature-item" data-cost-low="1000" data-cost-high="3500">
               <input type="checkbox" name="feature" value="seo" />
               <span class="est-check-box">
                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
@@ -771,10 +781,10 @@
               </span>
               <span>
                 <span class="est-feature-label">SEO Package</span><br />
-                <span class="est-feature-price">+$1,500 - $5,000</span>
+                <span class="est-feature-price">+$1,000 - $3,500</span>
               </span>
             </label>
-            <label class="est-feature-item" data-cost-low="200" data-cost-high="800">
+            <label class="est-feature-item" data-cost-low="150" data-cost-high="500">
               <input type="checkbox" name="feature" value="email" />
               <span class="est-check-box">
                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
@@ -783,10 +793,10 @@
               </span>
               <span>
                 <span class="est-feature-label">Email Marketing</span><br />
-                <span class="est-feature-price">+$200 - $800</span>
+                <span class="est-feature-price">+$150 - $500</span>
               </span>
             </label>
-            <label class="est-feature-item" data-cost-low="500" data-cost-high="3000">
+            <label class="est-feature-item" data-cost-low="300" data-cost-high="2000">
               <input type="checkbox" name="feature" value="branding" />
               <span class="est-check-box">
                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
@@ -795,10 +805,10 @@
               </span>
               <span>
                 <span class="est-feature-label">Logo &amp; Branding</span><br />
-                <span class="est-feature-price">+$500 - $3,000</span>
+                <span class="est-feature-price">+$300 - $2,000</span>
               </span>
             </label>
-            <label class="est-feature-item" data-cost-low="500" data-cost-high="3000">
+            <label class="est-feature-item" data-cost-low="300" data-cost-high="2000">
               <input type="checkbox" name="feature" value="copywriting" />
               <span class="est-check-box">
                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
@@ -807,10 +817,10 @@
               </span>
               <span>
                 <span class="est-feature-label">Copywriting</span><br />
-                <span class="est-feature-price">+$500 - $3,000</span>
+                <span class="est-feature-price">+$300 - $2,000</span>
               </span>
             </label>
-            <label class="est-feature-item" data-cost-low="1500" data-cost-high="5000">
+            <label class="est-feature-item" data-cost-low="1000" data-cost-high="3500">
               <input type="checkbox" name="feature" value="portal" />
               <span class="est-check-box">
                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
@@ -819,10 +829,22 @@
               </span>
               <span>
                 <span class="est-feature-label">Client Portal / Login</span><br />
-                <span class="est-feature-price">+$1,500 - $5,000</span>
+                <span class="est-feature-price">+$1,000 - $3,500</span>
               </span>
             </label>
-            <label class="est-feature-item" data-cost-low="2000" data-cost-high="8000">
+            <label class="est-feature-item" data-cost-low="1000" data-cost-high="3500">
+              <input type="checkbox" name="feature" value="ecommerce" />
+              <span class="est-check-box">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                  <path d="M2 6L5 9L10 3" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+              <span>
+                <span class="est-feature-label">E-Commerce Integration</span><br />
+                <span class="est-feature-price">+$1,000 - $3,500</span>
+              </span>
+            </label>
+            <label class="est-feature-item" data-cost-low="1400" data-cost-high="5500">
               <input type="checkbox" name="feature" value="multilingual" />
               <span class="est-check-box">
                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
@@ -831,7 +853,7 @@
               </span>
               <span>
                 <span class="est-feature-label">Bilingual / Multi-Language</span><br />
-                <span class="est-feature-price">+$2,000 - $8,000</span>
+                <span class="est-feature-price">+$1,400 - $5,500</span>
               </span>
             </label>
           </div>
@@ -847,7 +869,7 @@
             <span style="font-size: 0.5em; font-weight: 400; color: var(--text-white-muted)">CAD</span>
           </p>
           <p class="est-result-note">
-            One-time project cost based on 2026 southwestern Ontario market rates
+            One-time project cost based on 2026 southwestern Ontario freelancer rates
           </p>
           <div class="est-monthly" id="monthlyLine">
             Plus <strong id="monthlyLow">$100</strong> &ndash;
@@ -882,9 +904,9 @@
         <h2>What goes into the cost of a website?</h2>
         <p>
           Website pricing in Ontario varies widely. A template-based brochure
-          site for a local business in Paris, ON might cost $1,500, while a
+          site for a local business in Paris, ON might cost $1,000, while a
           custom-built e-commerce platform for a manufacturer in
-          Kitchener-Waterloo could be $30,000+. Here's what drives the numbers.
+          Kitchener-Waterloo could be $20,000+. Here's what drives the numbers.
         </p>
 
         <h3>Website type</h3>
@@ -896,19 +918,19 @@
 
         <h3>Design complexity</h3>
         <p>
-          Template-based designs ($400 - $2,500) use pre-built layouts and are
-          the fastest to launch. Semi-custom sites ($2,500 - $7,000) start with a
+          Template-based designs ($300 - $1,500) use pre-built layouts and are
+          the fastest to launch. Semi-custom sites ($1,500 - $5,000) start with a
           framework but add strategic custom sections. Fully custom builds
-          ($5,000 - $25,000+) are designed and coded from scratch to match your
+          ($3,500 - $18,000+) are designed and coded from scratch to match your
           brand exactly.
         </p>
 
         <h3>Page count and content</h3>
         <p>
           More pages means more design, development, and content work. In this
-          market, additional pages typically add $80 - $200 each. If you need
+          market, additional pages typically add $50 - $150 each. If you need
           professional copywriting (rather than providing your own content),
-          budget an additional $50 - $150 per page.
+          budget an additional $35 - $100 per page.
         </p>
 
         <h3>Features and integrations</h3>
@@ -921,25 +943,26 @@
 
         <h3>Ongoing costs</h3>
         <p>
-          After launch, your website needs hosting ($10 - $75/month),
-          maintenance and security updates ($85 - $250/month), and a domain
+          After launch, your website needs hosting ($10 - $50/month),
+          maintenance and security updates ($60 - $200/month), and a domain
           renewal ($15 - $25/year). A reasonable monthly budget for a small
-          business site in Ontario is $100 - $300.
+          business site in Ontario is $75 - $225.
         </p>
 
-        <h3>Freelancer vs. agency</h3>
+        <h3>Why freelancer rates?</h3>
         <p>
-          In the Brantford, Hamilton, and KWC market, freelancers typically
-          charge $35 - $80/hr while agencies charge $50 - $130/hr. Freelancers
-          cost less but agencies offer larger teams, established processes, and
-          more reliable long-term support. This region is 15 - 30% less expensive
-          than Toronto.
+          In the Brantford, Hamilton, and KWC market, freelancers and small
+          studios charge $35 - $80/hr &mdash; 30 to 40% less than traditional
+          agencies ($50 - $130/hr). You get the same quality work with lower
+          overhead. This estimator uses freelancer-level rates because that's
+          what most small businesses in this region actually pay. This region
+          is also 15 - 30% less expensive than Toronto.
         </p>
 
         <h3>When the cheapest option costs more</h3>
         <p>
           A $500 website that doesn't convert visitors into customers is more
-          expensive than a $5,000 website that pays for itself in three months.
+          expensive than a $3,500 website that pays for itself in three months.
           The right question isn't "what's the cheapest price?" &mdash; it's
           "what will this investment return?"
         </p>
@@ -1059,36 +1082,36 @@
       (function () {
         "use strict";
 
-        // ── PRICING DATA (2026 southwestern Ontario market rates) ────
+        // ── PRICING DATA (2026 southwestern Ontario freelancer / small-studio rates) ────
         // Base costs: [low, high] per type + design level
         var bases = {
           brochure: {
-            template: [800, 2000],
-            "semi-custom": [2000, 4500],
-            custom: [4000, 8000],
+            template: [500, 1400],
+            "semi-custom": [1200, 3000],
+            custom: [2500, 5500],
           },
           business: {
-            template: [2000, 4000],
-            "semi-custom": [4000, 8000],
-            custom: [7500, 15000],
+            template: [1200, 2800],
+            "semi-custom": [2500, 5500],
+            custom: [5000, 10000],
           },
           ecommerce: {
-            template: [3000, 7000],
-            "semi-custom": [7000, 18000],
-            custom: [18000, 40000],
+            template: [2000, 4500],
+            "semi-custom": [4500, 12000],
+            custom: [12000, 28000],
           },
           webapp: {
-            template: [10000, 20000],
-            "semi-custom": [20000, 45000],
-            custom: [40000, 80000],
+            template: [6500, 14000],
+            "semi-custom": [14000, 30000],
+            custom: [28000, 55000],
           },
         };
 
         // Per-page adder above included pages: [low, high]
         var perPage = {
-          template: [80, 120],
-          "semi-custom": [100, 160],
-          custom: [150, 250],
+          template: [50, 80],
+          "semi-custom": [65, 110],
+          custom: [100, 175],
         };
 
         // Included page counts per type (additional pages cost extra)
@@ -1101,10 +1124,10 @@
 
         // Monthly ongoing: [low, high]
         var monthly = {
-          brochure: [75, 200],
-          business: [100, 300],
-          ecommerce: [150, 400],
-          webapp: [200, 500],
+          brochure: [60, 150],
+          business: [75, 225],
+          ecommerce: [125, 325],
+          webapp: [175, 400],
         };
 
         // ── STATE ────────────────────────────────────────────

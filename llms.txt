@@ -46,11 +46,11 @@ Orban Forest is based in Brantford, Ontario and serves businesses across Brantfo
 - [Your Website Has Three Seconds](https://orbanforest.ca/blog/website-three-seconds): Web design self-audit checklist focused on first impressions and trust signals.
 - [The Follow-Up Is Where the Money Is](https://orbanforest.ca/blog/follow-up-is-where-the-money-is): Guide to lead follow-up systems and automation for small businesses.
 
-## Pricing (2026 Ontario Market Rates)
+## Pricing (2026 Ontario Freelancer Rates)
 
-- Brochure website (3-5 pages): $800 - $8,000 CAD depending on design level
-- Business website (5-15 pages): $2,000 - $15,000 CAD
-- E-commerce: $3,000 - $40,000 CAD
-- Web application: $10,000 - $80,000 CAD
-- Monthly ongoing (hosting + maintenance): $75 - $500 CAD
+- Brochure website (3-5 pages): $500 - $5,500 CAD depending on design level
+- Business website (5-15 pages): $1,200 - $10,000 CAD
+- E-commerce: $2,000 - $28,000 CAD
+- Web application: $6,500 - $55,000 CAD
+- Monthly ongoing (hosting + maintenance): $60 - $400 CAD
 - Use the [Cost Estimator](https://orbanforest.ca/web-design-cost-estimator) for detailed project estimates

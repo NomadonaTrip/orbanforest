@@ -5,6 +5,9 @@ ErrorDocument 404 /404.html
 
 RewriteEngine On
 
+RewriteCond %{HTTP_HOST} !nomadonatrip.github.io
+RewriteRule ^ https://orbanforest.ca%{REQUEST_URI} [R=301,L]
+
 # 0. 301 redirect www to non-www (canonical domain)
 RewriteCond %{HTTP_HOST} ^www\.orbanforest\.ca [NC]
 RewriteRule ^(.*)$ https://orbanforest.ca/$1 [R=301,L]
@@ -13,7 +16,15 @@ RewriteRule ^(.*)$ https://orbanforest.ca/$1 [R=301,L]
 RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?] [NC]
 RewriteRule ^ /%1 [R=301,L,NE]
 
-# 2. Generic: rewrite /foo -> /foo.html if the .html file exists
+# 2. Explicit rewrites for hyphenated pages
+RewriteRule ^web-design-cost-estimator/?$ web-design-cost-estimator.html [L]
+RewriteRule ^web-design-paris-ontario/?$ web-design-paris-ontario.html [L]
+RewriteRule ^web-design-brantford/?$ web-design-brantford.html [L]
+RewriteRule ^web-design-cambridge-ontario/?$ web-design-cambridge-ontario.html [L]
+RewriteRule ^web-design-kitchener-waterloo/?$ web-design-kitchener-waterloo.html [L]
+RewriteRule ^web-design-hamilton/?$ web-design-hamilton.html [L]
+
+# 3. Generic: rewrite /foo -> /foo.html if the .html file exists
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME}.html -f

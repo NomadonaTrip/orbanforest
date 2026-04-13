@@ -366,4 +366,82 @@
       animId = requestAnimationFrame(loop);
     });
   })();
+
+  // ── COOKIE CONSENT BANNER (opt-out) ───────────────────
+  (function () {
+    var STORAGE_KEY = "of-cookie-consent";
+    var GA_ID = "G-CBGMEPXECR";
+
+    // Don't show if user already made a choice
+    if (localStorage.getItem(STORAGE_KEY)) return;
+
+    // Inject banner HTML
+    var banner = document.createElement("div");
+    banner.id = "cookieBanner";
+    banner.setAttribute("role", "dialog");
+    banner.setAttribute("aria-label", "Cookie consent");
+    banner.innerHTML =
+      '<div class="cb-inner">' +
+      '<p class="cb-text">We use cookies (Google Analytics) to understand how visitors use this site. ' +
+      'By continuing to browse, you accept this. <a href="/privacy-policy" class="cb-link">Privacy Policy</a></p>' +
+      '<div class="cb-actions">' +
+      '<button class="cb-btn cb-accept" id="cbAccept">Got it</button>' +
+      '<button class="cb-btn cb-decline" id="cbDecline">Opt out</button>' +
+      "</div>" +
+      "</div>";
+
+    // Inject styles
+    var style = document.createElement("style");
+    style.textContent =
+      "#cookieBanner{position:fixed;bottom:0;left:0;right:0;z-index:9999;" +
+      "background:var(--bg-dark-elevated,#1a1a1a);border-top:1px solid var(--border-light,#2a2a2a);" +
+      "padding:1rem 1.5rem;font-family:var(--font-sans,sans-serif);font-size:0.88rem;" +
+      "color:var(--text-white-muted,#999);transform:translateY(100%);opacity:0;" +
+      "transition:transform 0.4s cubic-bezier(0.16,1,0.3,1),opacity 0.4s ease}" +
+      "#cookieBanner.cb-visible{transform:translateY(0);opacity:1}" +
+      ".cb-inner{max-width:1060px;margin:0 auto;display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap}" +
+      ".cb-text{flex:1;min-width:280px;line-height:1.6;margin:0}" +
+      ".cb-link{color:var(--accent,#a855f7);text-decoration:underline}" +
+      ".cb-actions{display:flex;gap:0.5rem;flex-shrink:0}" +
+      ".cb-btn{font-family:inherit;font-size:0.85rem;font-weight:500;padding:0.5rem 1.25rem;" +
+      "border-radius:100px;cursor:pointer;border:none;transition:background 0.2s,color 0.2s}" +
+      ".cb-accept{background:var(--accent,#a855f7);color:#0a0a0a}" +
+      ".cb-accept:hover{background:var(--accent-hover,#9333ea)}" +
+      ".cb-decline{background:transparent;color:var(--text-white-muted,#999);" +
+      "border:1px solid var(--border-light,#2a2a2a)}" +
+      ".cb-decline:hover{border-color:var(--accent,#a855f7);color:var(--accent,#a855f7)}" +
+      "@media(max-width:600px){.cb-inner{flex-direction:column;text-align:center}" +
+      ".cb-actions{justify-content:center}}";
+
+    document.head.appendChild(style);
+    document.body.appendChild(banner);
+
+    // Animate in after a short delay
+    setTimeout(function () {
+      banner.classList.add("cb-visible");
+    }, 800);
+
+    function dismiss(choice) {
+      localStorage.setItem(STORAGE_KEY, choice);
+      banner.classList.remove("cb-visible");
+      setTimeout(function () {
+        banner.remove();
+      }, 500);
+
+      if (choice === "declined") {
+        // Disable GA and clear cookies
+        window["ga-disable-" + GA_ID] = true;
+        document.cookie = "_ga=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=.orbanforest.ca";
+        document.cookie = "_ga_CBGMEPXECR=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=.orbanforest.ca";
+        document.cookie = "_gid=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=.orbanforest.ca";
+      }
+    }
+
+    document.getElementById("cbAccept").addEventListener("click", function () {
+      dismiss("accepted");
+    });
+    document.getElementById("cbDecline").addEventListener("click", function () {
+      dismiss("declined");
+    });
+  })();
 })();
