@@ -1,18 +1,18 @@
 # Clean URLs for orbanforest.ca
-# Internally rewrites /foo -> /foo.html, and 301-redirects /foo.html -> /foo
-
 ErrorDocument 404 /404.html
 
 RewriteEngine On
 
-RewriteCond %{HTTP_HOST} !nomadonatrip.github.io
+# Redirect to canonical domain (skip GitHub Pages staging)
+RewriteCond %{HTTP_HOST} !nomadonatrip\.github\.io
+RewriteCond %{HTTP_HOST} !^$ [NC]
 RewriteRule ^ https://orbanforest.ca%{REQUEST_URI} [R=301,L]
 
-# 1. 301 redirect old .html URLs to clean URLs (preserves SEO link equity)
+# 1. 301 redirect old .html URLs to clean URLs
 RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?] [NC]
 RewriteRule ^ /%1 [R=301,L,NE]
 
-# 2. Explicit rewrites for hyphenated pages
+# 2. Explicit rewrites
 RewriteRule ^web-design-cost-estimator/?$ web-design-cost-estimator.html [L]
 RewriteRule ^web-design-paris-ontario/?$ web-design-paris-ontario.html [L]
 RewriteRule ^web-design-brantford/?$ web-design-brantford.html [L]
@@ -20,10 +20,8 @@ RewriteRule ^web-design-cambridge-ontario/?$ web-design-cambridge-ontario.html [
 RewriteRule ^web-design-kitchener-waterloo/?$ web-design-kitchener-waterloo.html [L]
 RewriteRule ^web-design-hamilton/?$ web-design-hamilton.html [L]
 RewriteRule ^blog/?$ blog/index.html [L]
-RewriteRule ^web-design-cost-estimator/?$ web-design-cost-estimator.html [L]
-RewriteRule ^web-design-paris-ontario/?$ web-design-paris-ontario.html [L]
 
-# 3. Generic: rewrite /foo -> /foo.html if the .html file exists
+# 3. Generic rewrite /foo -> /foo.html
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME}.html -f
