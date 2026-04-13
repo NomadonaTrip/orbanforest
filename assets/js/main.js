@@ -16,10 +16,12 @@
     localStorage.setItem("of-theme", theme);
   }
   setTheme(getPreferredTheme());
-  themeToggle.addEventListener("click", () => {
-    const current = root.getAttribute("data-theme");
-    setTheme(current === "light" ? "dark" : "light");
-  });
+  if (themeToggle) {
+    themeToggle.addEventListener("click", () => {
+      const current = root.getAttribute("data-theme");
+      setTheme(current === "light" ? "dark" : "light");
+    });
+  }
   window
     .matchMedia("(prefers-color-scheme: dark)")
     .addEventListener("change", (e) => {

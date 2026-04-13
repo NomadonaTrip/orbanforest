@@ -1,0 +1,56 @@
+# Orban Forest Inc.
+
+> Digital agency delivering web design, AI automation, digital marketing, 3D animation, and AR/VR experiences for businesses in southwestern Ontario, Canada.
+
+Orban Forest is based in Brantford, Ontario and serves businesses across Brantford, Cambridge, Paris, Kitchener, Waterloo, Hamilton, Guelph, Woodstock, Simcoe, Norfolk County, and Brant County.
+
+## Contact
+
+- Phone: +1 (365) 994-8961
+- Email: hello@orbanforest.ca
+- WhatsApp: +1 (365) 994-8961
+- Location: Brantford, Ontario, Canada
+- Website: https://orbanforest.ca
+- Status: Currently accepting new projects
+
+## Services
+
+- [Web Design](https://orbanforest.ca/#service-web-design): UI/UX design, responsive websites, e-commerce, design systems
+- [AI Automations](https://orbanforest.ca/#service-ai): Machine learning, LLM integration, workflow automation, chatbots
+- [Web Applications](https://orbanforest.ca/#service-web-apps): React, Next.js, Node.js, full-stack development
+- [Digital Marketing](https://orbanforest.ca/#service-digital-marketing): SEO, content strategy, social media, PPC
+- [3D Animation](https://orbanforest.ca/#service-3d-animation): Character design, motion graphics, Blender, Maya
+- [AR/VR Experiences](https://orbanforest.ca/#service-arvr): Unity, Unreal Engine, WebXR, spatial computing
+
+## Pages
+
+- [Homepage](https://orbanforest.ca/): Service overview, case studies, company process, and contact
+- [Blog](https://orbanforest.ca/blog): Articles on web design, AI automation, digital marketing, and business growth
+- [Contact Us](https://orbanforest.ca/contact-us): Project inquiry form, phone, email, WhatsApp
+- [Web Design Cost Estimator](https://orbanforest.ca/web-design-cost-estimator): Free interactive tool to estimate website project costs based on 2026 Ontario market rates
+- [Privacy Policy](https://orbanforest.ca/privacy-policy): Data handling practices for Sophia social media platform
+
+## Case Studies
+
+- [Loewen Property Works](https://orbanforest.ca/case-study-1): Website rebuild for property maintenance company. 3x increase in inquiries, top 5 Google ranking, delivered in 3 weeks. Services: web design, development, local SEO.
+- [HBCU Superheroes](https://orbanforest.ca/case-study-2): 3D animated short celebrating HBCU culture. 6+ original characters, international team across 4 countries. Services: animation, character design, creative direction.
+- [People of the Bible](https://orbanforest.ca/case-study-3): Animated series reimagining biblical narratives. 5+ episodes with unified visual identity. Services: animation, storytelling, art direction.
+
+## Blog Articles
+
+- [Google Business Profile: Why It's Costing You Customers Right Now](https://orbanforest.ca/blog/google-business-profile): Guide to GBP setup and optimization for local businesses in Brantford, Cambridge, Paris ON.
+- [Your Customers Are Telling You Why They Buy](https://orbanforest.ca/blog/customers-tell-you-why-they-buy): Customer research strategy for discovering authentic marketing messages.
+- [AI Automation for Small Business](https://orbanforest.ca/blog/automate-repetitive-tasks): Practical guide to automating lead response, scheduling, and invoice follow-up. Ontario small businesses spend 10-15 hours/week on repetitive tasks.
+- [Your Website Isn't Broken. Your Marketing Around It Is.](https://orbanforest.ca/blog/website-marketing-not-broken): Why a new website alone won't generate leads without supporting marketing strategy.
+- [A 30-Second Video Can Do What Your Brochure Never Could](https://orbanforest.ca/blog/30-second-video-beats-brochure): Business case for animation and video in B2B sales, with real manufacturing example.
+- [Your Website Has Three Seconds](https://orbanforest.ca/blog/website-three-seconds): Web design self-audit checklist focused on first impressions and trust signals.
+- [The Follow-Up Is Where the Money Is](https://orbanforest.ca/blog/follow-up-is-where-the-money-is): Guide to lead follow-up systems and automation for small businesses.
+
+## Pricing (2026 Ontario Market Rates)
+
+- Brochure website (3-5 pages): $800 - $8,000 CAD depending on design level
+- Business website (5-15 pages): $2,000 - $15,000 CAD
+- E-commerce: $3,000 - $40,000 CAD
+- Web application: $10,000 - $80,000 CAD
+- Monthly ongoing (hosting + maintenance): $75 - $500 CAD
+- Use the [Cost Estimator](https://orbanforest.ca/web-design-cost-estimator) for detailed project estimates

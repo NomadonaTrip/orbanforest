@@ -1,0 +1,277 @@
+# Orban Forest Inc. — Full Site Reference
+
+> Digital agency delivering web design, AI automation, digital marketing, 3D animation, and AR/VR experiences for businesses in southwestern Ontario, Canada. Based in Brantford, Ontario. Currently accepting new projects.
+
+## Company Overview
+
+Orban Forest Inc. is a full-service digital agency that blends design, technology, and marketing. The company partners with businesses to build digital presences that deliver measurable results — from responsive websites and AI-powered automations to 3D animation and AR/VR experiences.
+
+**Key stats:** 50+ projects delivered, 8+ years of craft, 12+ countries served, 100% client satisfaction.
+
+**Contact:**
+- Phone: +1 (365) 994-8961
+- Email: hello@orbanforest.ca
+- WhatsApp: +1 (365) 994-8961
+- Location: Brantford, Ontario, Canada
+- Website: https://orbanforest.ca
+
+## Service Area
+
+Orban Forest serves businesses across southwestern Ontario:
+
+- Brantford (primary location)
+- Cambridge
+- Paris, Ontario
+- Kitchener
+- Waterloo
+- Hamilton
+- Guelph
+- Woodstock
+- Simcoe
+- Norfolk County
+- Brant County
+
+The region is 15-30% less expensive than Toronto for digital services. Local agency hourly rates range from $50-$130 CAD.
+
+---
+
+## Services
+
+### Web Design
+UI/UX design, responsive websites, e-commerce sites, and design systems. Covers everything from brochure sites for local businesses to complex multi-page builds. Every site is mobile-first, fast-loading, and optimized for conversions. Technologies: HTML5, CSS3, JavaScript, WordPress, custom builds.
+
+### AI Automations
+Machine learning integration, LLM-powered chatbots, workflow automation, and custom AI solutions. Focus on practical automation that saves time: lead response automation, appointment scheduling, invoice follow-up, CRM integration. Built with PIPEDA (Canadian privacy law) compliance in mind. A documented case showed a Hamilton-area contractor gaining a 20% increase in close rate after automating quote follow-ups.
+
+### Web Applications
+Full-stack development using React, Next.js, and Node.js. Custom portals, dashboards, SaaS products, and internal tools. Includes authentication, role-based access, API integrations, and database design.
+
+### Digital Marketing
+SEO (technical and local), content strategy, social media management, and PPC campaign management. Strong focus on local SEO for the Brantford/Cambridge/KWC market. Services include Google Business Profile optimization, keyword research, schema markup, and content planning.
+
+### 3D Animation
+Character design, motion graphics, cinematic animation, and explainer videos. Tools: Blender, ZBrush, Substance Painter, Maya, After Effects, DaVinci Resolve, Marvelous Designer. International production experience coordinating teams across multiple countries.
+
+### AR/VR Experiences
+Immersive experiences using Unity, Unreal Engine, WebXR, and spatial computing. Covers virtual tours, product visualization, and interactive 3D web experiences.
+
+---
+
+## Case Studies
+
+### Loewen Property Works — Web Design & Local SEO
+**URL:** https://orbanforest.ca/case-study-1
+**Industry:** Property maintenance (residential and commercial), Ontario
+**Challenge:** Company website had been down for months, losing visibility in an increasingly digital market. Potential customers searching for property services couldn't find them online.
+**Approach:**
+- Responsive website designed for credibility and conversion
+- Mobile-tested across 12+ device configurations
+- Fast load times under 0.5 seconds on mobile
+- Service pages optimized for local SEO with geo-targeted keywords
+- Google Business Profile integration for local map pack visibility
+- Streamlined navigation with prominent CTAs on every page
+**Results:**
+- 3x increase in monthly customer inquiries
+- Under 1 second average page load time on mobile
+- Top 5 Google ranking for local service keywords
+**Timeline:** 3 weeks
+**Stack:** HTML5, CSS3, JavaScript, Responsive Design, Google Analytics, Local SEO
+**Live site:** loewenpropertyworks.ca
+
+### HBCU Superheroes — Animation & Character Design
+**URL:** https://orbanforest.ca/case-study-2
+**Industry:** Entertainment & Education
+**Challenge:** Creating a 3D animated short celebrating Historically Black College and University culture with authenticity and emotional impact, coordinating an international team.
+**Approach:**
+- Original character designs rooted in authentic HBCU culture and traditions
+- 3D modeling, rigging, and texturing pipeline coordinated across four countries
+- Cinematic camera work and lighting designed for emotional impact
+- Voice direction and sound design integrated into cohesive narrative
+- Iterative review process ensuring cultural authenticity at every stage
+**Results:**
+- 4 countries represented in production team
+- 6+ original characters designed and fully rigged
+- 1 unified creative vision from concept to screen
+**Client quote:** "Orban Forest took our idea and made it bigger than we imagined. The characters feel alive — and they feel like us."
+**Stack:** Blender, ZBrush, Substance Painter, After Effects, DaVinci Resolve, Marvelous Designer
+
+### People of the Bible — Animation & Storytelling
+**URL:** https://orbanforest.ca/case-study-3
+**Industry:** Faith & Education
+**Challenge:** Making ancient biblical stories feel urgent and alive for modern audiences through character-driven animation.
+**Approach:**
+- Original art direction balancing historical authenticity with contemporary appeal
+- Character designs conveying personality, emotion, and cultural context
+- Cinematic storyboarding with deliberate pacing and visual rhythm
+- Rich environment design immersing viewers in the world of each narrative
+- Sound design and score integration heightening emotional resonance
+**Results:**
+- 5+ episodes produced with unified visual identity
+- 2 distinct narrative arcs spanning the series
+- 100% original art direction and character design
+**Client quote:** "This is exactly what we hoped for — animation that makes people lean in, not tune out. The characters feel real in a way we haven't seen before."
+**Stack:** Blender, After Effects, Photoshop, Storyboarding, DaVinci Resolve, Sound Design
+
+---
+
+## Company Process
+
+Orban Forest follows a four-phase partnership process:
+
+1. **Deep Dive:** Every project starts with listening. Understanding, analyzing, and validating needs and desired outcomes.
+2. **Solution Design:** Assembling a team of experts to create solutions that hit core business needs. Creativity and precision combined.
+3. **Development:** Building responsive, interactive, user-centric solutions with cutting-edge technology and meticulous craft.
+4. **Support & Growth:** Remaining a vested, trusted partner maintaining and evolving the client's digital presence.
+
+---
+
+## Web Design Cost Estimator
+
+**URL:** https://orbanforest.ca/web-design-cost-estimator
+
+A free interactive tool for estimating website project costs. Based on real 2026 agency rates from Brantford, Cambridge, Hamilton, and Kitchener-Waterloo.
+
+### Website Types & Pricing
+
+**Brochure Site (3-5 pages)**
+- Template: $800 - $2,000
+- Semi-Custom: $2,000 - $4,500
+- Fully Custom: $4,000 - $8,000
+- Monthly ongoing: $75 - $200
+
+**Business Site (5-15 pages)**
+- Template: $2,000 - $4,000
+- Semi-Custom: $4,000 - $8,000
+- Fully Custom: $7,500 - $15,000
+- Monthly ongoing: $100 - $300
+
+**E-Commerce (online store)**
+- Template: $3,000 - $7,000
+- Semi-Custom: $7,000 - $18,000
+- Fully Custom: $18,000 - $40,000
+- Monthly ongoing: $150 - $400
+
+**Web Application (custom platform)**
+- Template/Framework: $10,000 - $20,000
+- Semi-Custom: $20,000 - $45,000
+- Fully Custom: $40,000 - $80,000
+- Monthly ongoing: $200 - $500
+
+### Design Levels
+
+- **Template:** Pre-built theme customized with client's brand, content, and colours. Fastest to launch.
+- **Semi-Custom:** Strategic layout with custom sections built around client's goals. Framework-based with custom additions.
+- **Fully Custom:** Original design from the ground up. Unique in every detail.
+
+### Additional Page Costs
+- Template: $80 - $120 per page
+- Semi-Custom: $100 - $160 per page
+- Fully Custom: $150 - $250 per page
+
+### Feature Add-Ons (additive to base cost)
+- Blog: +$200 - $600
+- Online Booking: +$500 - $2,000
+- AI Chatbot: +$500 - $3,000
+- SEO Package: +$1,500 - $5,000
+- Email Marketing Integration: +$200 - $800
+- Logo & Branding: +$500 - $3,000
+- Copywriting: +$500 - $3,000
+- Client Portal / Login: +$1,500 - $5,000
+- Bilingual / Multi-Language: +$2,000 - $8,000
+
+### Ongoing Monthly Costs (typical small business)
+- Hosting: $10 - $75/month
+- Maintenance and security updates: $85 - $250/month
+- Domain renewal: $15 - $25/year
+- Optional SEO services: $700 - $4,000/month
+- Reasonable monthly budget: $100 - $300 CAD
+
+### Market Context
+- This region is 15-30% less expensive than Toronto
+- Local agency hourly rates: $50 - $130/hr
+- Freelancer rates: $35 - $80/hr
+- 60% of small business projects fall between $2,000 and $5,400 CAD nationally
+
+---
+
+## Blog Content
+
+### Google Business Profile: Why It's Costing You Customers Right Now
+**URL:** https://orbanforest.ca/blog/google-business-profile
+**Published:** March 27, 2026 | Category: Marketing
+**Summary:** Actionable guide for local businesses in Brantford, Cambridge, and Paris ON on setting up and optimizing Google Business Profile. Explains that GBP controls what appears in Google Maps and local search results. When someone searches "plumber near me" or "CNC machining Brantford," Google shows a map with three businesses — if you're not one, you're invisible.
+**Key advice:** Claim profile, fill every field, add real photos, request reviews, post weekly updates. No website needed to start.
+
+### Your Customers Are Telling You Why They Buy. Are You Listening?
+**URL:** https://orbanforest.ca/blog/customers-tell-you-why-they-buy
+**Published:** March 20, 2026 | Category: Strategy
+**Summary:** Marketing strategy article on customer research. Most businesses say their differentiator is "quality" or "service" — but so does every competitor. The best marketing messages come from actual customer language. Recommends calling 5 best customers and asking three questions: what triggered their search, what made them choose you, and what they'd tell a friend. Their exact words become your marketing copy.
+
+### AI Automation for Small Business: Stop Doing the Same 10 Tasks Every Day
+**URL:** https://orbanforest.ca/blog/automate-repetitive-tasks
+**Published:** March 13, 2026 | Category: Technology
+**Summary:** Ontario small business owners spend 10-15 hours per week on repetitive tasks like answering the same questions, sending invoices, scheduling appointments, and following up on quotes. The article provides three practical automation starting points: automatic lead response (instant personalized email with pricing guide), appointment scheduling (eliminate back-and-forth), and invoice follow-up (automatic reminders at 14 days). Real example: Hamilton-area contractor automated quote follow-ups and saw a 20% increase in close rate while eliminating 1+ hour of daily manual work.
+
+### Your Website Isn't Broken. Your Marketing Around It Is.
+**URL:** https://orbanforest.ca/blog/website-marketing-not-broken
+**Published:** March 6, 2026 | Category: Marketing
+**Summary:** Businesses spend $5,000-$15,000 on a new website, share it on Facebook once, then wonder why it doesn't generate leads. The website didn't fail — it never had a supporting marketing strategy. Three things every website needs: a linked Google Business Profile, active social media driving traffic, and fresh content giving reasons to return. Before considering a redesign, ensure you have these foundations in place.
+
+### A 30-Second Video Can Do What Your Brochure Never Could
+**URL:** https://orbanforest.ca/blog/30-second-video-beats-brochure
+**Published:** February 27, 2026 | Category: Marketing
+**Summary:** Business case for animation and video in B2B sales. Real example: a manufacturing company making industrial filtration systems in the Kitchener area had sales teams spending 30 minutes per call explaining basics. A 40-second animated explainer collapsed that gap. Animation is particularly powerful for complex products, products that don't physically exist yet, trade shows, and reducing repeated sales explanations. Positioned as competing above your weight class — small businesses can present as polished as large corporations.
+
+### Your Website Has Three Seconds. What Does It Say About You?
+**URL:** https://orbanforest.ca/blog/website-three-seconds
+**Published:** February 20, 2026 | Category: Strategy
+**Summary:** Every visitor makes a snap judgment about your business within three seconds. Provides a six-point self-audit: (1) load your site on your phone — does it appear in under 3 seconds? (2) Can a stranger tell what you do from the headline? (3) Can they contact you without scrolling? (4) Are the photos real (your team, your shop, your work)? (5) Does the design feel current? (6) Is there a clear next step? If any answer is no, that's where visitors are leaving.
+
+### The Follow-Up Is Where the Money Is
+**URL:** https://orbanforest.ca/blog/follow-up-is-where-the-money-is
+**Published:** February 13, 2026 | Category: Growth
+**Summary:** The fastest way to grow isn't more leads — it's to stop losing existing ones. Most small businesses lose leads because they're busy, not because they don't care. A potential customer reaches out, you're busy, you'll get back to them later — by Monday they've called someone else. Practical system: respond to new leads within 2 hours (even just acknowledgment), check messages 3x daily, maintain a simple tracking spreadsheet. For past customers: quarterly check-ins, post-project follow-up within 1 week, referral requests. AI-powered follow-up automation scales this without adding headcount.
+
+---
+
+## Frequently Asked Questions
+
+### How much does a website cost in Ontario in 2026?
+A basic brochure website (3-5 pages) typically costs $1,500 to $5,000 CAD in southwestern Ontario. A small business website (5-10 pages) ranges from $3,000 to $9,000. E-commerce sites start at $5,000 and can reach $40,000+ for advanced builds. Custom web applications range from $20,000 to $80,000+. Prices vary based on design complexity, features, and whether you hire a freelancer or agency. Use Orban Forest's free cost estimator at https://orbanforest.ca/web-design-cost-estimator for a personalized estimate.
+
+### What is a reasonable price for web design in Brantford, Hamilton, or Kitchener-Waterloo?
+Web design rates in Brantford, Hamilton, and the Kitchener-Waterloo-Cambridge corridor are typically 15-30% lower than Toronto. Local agency hourly rates range from $50-$130/hr, and freelancers charge $35-$80/hr. A professional 5-page business website from a local agency averages $3,000 to $6,000 CAD.
+
+### What ongoing costs should I budget for after my website launches?
+Typical monthly ongoing costs include: hosting ($10-$75/month), maintenance and updates ($85-$250/month), domain renewal ($15-$25/year), and optional SEO services ($700-$4,000/month). A reasonable monthly budget for a small business is $100-$300 CAD.
+
+### Does Orban Forest offer AI automation services?
+Yes. AI automation is a core service, covering machine learning integration, LLM-powered chatbots, workflow automation, lead response automation, appointment scheduling, and invoice follow-up. All solutions are built with PIPEDA (Canadian privacy law) compliance. There is currently zero competition for AI automation services in the Brantford, Cambridge, and Paris ON market.
+
+### What industries does Orban Forest serve?
+Orban Forest works with businesses across industries including property services, entertainment, education, faith organizations, manufacturing, and general small-to-medium businesses. The common thread is businesses that need a stronger digital presence in the southwestern Ontario market.
+
+### How long does a typical website project take?
+Brochure sites: 1-3 weeks. Business sites: 3-6 weeks. E-commerce: 4-10 weeks. Web applications: 8-20+ weeks. Timelines depend on content readiness, design complexity, and feature requirements.
+
+---
+
+## Sitemap
+
+```
+https://orbanforest.ca/
+https://orbanforest.ca/blog
+https://orbanforest.ca/contact-us
+https://orbanforest.ca/case-study-1
+https://orbanforest.ca/case-study-2
+https://orbanforest.ca/case-study-3
+https://orbanforest.ca/blog/google-business-profile
+https://orbanforest.ca/blog/customers-tell-you-why-they-buy
+https://orbanforest.ca/blog/automate-repetitive-tasks
+https://orbanforest.ca/blog/website-marketing-not-broken
+https://orbanforest.ca/blog/30-second-video-beats-brochure
+https://orbanforest.ca/blog/website-three-seconds
+https://orbanforest.ca/blog/follow-up-is-where-the-money-is
+https://orbanforest.ca/web-design-cost-estimator
+https://orbanforest.ca/privacy-policy
+```

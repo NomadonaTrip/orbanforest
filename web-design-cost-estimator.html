@@ -1,0 +1,1248 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-CBGMEPXECR"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-CBGMEPXECR");
+    </script>
+    <!-- Google tag end -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="How much does a website cost in Ontario? Use our free web design price estimator to get an instant ballpark for your project — based on real 2026 rates from Brantford, Cambridge, Hamilton, and Kitchener-Waterloo."
+    />
+    <link rel="icon" type="image/png" href="assets/img/logo/favicon.png" />
+    <link
+      rel="canonical"
+      href="https://orbanforest.ca/web-design-cost-estimator"
+    />
+    <title>
+      Web Design Cost Estimator — How Much Does a Website Cost in Ontario? |
+      Orban Forest
+    </title>
+
+    <!-- Open Graph -->
+    <meta
+      property="og:title"
+      content="Web Design Cost Estimator — How Much Does a Website Cost in Ontario?"
+    />
+    <meta
+      property="og:description"
+      content="Use our free interactive tool to estimate your website project cost. Based on real 2026 rates from agencies in Brantford, Cambridge, Hamilton, and Kitchener-Waterloo."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://orbanforest.ca/web-design-cost-estimator"
+    />
+    <meta property="og:site_name" content="Orban Forest Inc." />
+
+    <!-- Structured Data: FAQPage + BreadcrumbList + WebApplication -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebApplication",
+            "name": "Web Design Cost Estimator",
+            "description": "Free interactive tool to estimate website design costs in Ontario, Canada. Based on 2026 market rates from Brantford, Cambridge, Hamilton, and Kitchener-Waterloo.",
+            "url": "https://orbanforest.ca/web-design-cost-estimator",
+            "applicationCategory": "BusinessApplication",
+            "operatingSystem": "Any",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "CAD"
+            },
+            "provider": { "@id": "https://orbanforest.ca/#business" }
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "How much does a website cost in Ontario in 2026?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A basic brochure website (3-5 pages) typically costs $1,500 to $5,000 CAD in southwestern Ontario. A small business website (5-10 pages) ranges from $3,000 to $9,000. E-commerce sites start at $5,000 and can reach $40,000+ for advanced builds. Custom web applications range from $20,000 to $80,000+. Prices vary based on design complexity, features, and whether you hire a freelancer or agency."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is a reasonable price for web design in Brantford, Hamilton, or Kitchener-Waterloo?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Web design rates in Brantford, Hamilton, and the Kitchener-Waterloo-Cambridge corridor are typically 15-30% lower than Toronto. Local agency hourly rates range from $50-$130/hr, and freelancers charge $35-$80/hr. A professional 5-page business website from a local agency averages $3,000 to $6,000 CAD."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What ongoing costs should I budget for after my website launches?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Typical monthly ongoing costs for a small business website in Ontario include: hosting ($10-$75/month), maintenance and updates ($85-$250/month), domain renewal ($15-$25/year), and optional SEO services ($700-$4,000/month). A reasonable monthly budget for a small business is $100-$300 CAD."
+                }
+              }
+            ]
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://orbanforest.ca/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Web Design Cost Estimator",
+                "item": "https://orbanforest.ca/web-design-cost-estimator"
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300;1,9..40,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <style>
+      /* ── ESTIMATOR PAGE STYLES ─────────────────────────── */
+      .est-hero {
+        padding: 10rem 1.5rem 3rem;
+        text-align: center;
+      }
+      .est-hero-label {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.8rem;
+        font-weight: 500;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 2rem;
+      }
+      .est-hero-label::before {
+        content: "";
+        width: 8px;
+        height: 8px;
+        background: var(--accent);
+        border-radius: 50%;
+        display: inline-block;
+      }
+      .est-hero h1 {
+        font-size: clamp(2.8rem, 5.5vw, 4.2rem);
+        font-weight: 300;
+        letter-spacing: -0.03em;
+        line-height: 1.15;
+        color: var(--text-white);
+        margin-bottom: 1.75rem;
+      }
+      .est-hero-sub {
+        font-size: clamp(1rem, 1.3vw, 1.15rem);
+        color: var(--text-white-muted);
+        max-width: 520px;
+        margin: 0 auto;
+        line-height: 1.75;
+      }
+
+      /* ── ESTIMATOR TOOL ─────────────────────────────────── */
+      .est-section {
+        padding: 2rem var(--container-pad) 5rem;
+      }
+      .est-container {
+        max-width: 1060px;
+        margin: 0 auto;
+      }
+
+      .est-step {
+        margin-bottom: 3.5rem;
+      }
+      .est-step-number {
+        font-size: 0.8rem;
+        font-weight: 500;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 0.75rem;
+      }
+      .est-step-title {
+        font-size: clamp(1.25rem, 2vw, 1.6rem);
+        font-weight: 500;
+        color: var(--text-white);
+        margin-bottom: 0.5rem;
+      }
+      .est-step-desc {
+        font-size: 1rem;
+        color: var(--text-white-muted);
+        margin-bottom: 1.5rem;
+        line-height: 1.75;
+      }
+
+      /* ── TYPE CARDS ──────────────────────────────────────── */
+      .est-type-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+      }
+      .est-type-card {
+        background: var(--bg-dark-elevated);
+        border: 1.5px solid var(--border-light);
+        border-radius: var(--radius-card);
+        padding: 1.5rem 1.25rem;
+        cursor: pointer;
+        transition:
+          border-color var(--transition-fast),
+          box-shadow var(--transition-fast);
+        text-align: center;
+      }
+      .est-type-card:hover {
+        border-color: var(--accent);
+      }
+      .est-type-card.active {
+        border-color: var(--accent);
+        box-shadow: 0 0 24px var(--accent-glow);
+      }
+      .est-type-card .est-card-icon {
+        font-size: 1.6rem;
+        margin-bottom: 0.5rem;
+        display: block;
+      }
+      .est-type-card .est-card-label {
+        font-weight: 500;
+        font-size: 0.9rem;
+        color: var(--text-white);
+        display: block;
+        margin-bottom: 0.2rem;
+      }
+      .est-type-card .est-card-range {
+        font-size: 0.78rem;
+        color: var(--text-white-muted);
+      }
+
+      /* ── DESIGN LEVEL ────────────────────────────────────── */
+      .est-level-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+      }
+      .est-level-card {
+        background: var(--bg-dark-elevated);
+        border: 1.5px solid var(--border-light);
+        border-radius: var(--radius-card);
+        padding: 1.25rem;
+        cursor: pointer;
+        transition:
+          border-color var(--transition-fast),
+          box-shadow var(--transition-fast);
+      }
+      .est-level-card:hover {
+        border-color: var(--accent);
+      }
+      .est-level-card.active {
+        border-color: var(--accent);
+        box-shadow: 0 0 24px var(--accent-glow);
+      }
+      .est-level-card .est-level-name {
+        font-weight: 500;
+        font-size: 0.95rem;
+        color: var(--text-white);
+        margin-bottom: 0.25rem;
+      }
+      .est-level-card .est-level-desc {
+        font-size: 0.85rem;
+        color: var(--text-white-muted);
+        line-height: 1.6;
+      }
+
+      /* ── SLIDER ──────────────────────────────────────────── */
+      .est-slider-wrap {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+      .est-slider-wrap input[type="range"] {
+        flex: 1;
+        -webkit-appearance: none;
+        appearance: none;
+        height: 6px;
+        border-radius: 3px;
+        background: var(--border-light);
+        outline: none;
+      }
+      .est-slider-wrap input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        background: var(--accent);
+        cursor: pointer;
+        border: 3px solid var(--bg-dark-elevated);
+        box-shadow: 0 0 8px var(--accent-glow);
+      }
+      .est-slider-wrap input[type="range"]::-moz-range-thumb {
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        background: var(--accent);
+        cursor: pointer;
+        border: 3px solid var(--bg-dark-elevated);
+        box-shadow: 0 0 8px var(--accent-glow);
+      }
+      .est-page-count {
+        font-weight: 700;
+        font-size: 1.3rem;
+        color: var(--accent);
+        min-width: 60px;
+        text-align: center;
+      }
+
+      /* ── FEATURE CHECKBOXES ──────────────────────────────── */
+      .est-features-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.75rem;
+      }
+      .est-feature-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.6rem;
+        background: var(--bg-dark-elevated);
+        border: 1.5px solid var(--border-light);
+        border-radius: 10px;
+        padding: 0.85rem 1rem;
+        cursor: pointer;
+        transition:
+          border-color var(--transition-fast),
+          box-shadow var(--transition-fast);
+      }
+      .est-feature-item:hover {
+        border-color: var(--accent);
+      }
+      .est-feature-item.checked {
+        border-color: var(--accent);
+        box-shadow: 0 0 16px var(--accent-glow);
+      }
+      .est-feature-item input[type="checkbox"] {
+        display: none;
+      }
+      .est-check-box {
+        width: 20px;
+        height: 20px;
+        min-width: 20px;
+        border-radius: 5px;
+        border: 2px solid var(--border-light);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition:
+          background var(--transition-fast),
+          border-color var(--transition-fast);
+        margin-top: 1px;
+      }
+      .est-feature-item.checked .est-check-box {
+        background: var(--accent);
+        border-color: var(--accent);
+      }
+      .est-check-box svg {
+        opacity: 0;
+        transition: opacity var(--transition-fast);
+      }
+      .est-feature-item.checked .est-check-box svg {
+        opacity: 1;
+      }
+      .est-feature-label {
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: var(--text-white);
+        line-height: 1.3;
+      }
+      .est-feature-price {
+        font-size: 0.8rem;
+        color: var(--text-white-muted);
+      }
+
+      /* ── RESULT PANEL ────────────────────────────────────── */
+      .est-result {
+        background: var(--bg-dark-elevated);
+        border: 1.5px solid var(--border-light);
+        border-radius: var(--radius-section);
+        padding: 2.5rem;
+        text-align: center;
+        margin-top: 1rem;
+        position: sticky;
+        bottom: 1.5rem;
+      }
+      .est-result-label {
+        font-size: 0.8rem;
+        font-weight: 500;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--text-white-muted);
+        margin-bottom: 0.75rem;
+      }
+      .est-result-range {
+        font-size: clamp(2.2rem, 5vw, 3.2rem);
+        font-weight: 300;
+        letter-spacing: -0.02em;
+        color: var(--text-white);
+        margin-bottom: 0.35rem;
+      }
+      .est-result-range .accent {
+        color: var(--accent);
+      }
+      .est-result-note {
+        font-size: 0.9rem;
+        color: var(--text-white-muted);
+        margin-bottom: 0.75rem;
+      }
+      .est-monthly {
+        font-size: 0.95rem;
+        color: var(--text-white-muted);
+        margin-bottom: 1.5rem;
+        padding-top: 1rem;
+        border-top: 1px solid var(--border-light);
+      }
+      .est-monthly strong {
+        color: var(--text-white);
+        font-weight: 500;
+      }
+      .est-result .btn {
+        margin-top: 0.5rem;
+      }
+
+      /* ── CONTEXT SECTION ─────────────────────────────────── */
+      .est-context {
+        padding: 4rem 1.5rem;
+      }
+      .est-context-inner {
+        max-width: 740px;
+        margin: 0 auto;
+      }
+      .est-context h2 {
+        font-size: clamp(2rem, 4vw, 3.2rem);
+        font-weight: 300;
+        letter-spacing: -0.02em;
+        line-height: 1.2;
+        color: var(--text-white);
+        margin-bottom: 1.5rem;
+      }
+      .est-context h3 {
+        font-size: clamp(1.25rem, 2vw, 1.6rem);
+        font-weight: 500;
+        color: var(--text-white);
+        margin-top: 2.5rem;
+        margin-bottom: 0.5rem;
+      }
+      .est-context p,
+      .est-context li {
+        font-size: 1rem;
+        color: var(--text-white-muted);
+        line-height: 1.75;
+      }
+      .est-context ul {
+        list-style: disc;
+        padding-left: 1.5rem;
+        margin-bottom: 1rem;
+      }
+      .est-context ul li {
+        margin-bottom: 0.3rem;
+      }
+
+      /* ── CTA BLOCK ───────────────────────────────────────── */
+      .est-cta {
+        padding: 3rem 1.5rem 5rem;
+        text-align: center;
+      }
+      .est-cta-card {
+        max-width: 700px;
+        margin: 0 auto;
+        background: var(--bg-dark-elevated);
+        border: 1.5px solid var(--border-light);
+        border-radius: var(--radius-section);
+        padding: 3rem 2rem;
+      }
+      .est-cta-card h2 {
+        font-size: clamp(1.5rem, 3vw, 2rem);
+        font-weight: 300;
+        letter-spacing: -0.02em;
+        color: var(--text-white);
+        margin-bottom: 0.75rem;
+      }
+      .est-cta-card p {
+        font-size: 1rem;
+        color: var(--text-white-muted);
+        margin-bottom: 1.5rem;
+        line-height: 1.75;
+      }
+
+      /* ── RESPONSIVE ──────────────────────────────────────── */
+      @media (max-width: 860px) {
+        .est-type-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .est-features-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media (max-width: 600px) {
+        .est-type-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .est-level-grid {
+          grid-template-columns: 1fr;
+        }
+        .est-features-grid {
+          grid-template-columns: 1fr;
+        }
+        .est-result {
+          padding: 1.75rem 1.25rem;
+          border-radius: var(--radius-card);
+        }
+        .est-cta-card {
+          padding: 2rem 1.25rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ========== HEADER / NAV ========== -->
+    <header class="site-header" id="header">
+      <nav class="nav-container">
+        <a href="/" class="nav-logo" aria-label="Orban Forest Home">
+          <img
+            src="assets/img/logo/logo-white.svg"
+            alt="Orban Forest logo"
+            class="logo-img"
+          />
+          <span class="logo-text">Orban Forest</span>
+        </a>
+
+        <div class="nav-links" id="navLinks">
+          <a href="/#services" class="nav-link">Services</a>
+          <a href="/#work" class="nav-link">Work</a>
+          <a href="/#process" class="nav-link">Process</a>
+          <a href="/blog" class="nav-link">Blog</a>
+          <a href="/contact-us" class="nav-link nav-link--cta">
+            Let's Talk
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 14 14"
+              fill="none"
+              aria-hidden="true"
+            >
+              <path
+                d="M1 13L13 1M13 1H3M13 1V11"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+        </div>
+
+        <!-- Theme Toggle -->
+        <button
+          class="theme-toggle"
+          id="themeToggle"
+          aria-label="Toggle dark mode"
+        >
+          <svg
+            class="theme-icon theme-icon--sun"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <circle cx="12" cy="12" r="5" />
+            <line x1="12" y1="1" x2="12" y2="3" />
+            <line x1="12" y1="21" x2="12" y2="23" />
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+            <line x1="1" y1="12" x2="3" y2="12" />
+            <line x1="21" y1="12" x2="23" y2="12" />
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+          </svg>
+          <svg
+            class="theme-icon theme-icon--moon"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+          </svg>
+        </button>
+
+        <!-- Mobile Menu Toggle -->
+        <button
+          class="nav-hamburger"
+          id="navToggle"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+        >
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </nav>
+    </header>
+
+    <!-- ========== HERO ========== -->
+    <section class="est-hero">
+      <div class="container">
+        <div class="est-hero-label reveal-up">Free Tool</div>
+        <h1 class="reveal-up" data-delay="1">
+          How much does a
+          <span class="italic-serif">website</span> cost<br />in Ontario?
+        </h1>
+        <p class="est-hero-sub reveal-up" data-delay="2">
+          Get an instant ballpark estimate for your web project. Based on real
+          2026 rates from agencies in Brantford, Cambridge, Hamilton, and
+          Kitchener-Waterloo.
+        </p>
+      </div>
+    </section>
+
+    <!-- ========== ESTIMATOR TOOL ========== -->
+    <section class="est-section">
+      <div class="est-container">
+        <!-- Step 1: Project Type -->
+        <div class="est-step">
+          <p class="est-step-number reveal-up">Step 1</p>
+          <h2 class="est-step-title reveal-up">What type of website do you need?</h2>
+          <p class="est-step-desc reveal-up">
+            Select the option that best describes your project.
+          </p>
+          <div class="est-type-grid reveal-up" id="typeGrid">
+            <div class="est-type-card active" data-type="brochure">
+              <span class="est-card-icon" aria-hidden="true">&#9741;</span>
+              <span class="est-card-label">Brochure Site</span>
+              <span class="est-card-range">3 - 5 pages</span>
+            </div>
+            <div class="est-type-card" data-type="business">
+              <span class="est-card-icon" aria-hidden="true">&#9881;</span>
+              <span class="est-card-label">Business Site</span>
+              <span class="est-card-range">5 - 15 pages</span>
+            </div>
+            <div class="est-type-card" data-type="ecommerce">
+              <span class="est-card-icon" aria-hidden="true">&#128722;</span>
+              <span class="est-card-label">E-Commerce</span>
+              <span class="est-card-range">Online store</span>
+            </div>
+            <div class="est-type-card" data-type="webapp">
+              <span class="est-card-icon" aria-hidden="true">&#128187;</span>
+              <span class="est-card-label">Web Application</span>
+              <span class="est-card-range">Custom platform</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 2: Page Count -->
+        <div class="est-step" id="pageStep">
+          <p class="est-step-number reveal-up">Step 2</p>
+          <h2 class="est-step-title reveal-up">How many pages?</h2>
+          <p class="est-step-desc reveal-up">
+            More pages means more design, content, and development work.
+          </p>
+          <div class="est-slider-wrap reveal-up">
+            <input
+              type="range"
+              id="pageSlider"
+              min="1"
+              max="30"
+              value="5"
+            />
+            <span class="est-page-count" id="pageCount">5 pages</span>
+          </div>
+        </div>
+
+        <!-- Step 3: Design Level -->
+        <div class="est-step">
+          <p class="est-step-number reveal-up">Step 3</p>
+          <h2 class="est-step-title reveal-up">
+            What level of design do you need?
+          </h2>
+          <p class="est-step-desc reveal-up">
+            This is the biggest factor in cost. Template-based sites are faster
+            and cheaper; fully custom sites are built from scratch.
+          </p>
+          <div class="est-level-grid reveal-up" id="levelGrid">
+            <div class="est-level-card" data-level="template">
+              <p class="est-level-name">Template</p>
+              <p class="est-level-desc">
+                Pre-built theme customized with your brand, content, and colours.
+              </p>
+            </div>
+            <div class="est-level-card active" data-level="semi-custom">
+              <p class="est-level-name">Semi-Custom</p>
+              <p class="est-level-desc">
+                Strategic layout with custom sections built around your goals.
+              </p>
+            </div>
+            <div class="est-level-card" data-level="custom">
+              <p class="est-level-name">Fully Custom</p>
+              <p class="est-level-desc">
+                Original design from the ground up. Unique in every detail.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 4: Features -->
+        <div class="est-step">
+          <p class="est-step-number reveal-up">Step 4</p>
+          <h2 class="est-step-title reveal-up">
+            Any additional features?
+          </h2>
+          <p class="est-step-desc reveal-up">
+            Select everything that applies. Each adds to the overall estimate.
+          </p>
+          <div class="est-features-grid reveal-up" id="featuresGrid">
+            <label class="est-feature-item" data-cost-low="200" data-cost-high="600">
+              <input type="checkbox" name="feature" value="blog" />
+              <span class="est-check-box">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                  <path d="M2 6L5 9L10 3" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+              <span>
+                <span class="est-feature-label">Blog</span><br />
+                <span class="est-feature-price">+$200 - $600</span>
+              </span>
+            </label>
+            <label class="est-feature-item" data-cost-low="500" data-cost-high="2000">
+              <input type="checkbox" name="feature" value="booking" />
+              <span class="est-check-box">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                  <path d="M2 6L5 9L10 3" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+              <span>
+                <span class="est-feature-label">Online Booking</span><br />
+                <span class="est-feature-price">+$500 - $2,000</span>
+              </span>
+            </label>
+            <label class="est-feature-item" data-cost-low="500" data-cost-high="3000">
+              <input type="checkbox" name="feature" value="chatbot" />
+              <span class="est-check-box">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                  <path d="M2 6L5 9L10 3" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+              <span>
+                <span class="est-feature-label">AI Chatbot</span><br />
+                <span class="est-feature-price">+$500 - $3,000</span>
+              </span>
+            </label>
+            <label class="est-feature-item" data-cost-low="1500" data-cost-high="5000">
+              <input type="checkbox" name="feature" value="seo" />
+              <span class="est-check-box">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                  <path d="M2 6L5 9L10 3" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+              <span>
+                <span class="est-feature-label">SEO Package</span><br />
+                <span class="est-feature-price">+$1,500 - $5,000</span>
+              </span>
+            </label>
+            <label class="est-feature-item" data-cost-low="200" data-cost-high="800">
+              <input type="checkbox" name="feature" value="email" />
+              <span class="est-check-box">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                  <path d="M2 6L5 9L10 3" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+              <span>
+                <span class="est-feature-label">Email Marketing</span><br />
+                <span class="est-feature-price">+$200 - $800</span>
+              </span>
+            </label>
+            <label class="est-feature-item" data-cost-low="500" data-cost-high="3000">
+              <input type="checkbox" name="feature" value="branding" />
+              <span class="est-check-box">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                  <path d="M2 6L5 9L10 3" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+              <span>
+                <span class="est-feature-label">Logo &amp; Branding</span><br />
+                <span class="est-feature-price">+$500 - $3,000</span>
+              </span>
+            </label>
+            <label class="est-feature-item" data-cost-low="500" data-cost-high="3000">
+              <input type="checkbox" name="feature" value="copywriting" />
+              <span class="est-check-box">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                  <path d="M2 6L5 9L10 3" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+              <span>
+                <span class="est-feature-label">Copywriting</span><br />
+                <span class="est-feature-price">+$500 - $3,000</span>
+              </span>
+            </label>
+            <label class="est-feature-item" data-cost-low="1500" data-cost-high="5000">
+              <input type="checkbox" name="feature" value="portal" />
+              <span class="est-check-box">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                  <path d="M2 6L5 9L10 3" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+              <span>
+                <span class="est-feature-label">Client Portal / Login</span><br />
+                <span class="est-feature-price">+$1,500 - $5,000</span>
+              </span>
+            </label>
+            <label class="est-feature-item" data-cost-low="2000" data-cost-high="8000">
+              <input type="checkbox" name="feature" value="multilingual" />
+              <span class="est-check-box">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                  <path d="M2 6L5 9L10 3" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+              <span>
+                <span class="est-feature-label">Bilingual / Multi-Language</span><br />
+                <span class="est-feature-price">+$2,000 - $8,000</span>
+              </span>
+            </label>
+          </div>
+        </div>
+
+        <!-- ── RESULT ── -->
+        <div class="est-result reveal-up" id="resultPanel">
+          <p class="est-result-label">Estimated Project Cost</p>
+          <p class="est-result-range">
+            <span class="accent" id="resultLow">$3,000</span>
+            &ndash;
+            <span class="accent" id="resultHigh">$6,000</span>
+            <span style="font-size: 0.5em; font-weight: 400; color: var(--text-white-muted)">CAD</span>
+          </p>
+          <p class="est-result-note">
+            One-time project cost based on 2026 southwestern Ontario market rates
+          </p>
+          <div class="est-monthly" id="monthlyLine">
+            Plus <strong id="monthlyLow">$100</strong> &ndash;
+            <strong id="monthlyHigh">$300</strong>/month for hosting,
+            maintenance &amp; domain
+          </div>
+          <a href="/contact-us" class="btn btn--primary">
+            Get an Exact Quote
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 14 14"
+              fill="none"
+              aria-hidden="true"
+            >
+              <path
+                d="M1 7H13M13 7L7 1M13 7L7 13"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CONTEXT / EDITORIAL ========== -->
+    <section class="est-context">
+      <div class="est-context-inner">
+        <h2>What goes into the cost of a website?</h2>
+        <p>
+          Website pricing in Ontario varies widely. A template-based brochure
+          site for a local business in Paris, ON might cost $1,500, while a
+          custom-built e-commerce platform for a manufacturer in
+          Kitchener-Waterloo could be $30,000+. Here's what drives the numbers.
+        </p>
+
+        <h3>Website type</h3>
+        <p>
+          A simple informational site is far less complex than an online store or
+          a custom web application with user accounts and dashboards. The more
+          your site needs to <em>do</em>, the more it costs to build.
+        </p>
+
+        <h3>Design complexity</h3>
+        <p>
+          Template-based designs ($400 - $2,500) use pre-built layouts and are
+          the fastest to launch. Semi-custom sites ($2,500 - $7,000) start with a
+          framework but add strategic custom sections. Fully custom builds
+          ($5,000 - $25,000+) are designed and coded from scratch to match your
+          brand exactly.
+        </p>
+
+        <h3>Page count and content</h3>
+        <p>
+          More pages means more design, development, and content work. In this
+          market, additional pages typically add $80 - $200 each. If you need
+          professional copywriting (rather than providing your own content),
+          budget an additional $50 - $150 per page.
+        </p>
+
+        <h3>Features and integrations</h3>
+        <p>
+          Booking systems, AI chatbots, client portals, payment processing,
+          CRM integrations, and multilingual support all add significant
+          development time. Each feature is essentially a project within the
+          project.
+        </p>
+
+        <h3>Ongoing costs</h3>
+        <p>
+          After launch, your website needs hosting ($10 - $75/month),
+          maintenance and security updates ($85 - $250/month), and a domain
+          renewal ($15 - $25/year). A reasonable monthly budget for a small
+          business site in Ontario is $100 - $300.
+        </p>
+
+        <h3>Freelancer vs. agency</h3>
+        <p>
+          In the Brantford, Hamilton, and KWC market, freelancers typically
+          charge $35 - $80/hr while agencies charge $50 - $130/hr. Freelancers
+          cost less but agencies offer larger teams, established processes, and
+          more reliable long-term support. This region is 15 - 30% less expensive
+          than Toronto.
+        </p>
+
+        <h3>When the cheapest option costs more</h3>
+        <p>
+          A $500 website that doesn't convert visitors into customers is more
+          expensive than a $5,000 website that pays for itself in three months.
+          The right question isn't "what's the cheapest price?" &mdash; it's
+          "what will this investment return?"
+        </p>
+      </div>
+    </section>
+
+    <!-- ========== CTA ========== -->
+    <section class="est-cta">
+      <div class="est-cta-card reveal-up">
+        <h2>Ready to talk about your project?</h2>
+        <p>
+          This estimator gives you a starting point. Every project is different.
+          Tell us what you're building and we'll give you an honest, detailed
+          quote &mdash; no obligation.
+        </p>
+        <a href="/contact-us" class="btn btn--primary">
+          Start a Conversation
+          <svg
+            width="14"
+            height="14"
+            viewBox="0 0 14 14"
+            fill="none"
+            aria-hidden="true"
+          >
+            <path
+              d="M1 13L13 1M13 1H3M13 1V11"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <img
+              src="assets/img/logo/logo-white.svg"
+              alt="Orban Forest logo"
+              class="logo-img"
+            />
+            <div class="footer-contact">
+              <p>Brantford, Ontario, Canada</p>
+              <a href="tel:+13659948961">+1 (365) 994-8961</a>
+              <a href="mailto:hello@orbanforest.ca">hello@orbanforest.ca</a>
+            </div>
+            <div class="footer-social">
+              <a
+                href="https://wa.me/+13659948961"
+                class="social-link"
+                aria-label="WhatsApp"
+                target="_blank"
+                rel="noopener"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                </svg>
+              </a>
+              <a href="#" class="social-link" aria-label="LinkedIn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                </svg>
+              </a>
+              <a href="#" class="social-link" aria-label="Instagram">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="footer-nav-group">
+            <p class="footer-nav-title">Design</p>
+            <a href="/#service-web-design">Web Design</a>
+            <a href="/#service-web-design">UI/UX Design</a>
+            <a href="/#service-3d-animation">Animation</a>
+            <a href="/#service-arvr">AR/VR Experiences</a>
+          </div>
+
+          <div class="footer-nav-group">
+            <p class="footer-nav-title">Technology</p>
+            <a href="/#service-web-apps">Web Applications</a>
+            <a href="/#service-ai">AI Automations</a>
+            <a href="/#service-web-apps">Full-Stack Dev</a>
+          </div>
+
+          <div class="footer-nav-group">
+            <p class="footer-nav-title">Marketing</p>
+            <a href="/#service-digital-marketing">SEO</a>
+            <a href="/#service-digital-marketing">Content Strategy</a>
+            <a href="/#service-digital-marketing">Social Media</a>
+            <a href="/#service-digital-marketing">PPC</a>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>
+            &copy; 2026 Orban Forest Inc. All rights reserved. &middot; Designed
+            by <a href="https://www.orbanforest.ca/">Orban Forest Inc.</a>
+          </p>
+          <div class="footer-bottom-links">
+            <a href="/privacy-policy">Privacy Policy</a>
+            <a href="/contact-us">Contact</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ========== SCRIPTS ========== -->
+    <script src="assets/js/main.js"></script>
+    <script>
+      (function () {
+        "use strict";
+
+        // ── PRICING DATA (2026 southwestern Ontario market rates) ────
+        // Base costs: [low, high] per type + design level
+        var bases = {
+          brochure: {
+            template: [800, 2000],
+            "semi-custom": [2000, 4500],
+            custom: [4000, 8000],
+          },
+          business: {
+            template: [2000, 4000],
+            "semi-custom": [4000, 8000],
+            custom: [7500, 15000],
+          },
+          ecommerce: {
+            template: [3000, 7000],
+            "semi-custom": [7000, 18000],
+            custom: [18000, 40000],
+          },
+          webapp: {
+            template: [10000, 20000],
+            "semi-custom": [20000, 45000],
+            custom: [40000, 80000],
+          },
+        };
+
+        // Per-page adder above included pages: [low, high]
+        var perPage = {
+          template: [80, 120],
+          "semi-custom": [100, 160],
+          custom: [150, 250],
+        };
+
+        // Included page counts per type (additional pages cost extra)
+        var includedPages = {
+          brochure: 5,
+          business: 8,
+          ecommerce: 10,
+          webapp: 5,
+        };
+
+        // Monthly ongoing: [low, high]
+        var monthly = {
+          brochure: [75, 200],
+          business: [100, 300],
+          ecommerce: [150, 400],
+          webapp: [200, 500],
+        };
+
+        // ── STATE ────────────────────────────────────────────
+        var state = {
+          type: "brochure",
+          level: "semi-custom",
+          pages: 5,
+        };
+
+        // ── DOM REFS ─────────────────────────────────────────
+        var typeCards = document.querySelectorAll("#typeGrid .est-type-card");
+        var levelCards = document.querySelectorAll(
+          "#levelGrid .est-level-card"
+        );
+        var pageSlider = document.getElementById("pageSlider");
+        var pageCountEl = document.getElementById("pageCount");
+        var pageStep = document.getElementById("pageStep");
+        var featureItems = document.querySelectorAll(".est-feature-item");
+        var resultLow = document.getElementById("resultLow");
+        var resultHigh = document.getElementById("resultHigh");
+        var monthlyLow = document.getElementById("monthlyLow");
+        var monthlyHigh = document.getElementById("monthlyHigh");
+
+        // ── HELPERS ──────────────────────────────────────────
+        function fmt(n) {
+          return "$" + n.toLocaleString("en-CA");
+        }
+
+        function calculate() {
+          var base = bases[state.type][state.level];
+          var low = base[0];
+          var high = base[1];
+
+          // Extra pages
+          var included = includedPages[state.type];
+          var extra = Math.max(0, state.pages - included);
+          var pp = perPage[state.level];
+          low += extra * pp[0];
+          high += extra * pp[1];
+
+          // Features
+          featureItems.forEach(function (item) {
+            var cb = item.querySelector("input");
+            if (cb.checked) {
+              low += parseInt(item.dataset.costLow, 10);
+              high += parseInt(item.dataset.costHigh, 10);
+            }
+          });
+
+          // Round to nearest 100
+          low = Math.round(low / 100) * 100;
+          high = Math.round(high / 100) * 100;
+
+          resultLow.textContent = fmt(low);
+          resultHigh.textContent = fmt(high);
+
+          // Monthly
+          var mo = monthly[state.type];
+          monthlyLow.textContent = fmt(mo[0]);
+          monthlyHigh.textContent = fmt(mo[1]);
+        }
+
+        // ── TYPE CARDS ───────────────────────────────────────
+        typeCards.forEach(function (card) {
+          card.addEventListener("click", function () {
+            typeCards.forEach(function (c) {
+              c.classList.remove("active");
+            });
+            card.classList.add("active");
+            state.type = card.dataset.type;
+
+            // Update slider max/defaults
+            if (state.type === "brochure") {
+              pageSlider.max = 15;
+              pageSlider.value = Math.min(state.pages, 15);
+            } else if (state.type === "business") {
+              pageSlider.max = 30;
+              pageSlider.value = Math.min(state.pages, 30);
+            } else if (state.type === "ecommerce") {
+              pageSlider.max = 50;
+              pageSlider.value = Math.min(state.pages, 50);
+            } else {
+              pageSlider.max = 20;
+              pageSlider.value = Math.min(state.pages, 20);
+            }
+            state.pages = parseInt(pageSlider.value, 10);
+            pageCountEl.textContent =
+              state.pages + (state.pages === 1 ? " page" : " pages");
+
+            // Show/hide page step for webapp
+            pageStep.style.display =
+              state.type === "webapp" ? "none" : "";
+
+            calculate();
+          });
+        });
+
+        // ── LEVEL CARDS ──────────────────────────────────────
+        levelCards.forEach(function (card) {
+          card.addEventListener("click", function () {
+            levelCards.forEach(function (c) {
+              c.classList.remove("active");
+            });
+            card.classList.add("active");
+            state.level = card.dataset.level;
+            calculate();
+          });
+        });
+
+        // ── PAGE SLIDER ──────────────────────────────────────
+        pageSlider.addEventListener("input", function () {
+          state.pages = parseInt(pageSlider.value, 10);
+          pageCountEl.textContent =
+            state.pages + (state.pages === 1 ? " page" : " pages");
+          calculate();
+        });
+
+        // ── FEATURE CHECKBOXES ───────────────────────────────
+        featureItems.forEach(function (item) {
+          item.addEventListener("click", function (e) {
+            // Let the label/checkbox handle the toggle naturally
+            // but we need to update the visual state
+            var cb = item.querySelector("input");
+            // The click on label auto-toggles, so read the new state after a tick
+            setTimeout(function () {
+              if (cb.checked) {
+                item.classList.add("checked");
+              } else {
+                item.classList.remove("checked");
+              }
+              calculate();
+            }, 0);
+          });
+        });
+
+        // ── INITIAL CALC ─────────────────────────────────────
+        calculate();
+      })();
+    </script>
+  </body>
+</html>
