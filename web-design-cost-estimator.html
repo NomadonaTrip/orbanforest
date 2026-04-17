@@ -1204,7 +1204,9 @@
             params.set("features", selectedFeatures.join(","));
           params.set("low", low);
           params.set("high", high);
-          quoteBtn.href = "/contact-us?" + params.toString();
+          var useExt = /\.html$/.test(window.location.pathname);
+          quoteBtn.href =
+            "/contact-us" + (useExt ? ".html" : "") + "?" + params.toString();
         }
 
         // ── TYPE CARDS ───────────────────────────────────────
