@@ -876,7 +876,7 @@
             <strong id="monthlyHigh">$300</strong>/month for hosting,
             maintenance &amp; domain
           </div>
-          <a href="/contact-us" class="btn btn--primary">
+          <a href="/contact-us" class="btn btn--primary" id="quoteBtn">
             Get an Exact Quote
             <svg
               width="14"
@@ -1150,6 +1150,7 @@
         var resultHigh = document.getElementById("resultHigh");
         var monthlyLow = document.getElementById("monthlyLow");
         var monthlyHigh = document.getElementById("monthlyHigh");
+        var quoteBtn = document.getElementById("quoteBtn");
 
         // ── HELPERS ──────────────────────────────────────────
         function fmt(n) {
@@ -1188,6 +1189,22 @@
           var mo = monthly[state.type];
           monthlyLow.textContent = fmt(mo[0]);
           monthlyHigh.textContent = fmt(mo[1]);
+
+          // Pre-filled quote handoff URL
+          var selectedFeatures = [];
+          featureItems.forEach(function (item) {
+            var cb = item.querySelector("input");
+            if (cb.checked) selectedFeatures.push(cb.value);
+          });
+          var params = new URLSearchParams();
+          params.set("type", state.type);
+          params.set("level", state.level);
+          if (state.type !== "webapp") params.set("pages", state.pages);
+          if (selectedFeatures.length)
+            params.set("features", selectedFeatures.join(","));
+          params.set("low", low);
+          params.set("high", high);
+          quoteBtn.href = "/contact-us?" + params.toString();
         }
 
         // ── TYPE CARDS ───────────────────────────────────────

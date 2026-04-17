@@ -88,6 +88,83 @@
     <!-- Styles -->
     <link rel="stylesheet" href="assets/css/styles.css" />
     <link rel="stylesheet" href="assets/css/contact.css" />
+    <style>
+      /* ── ESTIMATOR HANDOFF SUMMARY CARD ─────────────────── */
+      .quote-summary-card {
+        background: var(--bg-dark-elevated);
+        border: 1.5px solid var(--accent);
+        border-radius: var(--radius-card);
+        padding: 1.75rem;
+        margin-bottom: 2rem;
+        box-shadow: 0 0 24px var(--accent-glow);
+      }
+      .quote-summary-label {
+        font-size: 0.75rem;
+        font-weight: 500;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin: 0 0 1rem 0;
+      }
+      .quote-summary-list {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 1rem 0;
+      }
+      .quote-summary-list li {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        padding: 0.55rem 0;
+        border-bottom: 1px solid var(--border-light);
+        font-size: 0.9rem;
+      }
+      .quote-summary-list li:last-child {
+        border-bottom: none;
+      }
+      .quote-summary-list span {
+        color: var(--text-white-muted);
+      }
+      .quote-summary-list strong {
+        color: var(--text-white);
+        font-weight: 500;
+        text-align: right;
+      }
+      .quote-summary-range {
+        padding-top: 0.85rem;
+        border-top: 1.5px solid var(--border-light);
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-bottom: 1rem;
+        gap: 1rem;
+      }
+      .quote-summary-range span {
+        font-size: 0.8rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--text-white-muted);
+      }
+      .quote-summary-range strong {
+        font-size: 1.4rem;
+        font-weight: 300;
+        color: var(--accent);
+        letter-spacing: -0.01em;
+      }
+      .quote-summary-range em {
+        font-style: normal;
+        font-size: 0.55em;
+        color: var(--text-white-muted);
+        font-weight: 400;
+        margin-left: 0.2rem;
+      }
+      .quote-summary-note {
+        font-size: 0.8rem;
+        color: var(--text-white-muted);
+        line-height: 1.55;
+        margin: 0;
+      }
+    </style>
   </head>
   <body>
     <!-- Hidden iframe for Google Form submission -->
@@ -668,6 +745,139 @@
           g.classList.remove("has-value", "focused");
         });
       }
+
+      // ── ESTIMATOR HANDOFF ─────────────────────────────────────
+      (function () {
+        "use strict";
+        var params = new URLSearchParams(window.location.search);
+        if (!params.has("type")) return;
+
+        var typeLabels = {
+          brochure: "Brochure Site",
+          business: "Business Site",
+          ecommerce: "E-Commerce",
+          webapp: "Web Application",
+        };
+        var levelLabels = {
+          template: "Template",
+          "semi-custom": "Semi-Custom",
+          custom: "Fully Custom",
+        };
+        var featureLabels = {
+          blog: "Blog",
+          booking: "Online Booking",
+          chatbot: "AI Chatbot",
+          seo: "SEO Package",
+          email: "Email Marketing",
+          branding: "Logo & Branding",
+          copywriting: "Copywriting",
+          portal: "Client Portal / Login",
+          ecommerce: "E-Commerce Integration",
+          multilingual: "Bilingual / Multi-Language",
+        };
+
+        var type = params.get("type");
+        var level = params.get("level");
+        var pages = params.get("pages");
+        var features = (params.get("features") || "")
+          .split(",")
+          .filter(Boolean);
+        var low = params.get("low");
+        var high = params.get("high");
+
+        function fmt(n) {
+          var num = Number(n);
+          if (!isFinite(num)) return n;
+          return "$" + num.toLocaleString("en-CA");
+        }
+
+        function esc(s) {
+          return String(s).replace(/[&<>"']/g, function (c) {
+            return {
+              "&": "&amp;",
+              "<": "&lt;",
+              ">": "&gt;",
+              '"': "&quot;",
+              "'": "&#39;",
+            }[c];
+          });
+        }
+
+        var typeLabel = typeLabels[type] || type;
+        var levelLabel = levelLabels[level] || level;
+        var featureList = features.map(function (f) {
+          return featureLabels[f] || f;
+        });
+
+        // Pre-fill textarea
+        var textarea = document.getElementById("entry.105563153");
+        if (textarea && !textarea.value) {
+          var lines = [
+            "From the cost estimator:",
+            "• Project type: " + typeLabel,
+            "• Design level: " + levelLabel,
+          ];
+          if (type !== "webapp" && pages) lines.push("• Pages: " + pages);
+          if (featureList.length)
+            lines.push("• Features: " + featureList.join(", "));
+          if (low && high)
+            lines.push(
+              "• Estimated range: " + fmt(low) + " – " + fmt(high) + " CAD",
+            );
+          lines.push("");
+          lines.push("A bit more about my project:");
+          lines.push("");
+          textarea.value = lines.join("\n");
+          textarea.parentElement.classList.add("has-value");
+        }
+
+        // Tune copy for quote-request context
+        var eyebrow = document.querySelector(".contact-eyebrow");
+        if (eyebrow) eyebrow.textContent = "Exact Quote Request";
+        var btnText = document.querySelector("#submitBtn .btn-text");
+        if (btnText) btnText.textContent = "Send Quote Request";
+
+        // Inject summary card at top of info column
+        var infoBlock = document.querySelector(".contact-info-block");
+        if (infoBlock) {
+          var summary = document.createElement("div");
+          summary.className = "quote-summary-card reveal-up";
+          var pagesHtml =
+            type !== "webapp" && pages
+              ? "<li><span>Pages</span><strong>" +
+                esc(pages) +
+                "</strong></li>"
+              : "";
+          var featuresHtml = featureList.length
+            ? "<li><span>Features</span><strong>" +
+              esc(featureList.join(", ")) +
+              "</strong></li>"
+            : "";
+          var rangeHtml =
+            low && high
+              ? '<div class="quote-summary-range"><span>Your estimate</span><strong>' +
+                esc(fmt(low)) +
+                " – " +
+                esc(fmt(high)) +
+                " <em>CAD</em></strong></div>"
+              : "";
+          summary.innerHTML =
+            '<p class="quote-summary-label">Your estimator configuration</p>' +
+            '<ul class="quote-summary-list">' +
+            "<li><span>Project type</span><strong>" +
+            esc(typeLabel) +
+            "</strong></li>" +
+            "<li><span>Design level</span><strong>" +
+            esc(levelLabel) +
+            "</strong></li>" +
+            pagesHtml +
+            featuresHtml +
+            "</ul>" +
+            rangeHtml +
+            '<p class="quote-summary-note">We\'ve pre-filled these details in your message. Add any project context below and we\'ll send back a detailed quote within 24 hours.</p>';
+          infoBlock.parentNode.insertBefore(summary, infoBlock);
+        }
+      })();
     </script>
   </body>
 </html>
