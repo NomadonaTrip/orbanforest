@@ -25,6 +25,9 @@ Orban Forest is based in Brantford, Ontario and serves businesses across Brantfo
 ## Pages
 
 - [Homepage](https://orbanforest.ca/): Service overview, case studies, company process, and contact
+- [Web Design](https://orbanforest.ca/web-design): Service hub for custom web design in Ontario — responsive websites, e-commerce, redesigns, web applications, and local SEO
+- [AI Automation](https://orbanforest.ca/ai-automation): Service hub for AI automation in Ontario — AI chatbots, AI receptionists, voice agents, appointment booking, lead generation, and workflow automation with n8n, Make, and Zapier
+- [Animation](https://orbanforest.ca/animation): Service hub for animation studio services — 2D, 3D, character animation, explainer videos, motion graphics, and product animation
 - [Blog](https://orbanforest.ca/blog): Articles on web design, AI automation, digital marketing, and business growth
 - [Contact Us](https://orbanforest.ca/contact-us): Project inquiry form, phone, email, WhatsApp
 - [Web Design Cost Estimator](https://orbanforest.ca/web-design-cost-estimator): Free interactive tool to estimate website project costs based on 2026 Ontario market rates
