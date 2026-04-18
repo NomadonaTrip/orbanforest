@@ -232,15 +232,30 @@ A free interactive tool for estimating website project costs. Based on real 2026
 **Published:** February 13, 2026 | Category: Growth
 **Summary:** The fastest way to grow isn't more leads — it's to stop losing existing ones. Most small businesses lose leads because they're busy, not because they don't care. A potential customer reaches out, you're busy, you'll get back to them later — by Monday they've called someone else. Practical system: respond to new leads within 2 hours (even just acknowledgment), check messages 3x daily, maintain a simple tracking spreadsheet. For past customers: quarterly check-ins, post-project follow-up within 1 week, referral requests. AI-powered follow-up automation scales this without adding headcount.
 
+### How Long Does It Take to Build a Website in Ontario?
+**URL:** https://orbanforest.ca/blog/how-long-does-it-take-to-build-a-website-ontario
+**Published:** April 17, 2026 | Category: Strategy
+**Summary:** Realistic 2026 timelines for web projects in Brantford, Cambridge, Hamilton, and KWC. Brochure site: 2-4 weeks. Business site: 4-8 weeks. E-commerce: 6-12 weeks. Custom web application: 10 weeks to 6+ months. The biggest timeline killer is not development speed but content readiness — 70% of late projects are late because copy, photos, and product info weren't ready when development needed them. Feedback cycles also add up: each 2-week gap on approvals extends the project by the same. AI-assisted development in 2026 has compressed custom build time by 25-30% versus 2023, but content and QA still take traditional time. Most local studios are booked 2-4 weeks out.
+
+### Freelancer or Agency for Your Website? An Honest Comparison
+**URL:** https://orbanforest.ca/blog/freelancer-vs-agency-web-design-ontario
+**Published:** April 17, 2026 | Category: Strategy
+**Summary:** Practical comparison of freelancers, small studios, and full agencies for web design in southwestern Ontario in 2026. Freelancer rates $35-$80/hr, small studios $50-$100/hr, agencies $50-$130/hr. Freelancers best for projects under $10,000 with clear scope. Small studios are the sweet spot for $3,000-$30,000 projects that need coordinated design, dev, and content. Agencies make sense for $15,000+ projects with multiple disciplines or long-term brand partnerships. Decision framework: budget, scope complexity, timeline, and risk tolerance. Red flags in any tier: no written scope, no portfolio, refusing references, quotes dramatically above or below market.
+
+### What's Actually Included in a Website Package?
+**URL:** https://orbanforest.ca/blog/whats-included-in-a-website-package
+**Published:** April 17, 2026 | Category: Strategy
+**Summary:** When two quotes for the same 5-page site differ by $3,000+, the gap is almost always scope. Complete package checklist for the 2026 Ontario market: design for every page (not just home), responsive build for desktop/tablet/mobile, CMS (WordPress, Webflow, etc.), basic on-page SEO (title tags, meta descriptions, schema, sitemap, Open Graph), contact form with spam protection, SSL, analytics, launch and DNS configuration, defined revision rounds (2-3 is healthy, unlimited is a red flag), and post-launch training or documentation. Typically NOT included and priced separately: professional copywriting, custom photography, logo/brand design, ongoing SEO retainer, monthly maintenance, third-party integrations, multi-language translation. Includes a 10-question checklist to ask any provider before signing.
+
 ---
 
 ## Frequently Asked Questions
 
 ### How much does a website cost in Ontario in 2026?
-A basic brochure website (3-5 pages) typically costs $500 to $5,500 CAD in southwestern Ontario when working with a freelancer. A small business website (5-10 pages) ranges from $1,200 to $10,000. E-commerce sites start at $2,000 and can reach $28,000+ for advanced builds. Custom web applications range from $6,500 to $55,000+. Prices vary based on design complexity, features, and whether you hire a freelancer or agency. Use Orban Forest's free cost estimator at https://orbanforest.ca/web-design-cost-estimator for a personalized estimate.
+A basic brochure website (3-5 pages) typically costs $500 to $4,000 CAD in southwestern Ontario when working with a freelancer. A small business website (5-10 pages) ranges from $1,200 to $7,500. E-commerce sites start at $2,000 and can reach $18,000+ for advanced builds. Custom web applications range from $6,500 to $38,000+. Thanks to AI-assisted development, custom builds are meaningfully more affordable in 2026 than they were even a year ago. Prices vary based on design complexity, features, and whether you hire a freelancer or agency. Use Orban Forest's free cost estimator at https://orbanforest.ca/web-design-cost-estimator for a personalized estimate.
 
 ### What is a reasonable price for web design in Brantford, Hamilton, or Kitchener-Waterloo?
-Web design rates in Brantford, Hamilton, and the Kitchener-Waterloo-Cambridge corridor are typically 15-30% lower than Toronto. Local freelancers charge $35-$80/hr, and agencies range from $50-$130/hr. A professional 5-page business website from a local freelancer averages $1,200 to $5,500 CAD.
+Web design rates in Brantford, Hamilton, and the Kitchener-Waterloo-Cambridge corridor are typically 15-30% lower than Toronto. Local freelancers charge $35-$80/hr, small studios $50-$100/hr, and agencies range from $50-$130/hr. A professional 5-page business website from a local freelancer averages $1,200 to $5,500 CAD.
 
 ### What ongoing costs should I budget for after my website launches?
 Typical monthly ongoing costs include: hosting ($10-$75/month), maintenance and updates ($85-$250/month), domain renewal ($15-$25/year), and optional SEO services ($700-$4,000/month). A reasonable monthly budget for a small business is $75-$225 CAD.
@@ -252,7 +267,7 @@ Yes. AI automation is a core service, covering machine learning integration, LLM
 Orban Forest works with businesses across industries including property services, entertainment, education, faith organizations, manufacturing, and general small-to-medium businesses. The common thread is businesses that need a stronger digital presence in the southwestern Ontario market.
 
 ### How long does a typical website project take?
-Brochure sites: 1-3 weeks. Business sites: 3-6 weeks. E-commerce: 4-10 weeks. Web applications: 8-20+ weeks. Timelines depend on content readiness, design complexity, and feature requirements.
+Brochure sites: 2-4 weeks. Business sites: 4-8 weeks. E-commerce: 6-12 weeks. Web applications: 10 weeks to 6+ months. Timelines depend on content readiness, design complexity, and feature requirements. Content delays (not development speed) cause over 70% of projects to run late.
 
 ---
 
@@ -272,6 +287,9 @@ https://orbanforest.ca/blog/website-marketing-not-broken
 https://orbanforest.ca/blog/30-second-video-beats-brochure
 https://orbanforest.ca/blog/website-three-seconds
 https://orbanforest.ca/blog/follow-up-is-where-the-money-is
+https://orbanforest.ca/blog/how-long-does-it-take-to-build-a-website-ontario
+https://orbanforest.ca/blog/freelancer-vs-agency-web-design-ontario
+https://orbanforest.ca/blog/whats-included-in-a-website-package
 https://orbanforest.ca/web-design-cost-estimator
 https://orbanforest.ca/privacy-policy
 ```
