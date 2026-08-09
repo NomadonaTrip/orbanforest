@@ -1,21 +1,41 @@
 <!doctype html>
 <html lang="en" data-theme="light">
   <head>
-    <script>if(localStorage.getItem('of-cookie-consent')==='declined')window['ga-disable-G-CBGMEPXECR']=true;</script>
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-CBGMEPXECR"
-    ></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", "G-CBGMEPXECR");
+      if (localStorage.getItem("of-cookie-consent") === "declined")
+        window["ga-disable-G-CBGMEPXECR"] = true;
     </script>
-    <!-- Google-tag-end -->
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-MKZ772LF");
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Microsoft Clarity Tracking code start -->
+    <script type="text/javascript">
+      (function (c, l, a, r, i, t, y) {
+        c[a] =
+          c[a] ||
+          function () {
+            (c[a].q = c[a].q || []).push(arguments);
+          };
+        t = l.createElement(r);
+        t.async = 1;
+        t.src = "https://www.clarity.ms/tag/" + i;
+        y = l.getElementsByTagName(r)[0];
+        y.parentNode.insertBefore(t, y);
+      })(window, document, "clarity", "script", "wy8bow50fc");
+    </script>
+    <!-- Microsoft Clarity Tracking Code end -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
@@ -70,12 +90,36 @@
           "@type": "OfferCatalog",
           "name": "Animation Services",
           "itemListElement": [
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "2D Animation" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "3D Animation" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Character Animation and Design" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Explainer Video Animation" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Motion Graphics" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Product Animation" } }
+            {
+              "@type": "Offer",
+              "itemOffered": { "@type": "Service", "name": "2D Animation" }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": { "@type": "Service", "name": "3D Animation" }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Character Animation and Design"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Explainer Video Animation"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": { "@type": "Service", "name": "Motion Graphics" }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": { "@type": "Service", "name": "Product Animation" }
+            }
           ]
         }
       }
@@ -85,8 +129,18 @@
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://orbanforest.ca/" },
-          { "@type": "ListItem", "position": 2, "name": "Animation", "item": "https://orbanforest.ca/animation" }
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://orbanforest.ca/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Animation",
+            "item": "https://orbanforest.ca/animation"
+          }
         ]
       }
     </script>
@@ -100,10 +154,24 @@
     <link rel="stylesheet" href="assets/css/blog.css" />
   </head>
   <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+      <iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-MKZ772LF"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <header class="site-header" id="header">
       <nav class="nav-container">
         <a href="/" class="nav-logo" aria-label="Orban Forest Home">
-          <img src="assets/img/logo/logo-white.svg" alt="Orban Forest logo" class="logo-img" />
+          <img
+            src="assets/img/logo/logo-white.svg"
+            alt="Orban Forest logo"
+            class="logo-img"
+          />
           <span class="logo-text">Orban Forest</span>
         </a>
         <div class="nav-links" id="navLinks">
@@ -114,13 +182,37 @@
           <a href="/web-design-cost-estimator" class="nav-link">Pricing</a>
           <a href="/contact-us" class="nav-link nav-link--cta">
             Let's Talk
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-              <path d="M1 13L13 1M13 1H3M13 1V11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 14 14"
+              fill="none"
+              aria-hidden="true"
+            >
+              <path
+                d="M1 13L13 1M13 1H3M13 1V11"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
             </svg>
           </a>
         </div>
-        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
-          <svg class="theme-icon theme-icon--sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <button
+          class="theme-toggle"
+          id="themeToggle"
+          aria-label="Toggle dark mode"
+        >
+          <svg
+            class="theme-icon theme-icon--sun"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
             <circle cx="12" cy="12" r="5" />
             <line x1="12" y1="1" x2="12" y2="3" />
             <line x1="12" y1="21" x2="12" y2="23" />
@@ -131,12 +223,27 @@
             <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
             <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
           </svg>
-          <svg class="theme-icon theme-icon--moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <svg
+            class="theme-icon theme-icon--moon"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
           </svg>
         </button>
-        <button class="nav-hamburger" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
-          <span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span>
+        <button
+          class="nav-hamburger"
+          id="navToggle"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+        >
+          <span class="hamburger-line"></span
+          ><span class="hamburger-line"></span
+          ><span class="hamburger-line"></span>
         </button>
       </nav>
     </header>
@@ -145,7 +252,13 @@
       <div class="container">
         <a href="/" class="blog-article-back">
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-            <path d="M13 7H1M1 7L7 1M1 7L7 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            <path
+              d="M13 7H1M1 7L7 1M1 7L7 13"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
           </svg>
           Back to Home
         </a>
@@ -170,11 +283,11 @@
 
           <p>
             We're an animation studio based in Brantford, Ontario. We work in
-            2D, 3D, and motion graphics, and we've delivered for clients
-            across Canada, the United States, and internationally — including
-            a 3D animated short celebrating HBCU culture with a team spanning
-            four countries, and an animated series reimagining biblical
-            narratives across five episodes.
+            2D, 3D, and motion graphics, and we've delivered for clients across
+            Canada, the United States, and internationally — including a 3D
+            animated short celebrating HBCU culture with a team spanning four
+            countries, and an animated series reimagining biblical narratives
+            across five episodes.
           </p>
 
           <h2>What We Animate</h2>
@@ -182,28 +295,32 @@
           <h3>2D Animation</h3>
           <p>
             Traditional and digital 2D for explainer videos, educational
-            content, motion comics, and character-driven storytelling. Built
-            in After Effects, Toon Boom Harmony, and Procreate Dreams
-            depending on the aesthetic.
+            content, motion comics, and character-driven storytelling. Built in
+            After Effects, Toon Boom Harmony, and Procreate Dreams depending on
+            the aesthetic.
           </p>
 
           <h3>3D Animation</h3>
           <p>
             Full-pipeline 3D — modeling, rigging, animation, lighting, and
             compositing — in Blender and Maya. Used for character shorts,
-            product animation, architectural walkthroughs, and cinematic
-            brand films.
+            product animation, architectural walkthroughs, and cinematic brand
+            films.
           </p>
 
           <h3>Character Animation and Design</h3>
           <p>
             Original characters designed from scratch, rigged, and animated to
             match the tone of your brand or story. Our case study on
-            <a href="/case-study-2" style="color: var(--accent); text-decoration: underline;">HBCU Superheroes</a>
-            walks through the process of designing six original characters for
-            a 3D animated short. If you're building a mascot, a children's
-            book adaptation, or a character-led brand campaign, this is the
-            closest fit.
+            <a
+              href="/case-study-2"
+              style="color: var(--accent); text-decoration: underline"
+              >HBCU Superheroes</a
+            >
+            walks through the process of designing six original characters for a
+            3D animated short. If you're building a mascot, a children's book
+            adaptation, or a character-led brand campaign, this is the closest
+            fit.
           </p>
 
           <h3>Explainer Video Animation</h3>
@@ -218,8 +335,8 @@
           <h3>Motion Graphics</h3>
           <p>
             Logo animations, lower thirds, title sequences, data visualization,
-            social media content, and brand loops. Built to match your
-            existing brand system, not wallpaper over it.
+            social media content, and brand loops. Built to match your existing
+            brand system, not wallpaper over it.
           </p>
 
           <h3>Product Animation</h3>
@@ -240,7 +357,9 @@
 
           <ul>
             <li>
-              <strong>Explaining something complicated in under a minute.</strong>
+              <strong
+                >Explaining something complicated in under a minute.</strong
+              >
               Insurance, SaaS, manufacturing processes, healthcare procedures.
               Animation compresses the explanation without losing clarity.
             </li>
@@ -272,13 +391,13 @@
             </li>
             <li>
               <strong>Script and storyboard.</strong> Nothing gets animated
-              before the story is approved on paper. This is the cheapest
-              stage to change things.
+              before the story is approved on paper. This is the cheapest stage
+              to change things.
             </li>
             <li>
-              <strong>Style frames.</strong> Two to three visual directions
-              for you to pick between. Colour, typography, character design
-              (if applicable), aesthetic references.
+              <strong>Style frames.</strong> Two to three visual directions for
+              you to pick between. Colour, typography, character design (if
+              applicable), aesthetic references.
             </li>
             <li>
               <strong>Animatic.</strong> A rough cut with timing, pacing, and
@@ -300,14 +419,22 @@
           <ul>
             <li>
               <strong>
-                <a href="/case-study-2" style="color: var(--accent); text-decoration: underline;">HBCU Superheroes</a>
+                <a
+                  href="/case-study-2"
+                  style="color: var(--accent); text-decoration: underline"
+                  >HBCU Superheroes</a
+                >
               </strong>
               — a 3D animated short celebrating HBCU culture. Six original
               character designs, international team across four countries.
             </li>
             <li>
               <strong>
-                <a href="/case-study-3" style="color: var(--accent); text-decoration: underline;">People of the Bible</a>
+                <a
+                  href="/case-study-3"
+                  style="color: var(--accent); text-decoration: underline"
+                  >People of the Bible</a
+                >
               </strong>
               — animated series reimagining biblical narratives. Five-plus
               episodes with a unified visual identity, art direction, and
@@ -319,8 +446,8 @@
 
           <p>
             Animation pricing varies more than any other service we offer,
-            because a thirty-second piece can be $2,000 or $50,000 depending
-            on style, complexity, and how much is built from scratch. Rough
+            because a thirty-second piece can be $2,000 or $50,000 depending on
+            style, complexity, and how much is built from scratch. Rough
             guidance:
           </p>
 
@@ -336,49 +463,55 @@
             </li>
             <li>
               <strong>3D product animation (30–60 seconds):</strong>
-              $4,000 to $20,000 depending on model complexity and render
-              length.
+              $4,000 to $20,000 depending on model complexity and render length.
             </li>
             <li>
               <strong>Character-driven 3D short or branded film:</strong>
-              $15,000 to $80,000+ depending on cast size, length, and level
-              of finish.
+              $15,000 to $80,000+ depending on cast size, length, and level of
+              finish.
             </li>
           </ul>
 
           <p>
             For a number specific to your project,
-            <a href="/contact-us" style="color: var(--accent); text-decoration: underline;">get in touch</a>
-            — tell us the use case, the rough duration, and whether you have
-            a script. We'll send back a real estimate, not a range wrapped in
+            <a
+              href="/contact-us"
+              style="color: var(--accent); text-decoration: underline"
+              >get in touch</a
+            >
+            — tell us the use case, the rough duration, and whether you have a
+            script. We'll send back a real estimate, not a range wrapped in
             disclaimers.
           </p>
 
           <h2>Why an Ontario-Based Studio</h2>
 
           <p>
-            Time zone, working language, and the ability to meet in person
-            when the brief gets complicated. Ontario animation shops also sit
-            at a price point below the marquee studios in Toronto, Montreal,
-            and Vancouver without sacrificing technical standard — most of our
+            Time zone, working language, and the ability to meet in person when
+            the brief gets complicated. Ontario animation shops also sit at a
+            price point below the marquee studios in Toronto, Montreal, and
+            Vancouver without sacrificing technical standard — most of our
             pipeline is the same tooling the big houses use.
           </p>
 
           <p>
             We're based in Brantford and work with clients across Hamilton,
-            Kitchener–Waterloo, London, Cambridge, Guelph, and beyond. A
-            large share of our engagements run remotely — animation is one of
-            the more location-independent disciplines — but local kickoffs
-            are standard for anyone within a couple of hours.
+            Kitchener–Waterloo, London, Cambridge, Guelph, and beyond. A large
+            share of our engagements run remotely — animation is one of the more
+            location-independent disciplines — but local kickoffs are standard
+            for anyone within a couple of hours.
           </p>
 
           <div class="blog-article-cta">
             <p>
-              Have a project in mind? Whether it's a thirty-second explainer,
-              a branded character, or a full animated series —
-              <a href="/contact-us" style="color: var(--accent); text-decoration: underline;">let's talk</a>.
-              We'll tell you what's realistic, what it costs, and what timeline
-              looks honest.
+              Have a project in mind? Whether it's a thirty-second explainer, a
+              branded character, or a full animated series —
+              <a
+                href="/contact-us"
+                style="color: var(--accent); text-decoration: underline"
+                >let's talk</a
+              >. We'll tell you what's realistic, what it costs, and what
+              timeline looks honest.
             </p>
           </div>
         </div>
@@ -396,8 +529,21 @@
           </div>
           <div class="cta-arrow">
             <svg width="60" height="24" viewBox="0 0 80 24" fill="none">
-              <line x1="0" y1="12" x2="72" y2="12" stroke="currentColor" stroke-width="2" />
-              <path d="M65 5L72 12L65 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              <line
+                x1="0"
+                y1="12"
+                x2="72"
+                y2="12"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+              <path
+                d="M65 5L72 12L65 19"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
             </svg>
           </div>
         </a>
@@ -408,7 +554,11 @@
       <div class="container">
         <div class="footer-grid">
           <div class="footer-brand">
-            <img src="assets/img/logo/logo-white.svg" alt="Orban Forest logo" class="logo-img" />
+            <img
+              src="assets/img/logo/logo-white.svg"
+              alt="Orban Forest logo"
+              class="logo-img"
+            />
             <div class="footer-contact">
               <p>Brantford, Ontario, Canada</p>
               <a href="tel:+13659948961">+1 (365) 994-8961</a>
