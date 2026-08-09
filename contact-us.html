@@ -743,6 +743,10 @@
           return false; // prevent actual submission
         }
 
+        // Genuine submission — honeypot hits return above and never reach here
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({ event: "contact_form_success" });
+
         var btn = document.getElementById("submitBtn");
         var form = document.getElementById("contactForm");
         var success = document.getElementById("formSuccess");
