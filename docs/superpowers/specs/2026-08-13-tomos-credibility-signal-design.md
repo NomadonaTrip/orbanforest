@@ -32,9 +32,8 @@ Four touchpoints across the existing static site (`/mnt/e/TOOLMAKER/WEB PROJECTS
 New `<section id="tomos" class="section-light">` (or matching whatever the existing light-section pattern is) inserted immediately after `</section>` closing the hero (`index.html:358`) and before `.intro-section` (`index.html:360`). This is the payoff for the teaser click/scroll.
 
 Contents:
-- Eyebrow label: "Our Own Product"
-- Headline: "We don't just consult on AI — we build and ship it."
-- 2-3 sentences introducing Tomos as an in-house AI-powered receipt scanner, still in internal testing.
+- Headline: "We build the AI. You just use it."
+- Description: "Introducing Tomos — turn a pile of receipts into an organized price history in seconds, not the hours of manual entry it used to take." (Tomos is still in internal testing.)
 - Full illustration (same placeholder-now, real-asset-later approach as the teaser — same source image, different crop/size, so the two visually connect as one picture split by the fold).
 - Tomos logo/brand mark.
 - Two CTAs:
