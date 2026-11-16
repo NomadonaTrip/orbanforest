@@ -27,10 +27,12 @@
       rel="canonical"
       href="https://orbanforest.ca/blog/google-business-profile"
     />
-    <title>
-      Google Business Profile: Why It's Costing You Customers Right Now | Orban
-      Forest Blog
-    </title>
+    <meta property="og:image" content="https://orbanforest.ca/assets/img/blog/google-business-profile_1.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Google Business Profile Setup Guide | Orban Forest" />
+    <meta name="twitter:description" content="Learn why Google Business Profile is essential for local businesses in Brantford, Cambridge, and Paris ON — and how to set yours up in an afternoon." />
+    <meta name="twitter:image" content="https://orbanforest.ca/assets/img/blog/google-business-profile_1.jpg" />
+    <title>Google Business Profile Setup Guide | Orban Forest</title>
 
     <!-- Open Graph -->
     <meta
@@ -72,16 +74,13 @@
         "mainEntityOfPage": "https://orbanforest.ca/blog/google-business-profile"
       }
     </script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300;1,9..40,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="../assets/css/styles.css" />
-    <link rel="stylesheet" href="../assets/css/blog.css" />
+    <link rel="preload" href="/assets/fonts/dm-sans-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/assets/fonts/playfair-italic-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="../assets/css/styles.css?v=20261116" />
+    <link rel="stylesheet" href="../assets/css/blog.css?v=20261116" />
   </head>
   <body>
+    <a href="#main" class="skip-link">Skip to main content</a>
     <!-- Google Tag Manager (noscript) -->
     <noscript>
       <iframe
@@ -93,13 +92,13 @@
     </noscript>
     <!-- End Google Tag Manager (noscript) -->
     <header class="site-header" id="header">
-      <nav class="nav-container">
+      <nav class="nav-container" aria-label="Primary">
         <a href="/" class="nav-logo" aria-label="Orban Forest Home">
           <img
             src="../assets/img/logo/logo-white.svg"
             alt="Orban Forest logo"
             class="logo-img"
-          />
+            width="1280" height="1024" />
           <span class="logo-text">Orban Forest</span>
         </a>
         <div class="nav-links" id="navLinks">
@@ -127,7 +126,7 @@
             </svg>
           </a>
         </div>
-        <button
+        <button type="button"
           class="theme-toggle"
           id="themeToggle"
           aria-label="Toggle dark mode"
@@ -163,7 +162,7 @@
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
           </svg>
         </button>
-        <button
+        <button type="button"
           class="nav-hamburger"
           id="navToggle"
           aria-label="Toggle navigation"
@@ -175,6 +174,8 @@
         </button>
       </nav>
     </header>
+
+    <main id="main" tabindex="-1">
 
     <section class="blog-article-hero">
       <div class="container">
@@ -225,7 +226,7 @@
             invisible online.
           </p>
 
-          <h4>What Google Business Profile Actually Is</h4>
+          <h2 class="article-h">What Google Business Profile Actually Is</h2>
 
           <p>
             Google Business Profile (GBP) is a free listing that Google gives
@@ -245,7 +246,7 @@
             anyone. You just need to claim it and fill it out properly.
           </p>
 
-          <h4>The Basics That Most Businesses Get Wrong</h4>
+          <h2 class="article-h">The Basics That Most Businesses Get Wrong</h2>
 
           <p>
             <strong>1. They never claimed it in the first place.</strong> Google
@@ -282,7 +283,7 @@
             your business is active.
           </p>
 
-          <h4>Why This Matters More Than You Think</h4>
+          <h2 class="article-h">Why This Matters More Than You Think</h2>
 
           <p>
             For local businesses, your Google Business Profile often gets more
@@ -295,7 +296,7 @@
             If your GBP is weak, it doesn't matter how good your website is.
           </p>
 
-          <h4>What You Can Do This Week</h4>
+          <h2 class="article-h">What You Can Do This Week</h2>
 
           <p>This is not a six-month project. This is an afternoon:</p>
 
@@ -374,6 +375,8 @@
       </div>
     </section>
 
+    </main>
+
     <footer class="site-footer">
       <div class="container">
         <div class="footer-grid">
@@ -382,7 +385,7 @@
               src="../assets/img/logo/logo-white.svg"
               alt="Orban Forest logo"
               class="logo-img"
-            />
+              width="1280" height="1024" loading="lazy" />
             <div class="footer-contact">
               <p>Brantford, Ontario, Canada</p>
               <a href="tel:+13659948961">+1 (365) 994-8961</a>
@@ -422,6 +425,6 @@
         </div>
       </div>
     </footer>
-    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/main.js?v=20261116"></script>
   </body>
 </html>

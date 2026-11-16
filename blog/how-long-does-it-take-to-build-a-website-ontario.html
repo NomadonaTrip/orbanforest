@@ -20,17 +20,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="How long does it take to build a website in Brantford, Cambridge, Hamilton, or Kitchener-Waterloo? Realistic timelines for brochure sites, business sites, e-commerce, and custom web apps in 2026."
+      content="Realistic 2026 timelines for a brochure site, business site, e-commerce store or web app in Brantford, Cambridge, Hamilton and Kitchener-Waterloo."
     />
     <link rel="icon" type="image/png" href="../assets/img/logo/favicon.png" />
     <link
       rel="canonical"
       href="https://orbanforest.ca/blog/how-long-does-it-take-to-build-a-website-ontario"
     />
-    <title>
-      How Long Does It Take to Build a Website in Ontario? (2026 Timelines) |
-      Orban Forest Blog
-    </title>
+    <meta property="og:image" content="https://orbanforest.ca/assets/img/blog/cost-of-a-website_wide.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="How Long to Build a Website in Ontario? | Orban Forest" />
+    <meta name="twitter:description" content="Realistic 2026 timelines for a brochure site, business site, e-commerce store or web app in Brantford, Cambridge, Hamilton and Kitchener-Waterloo." />
+    <meta name="twitter:image" content="https://orbanforest.ca/assets/img/blog/cost-of-a-website_wide.jpg" />
+    <title>How Long to Build a Website in Ontario? | Orban Forest</title>
 
     <!-- Open Graph -->
     <meta
@@ -105,16 +107,13 @@
         ]
       }
     </script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300;1,9..40,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="../assets/css/styles.css" />
-    <link rel="stylesheet" href="../assets/css/blog.css" />
+    <link rel="preload" href="/assets/fonts/dm-sans-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/assets/fonts/playfair-italic-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="../assets/css/styles.css?v=20261116" />
+    <link rel="stylesheet" href="../assets/css/blog.css?v=20261116" />
   </head>
   <body>
+    <a href="#main" class="skip-link">Skip to main content</a>
     <!-- Google Tag Manager (noscript) -->
     <noscript>
       <iframe
@@ -126,13 +125,13 @@
     </noscript>
     <!-- End Google Tag Manager (noscript) -->
     <header class="site-header" id="header">
-      <nav class="nav-container">
+      <nav class="nav-container" aria-label="Primary">
         <a href="/" class="nav-logo" aria-label="Orban Forest Home">
           <img
             src="../assets/img/logo/logo-white.svg"
             alt="Orban Forest logo"
             class="logo-img"
-          />
+            width="1280" height="1024" />
           <span class="logo-text">Orban Forest</span>
         </a>
         <div class="nav-links" id="navLinks">
@@ -160,7 +159,7 @@
             </svg>
           </a>
         </div>
-        <button
+        <button type="button"
           class="theme-toggle"
           id="themeToggle"
           aria-label="Toggle dark mode"
@@ -196,7 +195,7 @@
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
           </svg>
         </button>
-        <button
+        <button type="button"
           class="nav-hamburger"
           id="navToggle"
           aria-label="Toggle navigation"
@@ -208,6 +207,8 @@
         </button>
       </nav>
     </header>
+
+    <main id="main" tabindex="-1">
 
     <section class="blog-article-hero">
       <div class="container">
@@ -500,6 +501,8 @@
       </div>
     </section>
 
+    </main>
+
     <footer class="site-footer">
       <div class="container">
         <div class="footer-grid">
@@ -508,7 +511,7 @@
               src="../assets/img/logo/logo-white.svg"
               alt="Orban Forest logo"
               class="logo-img"
-            />
+              width="1280" height="1024" loading="lazy" />
             <div class="footer-contact">
               <p>Brantford, Ontario, Canada</p>
               <a href="tel:+13659948961">+1 (365) 994-8961</a>
@@ -548,6 +551,6 @@
         </div>
       </div>
     </footer>
-    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/main.js?v=20261116"></script>
   </body>
 </html>

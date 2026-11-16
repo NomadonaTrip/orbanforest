@@ -24,10 +24,12 @@
     />
     <link rel="icon" type="image/png" href="../assets/img/logo/favicon.png" />
     <link rel="canonical" href="https://orbanforest.ca/blog" />
-    <title>
-      Blog — Web Design, AI Automation & Digital Marketing Insights | Orban
-      Forest
-    </title>
+    <meta property="og:image" content="https://orbanforest.ca/assets/img/logo/home_page_preview.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Blog: Web Design, AI &amp; Marketing Insights | Orban Forest" />
+    <meta name="twitter:description" content="Insights on web design, AI automation, digital marketing, and business growth strategy from Orban Forest — serving Brantford, Cambridge, Paris ON and beyond." />
+    <meta name="twitter:image" content="https://orbanforest.ca/assets/img/logo/home_page_preview.jpg" />
+    <title>Blog: Web Design, AI &amp; Marketing Insights | Orban Forest</title>
 
     <!-- Open Graph -->
     <meta
@@ -137,17 +139,14 @@
       }
     </script>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300;1,9..40,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preload" href="/assets/fonts/dm-sans-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/assets/fonts/playfair-italic-latin.woff2" as="font" type="font/woff2" crossorigin />
 
-    <link rel="stylesheet" href="../assets/css/styles.css" />
-    <link rel="stylesheet" href="../assets/css/blog.css" />
+    <link rel="stylesheet" href="../assets/css/styles.css?v=20261116" />
+    <link rel="stylesheet" href="../assets/css/blog.css?v=20261116" />
   </head>
   <body>
+    <a href="#main" class="skip-link">Skip to main content</a>
     <!-- Google Tag Manager (noscript) -->
     <noscript>
       <iframe
@@ -160,13 +159,13 @@
     <!-- End Google Tag Manager (noscript) -->
     <!-- ========== HEADER / NAV ========== -->
     <header class="site-header" id="header">
-      <nav class="nav-container">
+      <nav class="nav-container" aria-label="Primary">
         <a href="/" class="nav-logo" aria-label="Orban Forest Home">
           <img
             src="../assets/img/logo/logo-white.svg"
             alt="Orban Forest logo"
             class="logo-img"
-          />
+            width="1280" height="1024" />
           <span class="logo-text">Orban Forest</span>
         </a>
 
@@ -196,7 +195,7 @@
           </a>
         </div>
 
-        <button
+        <button type="button"
           class="theme-toggle"
           id="themeToggle"
           aria-label="Toggle dark mode"
@@ -233,7 +232,7 @@
           </svg>
         </button>
 
-        <button
+        <button type="button"
           class="nav-hamburger"
           id="navToggle"
           aria-label="Toggle navigation"
@@ -246,11 +245,13 @@
       </nav>
     </header>
 
+    <main id="main" tabindex="-1">
+
     <!-- ========== BLOG HERO ========== -->
     <section class="blog-hero">
       <div class="container">
         <div class="blog-hero-label reveal-up">Our Blog</div>
-        <h1 class="blog-hero-title reveal-up" data-delay="1">
+        <h1 class="blog-hero-title" data-delay="1">
           Insights & <span class="italic-serif">Ideas</span>
         </h1>
         <p class="blog-hero-sub reveal-up" data-delay="2">
@@ -288,7 +289,8 @@
           data-category="strategy"
         >
           <div class="blog-featured-image">
-            <img src="../assets/img/blog/cost-of-a-website_wide.jpg" alt="How much does a website cost in Ontario in 2026" />
+            <img src="../assets/img/blog/cost-of-a-website_wide.jpg" alt="How much does a website cost in Ontario in 2026"
+            width="1376" height="768" srcset="../assets/img/blog/cost-of-a-website_wide-200w.webp 200w, ../assets/img/blog/cost-of-a-website_wide-400w.webp 400w, ../assets/img/blog/cost-of-a-website_wide-800w.webp 800w, ../assets/img/blog/cost-of-a-website_wide-1200w.webp 1200w, ../assets/img/blog/cost-of-a-website_wide-1376w.webp 1376w" sizes="(max-width: 700px) 92vw, (max-width: 1200px) 46vw, 670px" fetchpriority="high" />
           </div>
           <div class="blog-featured-content">
             <div class="blog-post-meta">
@@ -341,7 +343,7 @@
               <img
                 src="../assets/img/blog/cost-of-a-website_wide.jpg"
                 alt="How long does it take to build a website in Ontario — realistic project timelines"
-              />
+                width="1376" height="768" srcset="../assets/img/blog/cost-of-a-website_wide-200w.webp 200w, ../assets/img/blog/cost-of-a-website_wide-400w.webp 400w, ../assets/img/blog/cost-of-a-website_wide-800w.webp 800w, ../assets/img/blog/cost-of-a-website_wide-1200w.webp 1200w, ../assets/img/blog/cost-of-a-website_wide-1376w.webp 1376w" sizes="(max-width: 700px) 92vw, (max-width: 1200px) 45vw, 400px" loading="lazy" decoding="async" />
             </div>
             <div class="blog-card-body">
               <div class="blog-post-meta">
@@ -389,7 +391,7 @@
               <img
                 src="../assets/img/blog/cost-of-a-website_wide.jpg"
                 alt="Freelancer vs agency for web design in southwestern Ontario — an honest comparison"
-              />
+                width="1376" height="768" srcset="../assets/img/blog/cost-of-a-website_wide-200w.webp 200w, ../assets/img/blog/cost-of-a-website_wide-400w.webp 400w, ../assets/img/blog/cost-of-a-website_wide-800w.webp 800w, ../assets/img/blog/cost-of-a-website_wide-1200w.webp 1200w, ../assets/img/blog/cost-of-a-website_wide-1376w.webp 1376w" sizes="(max-width: 700px) 92vw, (max-width: 1200px) 45vw, 400px" loading="lazy" decoding="async" />
             </div>
             <div class="blog-card-body">
               <div class="blog-post-meta">
@@ -436,7 +438,7 @@
               <img
                 src="../assets/img/blog/cost-of-a-website_wide.jpg"
                 alt="What's actually included in a website design package — a plain-English checklist"
-              />
+                width="1376" height="768" srcset="../assets/img/blog/cost-of-a-website_wide-200w.webp 200w, ../assets/img/blog/cost-of-a-website_wide-400w.webp 400w, ../assets/img/blog/cost-of-a-website_wide-800w.webp 800w, ../assets/img/blog/cost-of-a-website_wide-1200w.webp 1200w, ../assets/img/blog/cost-of-a-website_wide-1376w.webp 1376w" sizes="(max-width: 700px) 92vw, (max-width: 1200px) 45vw, 400px" loading="lazy" decoding="async" />
             </div>
             <div class="blog-card-body">
               <div class="blog-post-meta">
@@ -482,7 +484,7 @@
               <img
                 src="../assets/img/blog/google-business-profile_1.jpg"
                 alt="Google Business Profile optimization for local businesses"
-              />
+                width="1312" height="816" srcset="../assets/img/blog/google-business-profile_1-200w.webp 200w, ../assets/img/blog/google-business-profile_1-400w.webp 400w, ../assets/img/blog/google-business-profile_1-800w.webp 800w, ../assets/img/blog/google-business-profile_1-1200w.webp 1200w, ../assets/img/blog/google-business-profile_1-1312w.webp 1312w" sizes="(max-width: 700px) 92vw, (max-width: 1200px) 45vw, 400px" loading="lazy" decoding="async" />
             </div>
             <div class="blog-card-body">
               <div class="blog-post-meta">
@@ -529,7 +531,7 @@
               <img
                 src="../assets/img/blog/listening_to_customers.jpg"
                 alt="Listening to your customers to understand why they buy"
-              />
+                width="1200" height="896" srcset="../assets/img/blog/listening_to_customers-200w.webp 200w, ../assets/img/blog/listening_to_customers-400w.webp 400w, ../assets/img/blog/listening_to_customers-800w.webp 800w, ../assets/img/blog/listening_to_customers-1200w.webp 1200w" sizes="(max-width: 700px) 92vw, (max-width: 1200px) 45vw, 400px" loading="lazy" decoding="async" />
             </div>
             <div class="blog-card-body">
               <div class="blog-post-meta">
@@ -576,7 +578,7 @@
               <img
                 src="../assets/img/blog/automation.jpg"
                 alt="Automating repetitive daily tasks"
-              />
+                width="1200" height="896" srcset="../assets/img/blog/automation-200w.webp 200w, ../assets/img/blog/automation-400w.webp 400w, ../assets/img/blog/automation-800w.webp 800w, ../assets/img/blog/automation-1200w.webp 1200w" sizes="(max-width: 700px) 92vw, (max-width: 1200px) 45vw, 400px" loading="lazy" decoding="async" />
             </div>
             <div class="blog-card-body">
               <div class="blog-post-meta">
@@ -624,7 +626,7 @@
               <img
                 src="../assets/img/blog/website_marketing.jpg"
                 alt="Website marketing strategy for local businesses"
-              />
+                width="1200" height="896" srcset="../assets/img/blog/website_marketing-200w.webp 200w, ../assets/img/blog/website_marketing-400w.webp 400w, ../assets/img/blog/website_marketing-800w.webp 800w, ../assets/img/blog/website_marketing-1200w.webp 1200w" sizes="(max-width: 700px) 92vw, (max-width: 1200px) 45vw, 400px" loading="lazy" decoding="async" />
             </div>
             <div class="blog-card-body">
               <div class="blog-post-meta">
@@ -670,7 +672,7 @@
               <img
                 src="../assets/img/blog/Animation.jpg"
                 alt="3D animation and video production for business marketing"
-              />
+                width="1200" height="896" srcset="../assets/img/blog/Animation-200w.webp 200w, ../assets/img/blog/Animation-400w.webp 400w, ../assets/img/blog/Animation-800w.webp 800w, ../assets/img/blog/Animation-1200w.webp 1200w" sizes="(max-width: 700px) 92vw, (max-width: 1200px) 45vw, 400px" loading="lazy" decoding="async" />
             </div>
             <div class="blog-card-body">
               <div class="blog-post-meta">
@@ -717,7 +719,7 @@
               <img
                 src="../assets/img/blog/attention-website.jpg"
                 alt="Website first impressions and the three-second rule"
-              />
+                width="1200" height="896" srcset="../assets/img/blog/attention-website-200w.webp 200w, ../assets/img/blog/attention-website-400w.webp 400w, ../assets/img/blog/attention-website-800w.webp 800w, ../assets/img/blog/attention-website-1200w.webp 1200w" sizes="(max-width: 700px) 92vw, (max-width: 1200px) 45vw, 400px" loading="lazy" decoding="async" />
             </div>
             <div class="blog-card-body">
               <div class="blog-post-meta">
@@ -764,7 +766,7 @@
               <img
                 src="../assets/img/blog/website-follow-up.jpg"
                 alt="Automated follow-up systems for small business lead nurturing"
-              />
+                width="1200" height="896" srcset="../assets/img/blog/website-follow-up-200w.webp 200w, ../assets/img/blog/website-follow-up-400w.webp 400w, ../assets/img/blog/website-follow-up-800w.webp 800w, ../assets/img/blog/website-follow-up-1200w.webp 1200w" sizes="(max-width: 700px) 92vw, (max-width: 1200px) 45vw, 400px" loading="lazy" decoding="async" />
             </div>
             <div class="blog-card-body">
               <div class="blog-post-meta">
@@ -839,6 +841,8 @@
     </section>
 
     <!-- ========== FOOTER ========== -->
+    </main>
+
     <footer class="site-footer">
       <div class="container">
         <div class="footer-grid">
@@ -847,7 +851,7 @@
               src="../assets/img/logo/logo-white.svg"
               alt="Orban Forest logo"
               class="logo-img"
-            />
+              width="1280" height="1024" loading="lazy" />
             <div class="footer-contact">
               <p>Brantford, Ontario, Canada</p>
               <a href="tel:+13659948961">+1 (365) 994-8961</a>
@@ -861,7 +865,7 @@
                 target="_blank"
                 rel="noopener"
               >
-                <svg
+                <svg aria-hidden="true"
                   width="16"
                   height="16"
                   viewBox="0 0 24 24"
@@ -873,7 +877,7 @@
                 </svg>
               </a>
               <a href="#" class="social-link" aria-label="LinkedIn">
-                <svg
+                <svg aria-hidden="true"
                   width="16"
                   height="16"
                   viewBox="0 0 24 24"
@@ -885,7 +889,7 @@
                 </svg>
               </a>
               <a href="#" class="social-link" aria-label="Instagram">
-                <svg
+                <svg aria-hidden="true"
                   width="16"
                   height="16"
                   viewBox="0 0 24 24"
@@ -937,7 +941,7 @@
     </footer>
 
     <!-- ========== SCRIPTS ========== -->
-    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/main.js?v=20261116"></script>
     <script>
       /* ── Blog Category Filter ──────────────────────────── */
       (function () {

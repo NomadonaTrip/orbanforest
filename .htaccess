@@ -1,11 +1,28 @@
 # Clean URLs for orbanforest.ca
 ErrorDocument 404 /404.html
+DirectorySlash Off
 
 RewriteEngine On
 
 # 0. 301 redirect www to non-www (canonical domain)
 RewriteCond %{HTTP_HOST} ^www\.orbanforest\.ca [NC]
 RewriteRule ^(.*)$ https://orbanforest.ca/$1 [R=301,L]
+
+# 0a. Never serve internal working files (notes, drafts, archives, source files).
+#     robots.txt Disallow only asks crawlers to stay away; this actually blocks access.
+RewriteRule ^(archive|mockups|ui-iterations|instructions|docs|resources|assets/img/processing)(/|$) - [R=404,L,NC]
+RewriteRule (^|/)[^/]+\.(md|py|psd|zip|log)$ - [R=404,L,NC]
+
+# 0b. Retired pages
+RewriteRule ^ar-platform(\.html)?/?$ - [G,L,NC]
+
+# 0c. Homepage aliases -> / (index, index.html)
+RewriteCond %{THE_REQUEST} \s/+index(\.html)?[\s?] [NC]
+RewriteRule ^ / [R=301,L]
+
+# 0d. Strip trailing slashes (/web-design/ -> /web-design, /blog/ -> /blog)
+RewriteCond %{THE_REQUEST} \s/+(.+?)/+[\s?]
+RewriteRule ^ /%1 [R=301,L,NE]
 
 # 1. 301 redirect old .html URLs to clean URLs
 RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?] [NC]
@@ -28,3 +45,25 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^(.+?)/?$ $1.html [L]
+
+# ── Caching ────────────────────────────────────────────────
+# HTML: always revalidate so deploys show up immediately.
+# CSS/JS: referenced with ?v=YYYYMMDD — bump that query string on every
+#         change to styles.css / main.js so browsers fetch the new file.
+# Images/fonts: rarely change; cache for a year.
+<IfModule mod_headers.c>
+  <FilesMatch "\.html$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+  <FilesMatch "\.(css|js)$">
+    Header set Cache-Control "public, max-age=2592000"
+  </FilesMatch>
+  <FilesMatch "\.(jpe?g|png|webp|avif|svg|gif|ico|woff2?)$">
+    Header set Cache-Control "public, max-age=31536000"
+  </FilesMatch>
+
+  # ── Security headers ─────────────────────────────────────
+  Header always set Strict-Transport-Security "max-age=31536000"
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>

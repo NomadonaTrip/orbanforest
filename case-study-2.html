@@ -20,13 +20,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Orban Forest case study: How we directed an international team of artists to create HBCU Superheroes — a 3D animated short celebrating Historically Black College and University culture through original character design and cinematic storytelling."
+      content="How we directed an international team of artists to create HBCU Superheroes, a 3D animated short celebrating HBCU culture."
     />
     <link rel="icon" type="image/png" href="assets/img/logo/favicon.png" />
     <link rel="canonical" href="https://orbanforest.ca/case-study-2" />
-    <title>
-      HBCU Superheroes Case Study — Animation & Character Design | Orban Forest
-    </title>
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="HBCU Superheroes: 3D Animation Case Study | Orban Forest" />
+    <meta name="twitter:description" content="How we directed an international team of artists to create HBCU Superheroes, a 3D animated short celebrating HBCU culture." />
+    <meta name="twitter:image" content="https://orbanforest.ca/assets/img/projects/hbcu.png" />
+    <title>HBCU Superheroes: 3D Animation Case Study | Orban Forest</title>
 
     <!-- Open Graph -->
     <meta
@@ -69,17 +71,14 @@
       }
     </script>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300;1,9..40,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preload" href="/assets/fonts/dm-sans-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/assets/fonts/playfair-italic-latin.woff2" as="font" type="font/woff2" crossorigin />
 
-    <link rel="stylesheet" href="assets/css/styles.css" />
-    <link rel="stylesheet" href="assets/css/case-study.css" />
+    <link rel="stylesheet" href="assets/css/styles.css?v=20261116" />
+    <link rel="stylesheet" href="assets/css/case-study.css?v=20261116" />
   </head>
   <body>
+    <a href="#main" class="skip-link">Skip to main content</a>
     <!-- Google Tag Manager (noscript) -->
     <noscript>
       <iframe
@@ -92,13 +91,13 @@
     <!-- End Google Tag Manager (noscript) -->
     <!-- ========== HEADER / NAV ========== -->
     <header class="site-header" id="header">
-      <nav class="nav-container">
+      <nav class="nav-container" aria-label="Primary">
         <a href="/" class="nav-logo" aria-label="Orban Forest Home">
           <img
             src="assets/img/logo/logo-white.svg"
             alt="Orban Forest logo"
             class="logo-img"
-          />
+            width="1280" height="1024" />
           <span class="logo-text">Orban Forest</span>
         </a>
 
@@ -128,7 +127,7 @@
           </a>
         </div>
 
-        <button
+        <button type="button"
           class="theme-toggle"
           id="themeToggle"
           aria-label="Toggle dark mode"
@@ -165,7 +164,7 @@
           </svg>
         </button>
 
-        <button
+        <button type="button"
           class="nav-hamburger"
           id="navToggle"
           aria-label="Toggle navigation"
@@ -177,6 +176,8 @@
         </button>
       </nav>
     </header>
+
+    <main id="main" tabindex="-1">
 
     <!-- ========== CASE STUDY HERO ========== -->
     <section class="cs-hero">
@@ -194,7 +195,7 @@
           Back to Projects
         </a>
 
-        <h1 class="cs-title reveal-up" data-delay="1">
+        <h1 class="cs-title" data-delay="1">
           HBCU <span class="italic-serif">Superheroes</span>
         </h1>
 
@@ -242,7 +243,7 @@
           <img
             src="assets/img/projects/hbcu.png"
             alt="HBCU Superheroes 3D animated characters in heroic poses"
-          />
+            width="165" height="165" srcset="assets/img/projects/hbcu-165w.webp 165w" sizes="(max-width: 1340px) 90vw, 1240px" fetchpriority="high" />
         </div>
       </div>
     </div>
@@ -253,11 +254,11 @@
         <div class="cs-section-grid">
           <div class="cs-section-label reveal-up">The Challenge</div>
           <div class="cs-section-body">
-            <h3 class="reveal-up" data-delay="1">
+            <h2 class="reveal-up" data-delay="1">
               Bringing a
               <span class="italic-serif">culturally rich</span> vision to life
               across borders
-            </h3>
+            </h2>
             <p class="reveal-up" data-delay="2">
               The client had a powerful concept: superheroes rooted in the
               traditions, pride, and resilience of HBCU culture. But turning
@@ -302,10 +303,10 @@
         <div class="cs-section-grid">
           <div class="cs-section-label reveal-up">Our Approach</div>
           <div class="cs-section-body">
-            <h3 class="reveal-up" data-delay="1">
+            <h2 class="reveal-up" data-delay="1">
               <span class="italic-serif">Creative direction</span> that united a
               global team around a single vision
-            </h3>
+            </h2>
             <p class="reveal-up" data-delay="2">
               We served as creative directors on the project, building the
               pipeline that connected concept artists in one timezone to 3D
@@ -412,10 +413,10 @@
         <div class="cs-section-grid">
           <div class="cs-section-label reveal-up">The Results</div>
           <div class="cs-section-body">
-            <h3 class="reveal-up" data-delay="1">
+            <h2 class="reveal-up" data-delay="1">
               A <span class="italic-serif">cinematic debut</span> that resonated
               with audiences worldwide
-            </h3>
+            </h2>
             <p class="reveal-up" data-delay="2">
               The finished animated short delivered exactly what the client
               envisioned — a celebration of HBCU culture told through original
@@ -487,7 +488,7 @@
                 src="assets/img/projects/loewen.jpg"
                 alt="Loewen Property Works website"
                 loading="lazy"
-              />
+                width="165" height="165" srcset="assets/img/projects/loewen-165w.webp 165w" sizes="98px" decoding="async" />
             </div>
             <div>
               <div class="cs-related-dir">Previous Project</div>
@@ -503,7 +504,7 @@
                 src="assets/img/projects/potb.jpg"
                 alt="People of the Bible animation"
                 loading="lazy"
-              />
+                width="165" height="165" srcset="assets/img/projects/potb-165w.webp 165w" sizes="98px" decoding="async" />
             </div>
             <div>
               <div class="cs-related-dir">Next Project</div>
@@ -548,6 +549,8 @@
     </section>
 
     <!-- ========== FOOTER ========== -->
+    </main>
+
     <footer class="site-footer">
       <div class="container">
         <div class="footer-grid">
@@ -556,7 +559,7 @@
               src="assets/img/logo/logo-white.svg"
               alt="Orban Forest logo"
               class="logo-img"
-            />
+              width="1280" height="1024" loading="lazy" />
             <div class="footer-contact">
               <p>Brantford, Ontario, Canada</p>
               <a href="tel:+13659948961">+1 (365) 994-8961</a>
@@ -570,7 +573,7 @@
                 target="_blank"
                 rel="noopener"
               >
-                <svg
+                <svg aria-hidden="true"
                   width="16"
                   height="16"
                   viewBox="0 0 24 24"
@@ -582,7 +585,7 @@
                 </svg>
               </a>
               <a href="#" class="social-link" aria-label="LinkedIn">
-                <svg
+                <svg aria-hidden="true"
                   width="16"
                   height="16"
                   viewBox="0 0 24 24"
@@ -594,7 +597,7 @@
                 </svg>
               </a>
               <a href="#" class="social-link" aria-label="Instagram">
-                <svg
+                <svg aria-hidden="true"
                   width="16"
                   height="16"
                   viewBox="0 0 24 24"
@@ -645,6 +648,6 @@
       </div>
     </footer>
 
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/main.js?v=20261116"></script>
   </body>
 </html>

@@ -1,6 +1,4 @@
-<!-- Google Tag Manager (noscript) -->
+I want you to re-write the web copy at the level of empathy and human connnectedness you would find in a Marketika website. It should be utterly perfect, emotionally arresting, with every word written at AAA quality. Every nuance, every phrase must serve to give the customer clarity on what Orban Forest delivers in website design and propel them towards engaging Orban Forest Inc. as the vendor of choice.
+Fan out subagents and have sub-agents tackle each section of the web copy individually so that the web copy is utterly perfect. You should /loop on each section and have a separate sub-agent check it to ensure that it meets the Marketika/ Awwards standard. That separate sub-agent should be a really harsh critic, and if it doesn't meet the Marketika/ Awwards web copy standard, it should keep going.
 
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MKZ772LF"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-
-<!-- End Google Tag Manager (noscript) -->
+Don't stop until each sub-agent is utterly wowed with the quality when compared with the actual quality of a Marketika web copy. It should literally compare them side by side blind and say which one reads better, more convincing, more emotionally arresting, more compelling. /loop until everything is perfect. Fan out sub-agents and ultracode.

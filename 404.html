@@ -26,14 +26,10 @@
     <title>Page Not Found | Orban Forest Inc.</title>
     <meta name="robots" content="noindex, nofollow" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300;1,9..40,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preload" href="/assets/fonts/dm-sans-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/assets/fonts/playfair-italic-latin.woff2" as="font" type="font/woff2" crossorigin />
 
-    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link rel="stylesheet" href="/assets/css/styles.css?v=20261116" />
     <style>
       .error-section {
         min-height: 70vh;
@@ -96,6 +92,7 @@
     </style>
   </head>
   <body>
+    <a href="#main" class="skip-link">Skip to main content</a>
     <!-- Google Tag Manager (noscript) -->
     <noscript>
       <iframe
@@ -108,13 +105,13 @@
     <!-- End Google Tag Manager (noscript) -->
     <!-- ========== HEADER / NAV ========== -->
     <header class="site-header" id="header">
-      <nav class="nav-container">
+      <nav class="nav-container" aria-label="Primary">
         <a href="/" class="nav-logo" aria-label="Orban Forest Home">
           <img
             src="/assets/img/logo/logo-white.svg"
             alt="Orban Forest logo"
             class="logo-img"
-          />
+            width="1280" height="1024" />
           <span class="logo-text">Orban Forest</span>
         </a>
 
@@ -149,6 +146,8 @@
         </button>
       </nav>
     </header>
+
+    <main id="main" tabindex="-1">
 
     <!-- ========== 404 CONTENT ========== -->
     <section class="error-section">
@@ -185,6 +184,8 @@
     </section>
 
     <!-- ========== FOOTER ========== -->
+    </main>
+
     <footer class="site-footer">
       <div class="container">
         <div class="footer-grid">
@@ -193,7 +194,7 @@
               src="/assets/img/logo/logo-white.svg"
               alt="Orban Forest logo"
               class="logo-img"
-            />
+              width="1280" height="1024" loading="lazy" />
             <div class="footer-contact">
               <p>Brantford, Ontario, Canada</p>
               <a href="tel:+13659948961">+1 (365) 994-8961</a>
@@ -238,6 +239,6 @@
       </div>
     </footer>
 
-    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/main.js?v=20261116"></script>
   </body>
 </html>
