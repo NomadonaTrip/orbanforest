@@ -28,11 +28,16 @@
           function () {
             (c[a].q = c[a].q || []).push(arguments);
           };
-        t = l.createElement(r);
-        t.async = 1;
-        t.src = "https://www.clarity.ms/tag/" + i;
-        y = l.getElementsByTagName(r)[0];
-        y.parentNode.insertBefore(t, y);
+        // Loaded after the page's load event so it doesn't compete with first render
+        function load() {
+          t = l.createElement(r);
+          t.async = 1;
+          t.src = "https://www.clarity.ms/tag/" + i;
+          y = l.getElementsByTagName(r)[0];
+          y.parentNode.insertBefore(t, y);
+        }
+        if (l.readyState === "complete") load();
+        else c.addEventListener("load", load);
       })(window, document, "clarity", "script", "wy8bow50fc");
     </script>
     <!-- Microsoft Clarity Tracking Code end -->
@@ -40,21 +45,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Orban Forest Inc. delivers web design, AI automations, digital marketing, and 3D animation for businesses in Brantford, Cambridge, Paris ON and surrounding cities. Let's build something remarkable."
+      content="Web design, AI automation, digital marketing and 3D animation for businesses in Brantford, Cambridge, Paris ON and surrounding cities."
     />
     <link rel="icon" type="image/png" href="assets/img/logo/favicon.png" />
-    <title>
-      Web Design, AI Automation & Digital Marketing — Brantford, Cambridge &
-      Paris ON | Orban Forest
-    </title>
+    <title>Web Design &amp; AI Automation in Brantford, ON | Orban Forest</title>
 
     <!-- Fonts: Editorial serif + clean geometric sans -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300;1,9..40,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preload" href="/assets/fonts/dm-sans-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/assets/fonts/playfair-italic-latin.woff2" as="font" type="font/woff2" crossorigin />
 
     <link rel="canonical" href="https://orbanforest.ca/" />
 
@@ -198,9 +196,10 @@
       }
     </script>
 
-    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/styles.css?v=20261117" />
   </head>
   <body>
+    <a href="#main" class="skip-link">Skip to main content</a>
     <!-- Google Tag Manager (noscript) -->
     <noscript>
       <iframe
@@ -213,13 +212,13 @@
     <!-- End Google Tag Manager (noscript) -->
     <!-- ========== HEADER / NAV ========== -->
     <header class="site-header" id="header">
-      <nav class="nav-container">
+      <nav class="nav-container" aria-label="Primary">
         <a href="/" class="nav-logo" aria-label="Orban Forest Home">
           <img
             src="assets/img/logo/logo-white.svg"
             alt="Orban Forest logo"
             class="logo-img"
-          />
+            width="1280" height="1024" />
           <span class="logo-text">Orban Forest</span>
         </a>
 
@@ -250,7 +249,7 @@
         </div>
 
         <!-- Theme Toggle -->
-        <button
+        <button type="button"
           class="theme-toggle"
           id="themeToggle"
           aria-label="Toggle dark mode"
@@ -287,7 +286,7 @@
           </svg>
         </button>
 
-        <button
+        <button type="button"
           class="nav-hamburger"
           id="navToggle"
           aria-label="Toggle navigation"
@@ -300,12 +299,14 @@
       </nav>
     </header>
 
+    <main id="main" tabindex="-1">
+
     <!-- ========== HERO ========== -->
     <section class="hero" id="hero">
       <div class="container">
         <div class="hero-content">
           <div class="hero-label reveal-up">Digital Craft Studio</div>
-          <h1 class="hero-headline reveal-up" data-delay="1">
+          <h1 class="hero-headline" data-delay="1">
             We craft <span class="italic-serif">digital</span><br />experiences
             that<br /><span class="italic-serif" style="color: var(--accent)"
               >deliver</span
@@ -402,6 +403,117 @@
       </div>
     </section>
 
+    <!-- ========== FEATURED PROJECT: TOMOS ========== -->
+    <section class="tomos-section" id="tomos" aria-labelledby="tomos-heading">
+      <div class="container">
+        <div class="tomos-header">
+          <div class="intro-label reveal-up">Featured Project &middot; Built In-House</div>
+          <h2 class="intro-heading reveal-up" data-delay="1" id="tomos-heading">
+            We don't just advise on AI.
+            We <span class="italic-serif">engineer</span> it.
+          </h2>
+        </div>
+
+        <figure class="tomos-banner reveal-up">
+          <img
+            src="assets/img/projects/Tomos%20Banner.jpg"
+            srcset="
+              assets/img/projects/tomos-banner-600w.webp   600w,
+              assets/img/projects/tomos-banner-900w.webp   900w,
+              assets/img/projects/tomos-banner-1240w.webp 1240w,
+              assets/img/projects/tomos-banner-1600w.webp 1600w,
+              assets/img/projects/tomos-banner-2172w.webp 2172w
+            "
+            sizes="(max-width: 1340px) 92vw, 1240px"
+            width="2172"
+            height="724"
+            loading="lazy"
+            decoding="async"
+            alt="Tomos.app: Your receipts, finally handled. A paper receipt being scanned into a phone. Beta release available on Android."
+          />
+        </figure>
+
+        <div class="tomos-grid">
+          <div class="intro-body">
+            <p class="reveal-up">
+              Tomos is our own AI product, designed, engineered and shipped
+              entirely by our team. Snap a receipt and Tomos turns it into
+              clean, structured data: a price history you own, showing you
+              exactly when the things you buy start costing more.
+            </p>
+            <p class="reveal-up" data-delay="1">
+              It's now in public beta on Android. Every system we build for
+              clients gets the same engineering standard we hold ourselves to.
+            </p>
+            <div class="tomos-cta reveal-up" data-delay="2">
+              <a
+                href="https://tomos.app/"
+                class="btn btn--primary"
+                target="_blank"
+                rel="noopener"
+              >
+                Visit Tomos.app
+                <span class="visually-hidden">(opens in a new tab)</span>
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 14 14"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M1 13L13 1M13 1H3M13 1V11"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+              <a href="/contact-us?ref=tomos" class="btn btn--ghost">
+                Build something like this
+              </a>
+            </div>
+          </div>
+
+          <ol class="tomos-points" role="list">
+            <li class="tomos-point reveal-up">
+              <span class="tomos-point-num" aria-hidden="true">01</span>
+              <div>
+                <h3>Messy documents in, structured data out</h3>
+                <p>
+                  Real receipts are crumpled, faded and inconsistent. Reading
+                  them reliably is the hard part most off-the-shelf automation
+                  tools skip. Tomos is built around it.
+                </p>
+              </div>
+            </li>
+            <li class="tomos-point reveal-up" data-delay="1">
+              <span class="tomos-point-num" aria-hidden="true">02</span>
+              <div>
+                <h3>Engineered end to end</h3>
+                <p>
+                  Product design, the AI pipeline and the Android app: one
+                  team, one standard, no hand-offs between vendors.
+                </p>
+              </div>
+            </li>
+            <li class="tomos-point reveal-up" data-delay="2">
+              <span class="tomos-point-num" aria-hidden="true">03</span>
+              <div>
+                <h3>Shipped, not just prototyped</h3>
+                <p>
+                  Tomos is in people's hands in a public beta, not sitting in a
+                  slide deck. We build what we recommend, then put it into
+                  production.
+                </p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
     <!-- ========== FEATURED WORK ========== -->
     <section class="work-section" id="work">
       <div class="container">
@@ -410,7 +522,7 @@
             Featured <span class="italic-serif">Projects</span>
           </h2>
           <a href="#contact" class="see-all reveal-up">
-            See All
+            Start a Project
             <svg
               width="14"
               height="14"
@@ -436,7 +548,7 @@
                 src="assets/img/case_studies/Loewen/Loewenpropertyworks_website.jpg"
                 alt="Loewen Property Works website showcasing property maintenance services"
                 loading="lazy"
-              />
+                width="1600" height="2000" srcset="assets/img/case_studies/Loewen/Loewenpropertyworks_website-200w.webp 200w, assets/img/case_studies/Loewen/Loewenpropertyworks_website-400w.webp 400w, assets/img/case_studies/Loewen/Loewenpropertyworks_website-800w.webp 800w, assets/img/case_studies/Loewen/Loewenpropertyworks_website-1200w.webp 1200w, assets/img/case_studies/Loewen/Loewenpropertyworks_website-1600w.webp 1600w" sizes="(max-width: 700px) 92vw, (max-width: 1200px) 45vw, 400px" decoding="async" />
             </div>
             <div class="project-meta">
               <span class="project-tag">Web Design</span>
@@ -472,7 +584,7 @@
                 src="assets/img/case_studies/Energija/the-hand-of-an-african-lady-dressed-in-executive-a.jpeg"
                 alt="Energija Integrated Systems — intelligent lighting and energy solutions"
                 loading="lazy"
-              />
+                width="810" height="1440" srcset="assets/img/case_studies/Energija/the-hand-of-an-african-lady-dressed-in-executive-a-200w.webp 200w, assets/img/case_studies/Energija/the-hand-of-an-african-lady-dressed-in-executive-a-400w.webp 400w, assets/img/case_studies/Energija/the-hand-of-an-african-lady-dressed-in-executive-a-800w.webp 800w, assets/img/case_studies/Energija/the-hand-of-an-african-lady-dressed-in-executive-a-810w.webp 810w" sizes="(max-width: 700px) 92vw, (max-width: 1200px) 45vw, 400px" decoding="async" />
             </div>
             <div class="project-meta">
               <span class="project-tag">Web Design</span>
@@ -511,7 +623,7 @@
                 alt="3D animated commercial for Emzor Paracetamol featuring character juggling a football"
                 loading="lazy"
                 style="object-fit: cover"
-              />
+                width="928" height="1152" srcset="assets/img/case_studies/Emzor/Emzor_endframe_1-200w.webp 200w, assets/img/case_studies/Emzor/Emzor_endframe_1-400w.webp 400w, assets/img/case_studies/Emzor/Emzor_endframe_1-800w.webp 800w, assets/img/case_studies/Emzor/Emzor_endframe_1-928w.webp 928w" sizes="(max-width: 700px) 92vw, (max-width: 1200px) 45vw, 400px" decoding="async" />
             </div>
             <div class="project-meta">
               <span class="project-tag">Animation</span>
@@ -890,6 +1002,8 @@
     </section>
 
     <!-- ========== FOOTER ========== -->
+    </main>
+
     <footer class="site-footer">
       <div class="container">
         <div class="footer-grid">
@@ -898,7 +1012,7 @@
               src="assets/img/logo/logo-white.svg"
               alt="Orban Forest logo"
               class="logo-img"
-            />
+              width="1280" height="1024" loading="lazy" />
             <div class="footer-contact">
               <p>Brantford, Ontario, Canada</p>
               <a href="tel:+13659948961">+1 (365) 994-8961</a>
@@ -912,7 +1026,7 @@
                 target="_blank"
                 rel="noopener"
               >
-                <svg
+                <svg aria-hidden="true"
                   width="16"
                   height="16"
                   viewBox="0 0 24 24"
@@ -924,7 +1038,7 @@
                 </svg>
               </a>
               <a href="#" class="social-link" aria-label="LinkedIn">
-                <svg
+                <svg aria-hidden="true"
                   width="16"
                   height="16"
                   viewBox="0 0 24 24"
@@ -936,7 +1050,7 @@
                 </svg>
               </a>
               <a href="#" class="social-link" aria-label="Instagram">
-                <svg
+                <svg aria-hidden="true"
                   width="16"
                   height="16"
                   viewBox="0 0 24 24"
@@ -988,6 +1102,6 @@
     </footer>
 
     <!-- ========== SCRIPTS ========== -->
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/main.js?v=20261116"></script>
   </body>
 </html>

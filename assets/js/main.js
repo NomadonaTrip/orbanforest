@@ -401,11 +401,11 @@
       "#cookieBanner.cb-visible{transform:translateY(0);opacity:1}" +
       ".cb-inner{max-width:1060px;margin:0 auto;display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap}" +
       ".cb-text{flex:1;min-width:280px;line-height:1.6;margin:0}" +
-      ".cb-link{color:var(--accent,#a855f7);text-decoration:underline}" +
+      ".cb-link{color:var(--accent,#9333ea);text-decoration:underline}" +
       ".cb-actions{display:flex;gap:0.5rem;flex-shrink:0}" +
       ".cb-btn{font-family:inherit;font-size:0.85rem;font-weight:500;padding:0.5rem 1.25rem;" +
       "border-radius:100px;cursor:pointer;border:none;transition:background 0.2s,color 0.2s}" +
-      ".cb-accept{background:var(--accent,#a855f7);color:#0a0a0a}" +
+      ".cb-accept{background:var(--accent,#9333ea);color:var(--on-accent,#fff)}" +
       ".cb-accept:hover{background:var(--accent-hover,#9333ea)}" +
       ".cb-decline{background:transparent;color:var(--text-white-muted,#999);" +
       "border:1px solid var(--border-light,#2a2a2a)}" +

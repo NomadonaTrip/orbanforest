@@ -7,6 +7,9 @@
 .cs-section--inverted {
   background: #111111;
   color: #f6f6f6;
+  /* dark section inside light theme: lighter purple, 5.65:1 on #111 */
+  --accent: #b16af8;
+  --on-accent: #0a0a0a;
   border-radius: var(--radius-section);
   margin-left: 1rem;
   margin-right: 1rem;
@@ -16,7 +19,7 @@
 .cs-section--inverted + .cs-section--inverted {
   margin-top: 1.5rem;
 }
-.cs-section--inverted .cs-section-body h3 {
+.cs-section--inverted .cs-section-body :is(h2, h3) {
   color: #f6f6f6;
 }
 .cs-section--inverted .cs-section-body p,
@@ -43,13 +46,13 @@
   border-color: rgba(255, 255, 255, 0.1);
 }
 .cs-section--inverted .cs-placeholder {
-  color: #555555;
+  color: #999999;
 }
 .cs-section--inverted .cs-quote blockquote {
   color: #f6f6f6;
 }
 .cs-section--inverted .cs-quote cite {
-  color: #666666;
+  color: #999999;
 }
 .cs-section--inverted .cs-quote {
   border-color: rgba(255, 255, 255, 0.1);
@@ -60,7 +63,10 @@
   background: #f6f6f6;
   color: #111111;
 }
-[data-theme="dark"] .cs-section--inverted .cs-section-body h3 {
+[data-theme="dark"] .cs-section--inverted {
+  --accent: #9333ea;
+}
+[data-theme="dark"] .cs-section--inverted .cs-section-body :is(h2, h3) {
   color: #111111;
 }
 [data-theme="dark"] .cs-section--inverted .cs-section-body p,
@@ -84,7 +90,7 @@
   border-color: #e0e0e0;
 }
 [data-theme="dark"] .cs-section--inverted .cs-placeholder {
-  color: #aaaaaa;
+  color: #666666;
 }
 [data-theme="dark"] .cs-section--inverted .cs-quote blockquote {
   color: #111111;
@@ -271,7 +277,7 @@
   position: sticky;
   top: 100px;
 }
-.cs-section-body h3 {
+.cs-section-body :is(h2, h3) {
   font-size: clamp(1.6rem, 2.5vw, 2.2rem);
   font-weight: 300;
   letter-spacing: -0.02em;

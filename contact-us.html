@@ -28,11 +28,16 @@
           function () {
             (c[a].q = c[a].q || []).push(arguments);
           };
-        t = l.createElement(r);
-        t.async = 1;
-        t.src = "https://www.clarity.ms/tag/" + i;
-        y = l.getElementsByTagName(r)[0];
-        y.parentNode.insertBefore(t, y);
+        // Loaded after the page's load event so it doesn't compete with first render
+        function load() {
+          t = l.createElement(r);
+          t.async = 1;
+          t.src = "https://www.clarity.ms/tag/" + i;
+          y = l.getElementsByTagName(r)[0];
+          y.parentNode.insertBefore(t, y);
+        }
+        if (l.readyState === "complete") load();
+        else c.addEventListener("load", load);
       })(window, document, "clarity", "script", "wy8bow50fc");
     </script>
     <!-- Microsoft Clarity Tracking Code end -->
@@ -44,9 +49,12 @@
     />
     <link rel="icon" type="image/png" href="assets/img/logo/favicon.png" />
     <link rel="canonical" href="https://orbanforest.ca/contact-us" />
-    <title>
-      Contact Us — Web Design & AI Automation Agency | Orban Forest Inc.
-    </title>
+    <meta property="og:image" content="https://orbanforest.ca/assets/img/logo/home_page_preview.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Contact Us: Web Design &amp; AI Automation | Orban Forest" />
+    <meta name="twitter:description" content="Get in touch with Orban Forest Inc. — web design, AI automation, and digital marketing for businesses in Brantford, Cambridge, Paris ON and surrounding cities." />
+    <meta name="twitter:image" content="https://orbanforest.ca/assets/img/logo/home_page_preview.jpg" />
+    <title>Contact Us: Web Design &amp; AI Automation | Orban Forest</title>
 
     <!-- Open Graph -->
     <meta
@@ -97,16 +105,12 @@
     </script>
 
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preload" href="/assets/fonts/dm-sans-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/assets/fonts/playfair-italic-latin.woff2" as="font" type="font/woff2" crossorigin />
 
     <!-- Styles -->
-    <link rel="stylesheet" href="assets/css/styles.css" />
-    <link rel="stylesheet" href="assets/css/contact.css" />
+    <link rel="stylesheet" href="assets/css/styles.css?v=20261117" />
+    <link rel="stylesheet" href="assets/css/contact.css?v=20261116" />
     <style>
       /* ── ESTIMATOR HANDOFF SUMMARY CARD ─────────────────── */
       .quote-summary-card {
@@ -186,6 +190,7 @@
     </style>
   </head>
   <body>
+    <a href="#main" class="skip-link">Skip to main content</a>
     <!-- Google Tag Manager (noscript) -->
     <noscript>
       <iframe
@@ -206,13 +211,13 @@
 
     <!-- ========== HEADER / NAV ========== -->
     <header class="site-header" id="header">
-      <nav class="nav-container">
+      <nav class="nav-container" aria-label="Primary">
         <a href="/" class="nav-logo" aria-label="Orban Forest Home">
           <img
             src="assets/img/logo/logo-white.svg"
             alt="Orban Forest"
             class="logo-img"
-          />
+            width="1280" height="1024" />
           <span class="logo-text">Orban Forest</span>
         </a>
 
@@ -243,7 +248,7 @@
         </div>
 
         <!-- Theme Toggle -->
-        <button
+        <button type="button"
           class="theme-toggle"
           id="themeToggle"
           aria-label="Toggle dark mode"
@@ -281,7 +286,7 @@
         </button>
 
         <!-- Mobile Menu Toggle -->
-        <button
+        <button type="button"
           class="nav-hamburger"
           id="navToggle"
           aria-label="Toggle navigation"
@@ -294,12 +299,14 @@
       </nav>
     </header>
 
+    <main id="main" tabindex="-1">
+
     <!-- ========== CONTACT HERO ========== -->
     <section class="contact-hero">
       <div class="container">
         <div class="contact-hero-content">
           <p class="contact-eyebrow reveal-up">Get in Touch</p>
-          <h1 class="contact-headline reveal-up" data-delay="1">
+          <h1 class="contact-headline" data-delay="1">
             Let's build something<br /><span class="hero-accent"
               >remarkable</span
             >
@@ -320,7 +327,7 @@
           <!-- Left: Info Column -->
           <div class="contact-info">
             <div class="contact-info-block reveal-up">
-              <h3 class="contact-info-title">Start a Conversation</h3>
+              <h2 class="contact-info-title">Start a Conversation</h2>
               <p class="contact-info-text">
                 We love to hear about your business and how we can help you
                 build trust with your online customers. Tell us your goals and
@@ -516,7 +523,7 @@
                   />
                 </svg>
               </div>
-              <h3 class="success-title">Message sent!</h3>
+              <h3 class="success-title" id="formSuccessTitle" tabindex="-1">Message sent!</h3>
               <p class="success-text">
                 Thank you for reaching out. We'll get back to you within 24
                 hours.
@@ -535,6 +542,8 @@
     </section>
 
     <!-- ========== FOOTER ========== -->
+    </main>
+
     <footer class="site-footer">
       <div class="container">
         <div class="footer-grid">
@@ -554,7 +563,7 @@
                 target="_blank"
                 rel="noopener"
               >
-                <svg
+                <svg aria-hidden="true"
                   width="20"
                   height="20"
                   viewBox="0 0 24 24"
@@ -566,7 +575,7 @@
                 </svg>
               </a>
               <a href="#" class="social-link" aria-label="LinkedIn">
-                <svg
+                <svg aria-hidden="true"
                   width="20"
                   height="20"
                   viewBox="0 0 24 24"
@@ -578,7 +587,7 @@
                 </svg>
               </a>
               <a href="#" class="social-link" aria-label="Instagram">
-                <svg
+                <svg aria-hidden="true"
                   width="20"
                   height="20"
                   viewBox="0 0 24 24"
@@ -740,6 +749,7 @@
           form.style.display = "none";
           success.style.display = "flex";
           success.classList.add("visible");
+          document.getElementById("formSuccessTitle").focus();
           return false; // prevent actual submission
         }
 
@@ -758,6 +768,7 @@
           form.style.display = "none";
           success.style.display = "flex";
           success.classList.add("visible");
+          document.getElementById("formSuccessTitle").focus();
         }, 800);
       }
 
@@ -777,7 +788,25 @@
         document.querySelectorAll(".form-group").forEach((g) => {
           g.classList.remove("has-value", "focused");
         });
+        form.querySelector("input:not([tabindex='-1'])").focus();
       }
+
+      // ── TOMOS HANDOFF (?ref=tomos from the homepage section) ──
+      (function () {
+        "use strict";
+        var params = new URLSearchParams(window.location.search);
+        if (params.get("ref") !== "tomos") return;
+
+        var textarea = document.getElementById("entry.105563153");
+        if (textarea && !textarea.value) {
+          textarea.value =
+            "Hi, I saw your Tomos project and I'm interested in building something similar for my business.";
+          textarea.parentElement.classList.add("has-value");
+        }
+
+        var eyebrow = document.querySelector(".contact-eyebrow");
+        if (eyebrow) eyebrow.textContent = "Build Something Like Tomos";
+      })();
 
       // ── ESTIMATOR HANDOFF ─────────────────────────────────────
       (function () {
