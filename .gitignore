@@ -7,3 +7,4 @@ resources/
 archive/
 *.py
 serve.py
+instructions/
