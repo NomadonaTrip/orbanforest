@@ -1,0 +1,18 @@
+# Normalise all text files to LF in the repo and working tree, so editors
+# on Windows/WSL can't silently flip line endings and bloat diffs.
+* text=auto eol=lf
+
+# Binary assets: never touch
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.JPG  binary
+*.webp binary
+*.avif binary
+*.gif  binary
+*.ico  binary
+*.woff binary
+*.woff2 binary
+*.pdf  binary
+*.mp4  binary
+*.zip  binary
