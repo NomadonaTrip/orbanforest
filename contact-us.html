@@ -109,7 +109,7 @@
     <link rel="preload" href="/assets/fonts/playfair-italic-latin.woff2" as="font" type="font/woff2" crossorigin />
 
     <!-- Styles -->
-    <link rel="stylesheet" href="assets/css/styles.css?v=20261116" />
+    <link rel="stylesheet" href="assets/css/styles.css?v=20261117" />
     <link rel="stylesheet" href="assets/css/contact.css?v=20261116" />
     <style>
       /* ── ESTIMATOR HANDOFF SUMMARY CARD ─────────────────── */
@@ -790,6 +790,23 @@
         });
         form.querySelector("input:not([tabindex='-1'])").focus();
       }
+
+      // ── TOMOS HANDOFF (?ref=tomos from the homepage section) ──
+      (function () {
+        "use strict";
+        var params = new URLSearchParams(window.location.search);
+        if (params.get("ref") !== "tomos") return;
+
+        var textarea = document.getElementById("entry.105563153");
+        if (textarea && !textarea.value) {
+          textarea.value =
+            "Hi, I saw your Tomos project and I'm interested in building something similar for my business.";
+          textarea.parentElement.classList.add("has-value");
+        }
+
+        var eyebrow = document.querySelector(".contact-eyebrow");
+        if (eyebrow) eyebrow.textContent = "Build Something Like Tomos";
+      })();
 
       // ── ESTIMATOR HANDOFF ─────────────────────────────────────
       (function () {
